@@ -90,3 +90,51 @@ footer {
     }
 }
 
+//Contact Form Style
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form .input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 0.5em; /* Reduced from 1em */
+    width: 100%; /* Added to ensure consistent width */
+}
+
+.input-box span {
+    font-size: 1.2em; /* Adjusted font size for labels */
+    margin-bottom: 0.2em;
+    color: var(--text-color); /* Set labels (Full Name, Email, Message) to white */
+}
+
+form input,
+form textarea {
+    width: 100%;
+    font-size: 1.3em;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+    color: black; /* Text inside input fields is black */
+    background-color: var(--text-color); /* Set background color to white for better contrast */
+}
+
+form input:focus,
+form textarea:focus {
+    background-color: var(--text-color);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Adjust shadow for focus */
+}
+
+#connect {
+    min-height: auto; /* Override the 100vh min-height */
+    padding-bottom: 3em; /* Reduce bottom padding */
+}
+
