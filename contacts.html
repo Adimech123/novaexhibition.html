@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-     <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/YOUR-FONT-AWESOME-KIT.js" crossorigin="anonymous"></script>
   </head>
   <body>
 
@@ -16,35 +18,33 @@
         </ul>
     </nav>
 
-   </section>
-
     <section id="connect">
         <h1 class="header"><span>LET'S CONNECT!</span></h1>
 
-        <form action="#">
+        <form action="submit_form.php" method="POST">
             <div class="input-box">
-                <span>Full Name</span>
-                <input type="text" placeholder="Enter Your Full Name">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Full Name" required>
             </div>
 
             <div class="input-box">
-                <span>Email</span>
-                <input type="text" placeholder="Enter Your Email">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
             </div>
 
             <div class="input-box">
-                <span>Message</span>
-                <input type="text" placeholder="What's on your mind?">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="What's on your mind?" rows="4" required></textarea>
             </div>
 
-            <div class="btn">Submit</div>
+            <button type="submit">Submit</button>
         </form>
     </section>
 
     <footer>
         <div class="social-icons">
             <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                  <i class="fa-brands fa-facebook-square"></i>
+                <i class="fa-brands fa-facebook-square"></i>
             </a>
             <a href="https://instagram.com" target="_blank" aria-label="Instagram">
                 <i class="fa-brands fa-instagram"></i>
@@ -52,7 +52,6 @@
             <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
                 <i class="fa-brands fa-tiktok"></i>
             </a>
-         
             <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
                 <i class="fa-brands fa-linkedin"></i>
             </a>
