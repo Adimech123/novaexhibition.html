@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: neue;
 }
 
 body {
@@ -34,38 +34,38 @@ body {
 }
 
 #circle1 {
-    width: 60%;
-    height: 60%;
-    background-color: #ff7e5f;
-    top: 20%;
-    left: 10%;
+    width: 100%;
+    height: 100%;
+    background-color: #f0685c;
+    top: -10%;
+    left: -10%;
     animation-delay: -1s;
 }
 
 #circle2 {
-    width: 50%;
-    height: 50%;
-    background-color: #feb47b;
-    top: 30%;
-    left: 30%;
+    width: 100%;
+    height: 100%;
+    background-color: #244c9d;
+    top: -10%;
+    left: 10%;
     animation-delay: -2.5s;
 }
 
 #circle3 {
-    width: 70%;
-    height: 70%;
-    background-color: #7c66dc;
-    top: 10%;
-    left: 40%;
+    width: 100%;
+    height: 100%;
+    background-color: #46b4ad;
+    top: 20%;
+    left: 25%;
     animation-delay: -4.5s;
 }
 
 #circle4 {
-    width: 40%;
-    height: 40%;
-    background-color: #4b49ac;
-    top: 40%;
-    left: 60%;
+    width: 100%;
+    height: 100%;
+    background-color: #27265e;
+    top: 30%;
+    left: 30%;
     animation-delay: -6.5s;
 }
 
