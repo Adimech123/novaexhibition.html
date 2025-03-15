@@ -149,15 +149,15 @@ body {
 
 
 .logo {
-    font-size: 36px;
-    font-weight: bold;
-    color: #000;
-    /* Changed to white for better contrast against dark background */
+    position: fixed;
+    top: -2%;
+    left: 20px;
 }
 
-.logo span {
-    display: inline-block;
-    transform: scaleY(-1);
+.logo img {
+    width: 100px;
+    height: auto;
+
 }
 
 .nav-links {
@@ -224,6 +224,7 @@ body {
     font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
     font-size: 48px;
     margin-bottom: 20px;
+    color: #000;
 }
 
 .card p {
@@ -290,6 +291,64 @@ body {
 
 
 
+
+h1 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    margin: 0 1rem;
+    min-width: 80px;
+}
+
+.countdown-value {
+
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-bottom: 0.5rem;
+
+}
+
+.countdown-label {
+    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}
+
+
+
+
+/* @media for countdown timer */
+
+@media (max-width: 600px) {
+    .countdown-item {
+        margin: 0.5rem;
+        min-width: 70px;
+    }
+
+    .countdown-value {
+        font-size: 2rem;
+    }
+}
 
 
 
