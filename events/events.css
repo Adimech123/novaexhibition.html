@@ -6,13 +6,35 @@
 }
 
 @font-face {
+    font-family: 'NeueHaasDisplayBold';
+    src: url('fonts/NeueHaasDisplayBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'NeueHaasDisplayMedium';
     src: url('fonts/NeueHaasDisplayMedium.ttf') format('truetype');
-    src: url('fonts/NeueHaasDisplayBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayLight';
     src: url('fonts/NeueHaasDisplayLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayThin';
     src: url('fonts/NeueHaasDisplayThin.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 body {
@@ -143,6 +165,8 @@ body {
     gap: 20px;
     list-style: none;
     margin-left: auto;
+    position: relative;
+    /* Add this for positioning the underline */
 }
 
 .nav-item {
@@ -151,11 +175,29 @@ body {
 
 .nav-link {
     color: #000;
-    /* Changed to white for better contrast against dark background */
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    position: relative;
+    /* For the underline positioning */
+    padding-bottom: 5px;
+    /* Space for the underline */
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    /* Position below the text */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    /* Thickness of the underline */
+    background-color: #000;
+    /* Color of the underline */
+    transition: all 0.3s ease;
+    /* Smooth transition when switching */
 }
 
 .separator {
@@ -173,17 +215,19 @@ body {
     margin: 30px auto;
     max-width: 1000px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: justify;
     color: #000;
     /* Changed to white for better visibility */
 }
 
 .card h1 {
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
     font-size: 48px;
     margin-bottom: 20px;
 }
 
 .card p {
+    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
     font-size: 22px;
     line-height: 1.5;
     margin-bottom: 30px;
@@ -206,13 +250,16 @@ body {
 }
 
 .detail h3 {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
     font-size: 24px;
     margin-bottom: 10px;
+    margin-left: -45px;
 }
 
 .detail p {
+    font-family: 'NeueHaasDisplayThin', Helvetica, Arial, sans-serif;
     font-size: 18px;
-    margin: 0;
+    margin-left: -45px;
 }
 
 .place {
@@ -240,3 +287,40 @@ body {
     /* Changed to white for better contrast */
     font-size: 24px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* To make the box and arrows lower, in the center */
+/*.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 40px;
+    margin: 120px auto 30px;  - Increased top margin to push it down
+    max-width: 1000px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    color: #000;
+}
+    
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 40px; - Increased gap between arrows 
+    margin-top: 60px; -Increased top margin to push it down 
+    padding-bottom: 50px; - Added padding at bottom for more space 
+}
+
+*/
