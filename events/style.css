@@ -300,7 +300,7 @@ body {
     font-size: 22px;
     margin-bottom: 5px;
     margin-left: 0px;
-    color: black;
+    color: #000;
 }
 
 .card p {
@@ -311,32 +311,30 @@ body {
     margin-left: 0px;
 }
 
+
 /* ===============================
   7. Events
    =============================== */
 
 .event-details {
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
     margin-top: 40px;
-    margin: 30px auto;
-    flex-wrap: wrap;
-    /* Added for better mobile responsiveness */
-    gap: 20px;
-    /* Added for spacing when wrapped */
+    margin-left: 0px;
+    gap: 70px;
 }
 
 .paragraph {
     font-family: 'NeueHaasDisplayThin', Helvetica, Arial, sans-serif;
     font-size: 18px;
     margin-top: 20px;
-    margin-left: -45px;
+    margin-left: 0px;
 }
 
 .detail {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 0px;
 }
 
@@ -344,18 +342,17 @@ body {
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
     font-size: 24px;
     margin-bottom: 10px;
-    margin-left: -45px;
+    margin-left: 0px;
 }
 
 .detail p {
     font-family: 'NeueHaasDisplayThin', Helvetica, Arial, sans-serif;
     font-size: 18px;
-    margin-left: -45px;
-    margin-left: -45px;
+    margin-left: 0px;
 }
 
 .place {
-    max-width: 300px;
+    max-width: 100%;
 }
 
 
@@ -375,6 +372,7 @@ h1 {
     justify-content: center;
     text-align: center;
     margin: 2rem 0;
+    margin-top: -370px;
     flex-wrap: wrap;
 }
 
@@ -472,36 +470,3 @@ h1 {
 .nav-button:active {
     transform: scale(0.95);
 }
-
-
-
-
-
-
-
-
-
-
-
-/* To make the box and arrows lower, in the center */
-/*.card {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
-    border-radius: 25px;
-    padding: 40px;
-    margin: 120px auto 30px;  - Increased top margin to push it down
-    max-width: 1000px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    text-align: justify;
-    color: #000;
-}
-    
-.navigation {
-    display: flex;
-    justify-content: center;
-    gap: 40px; - Increased gap between arrows 
-    margin-top: 60px; -Increased top margin to push it down 
-    padding-bottom: 50px; - Added padding at bottom for more space 
-}
-
-*/
