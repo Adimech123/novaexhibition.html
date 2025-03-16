@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Events</title>
+</head>
+
+<body>
+    <!-- Gradient background with circles moved outside the container -->
+    <div class="background">
+        <div class="circle" id="circle1"></div>
+        <div class="circle" id="circle2"></div>
+        <div class="circle" id="circle3"></div>
+        <div class="circle" id="circle4"></div>
+
+    </div>
+
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="start.html" class="logo">
+                    <img src="nova logo.png"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="nav-item"><a class="nav-link active" href="event1.html">EVENT</a></li>
+                <span class="separator">|</span>
+                <li class="nav-item"><a class="nav-link" href="website.html">WEBSITE</a></li>
+            </ul>
+        </nav>
+
+        <div class="card">
+            <div class="events-container">
+
+                <!-- Event 1 -->
+                <div class="event-content" data-event-index="0">
+                    <h2> Event 1 </h2>
+                    <h1>Figure Drawing Workshop</h1>
+                    <p>
+                        We're BFA students organising a live figure drawing session to support our exhibition NOVA.
+
+                        Whether you're an experienced artist or just want to give it a try, this is a great chance to
+                        practice
+                        and improve your skills in a relaxed, creative environment.
+                    </p>
+
+                    <div class="event-details">
+                        <div class="detail">
+                            <h3>Date</h3>
+                            <p>Friday 21st March 2025</p>
+                        </div>
+
+                        <div class="detail place">
+                            <h3>Place</h3>
+                            <p>Room 415, Faculty of Media and Knowledge Science, University of Malta Msida</p>
+                        </div>
+
+                        <div class="detail">
+                            <h3>Time</h3>
+                            <p>16:00-18:00</p>
+                        </div>
+
+                        <div class="detail">
+                            <h3>Price</h3>
+                            <p>€10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Opening Night - Exhibition -->
+        <div class="event-content" data-event-index="1" style="display: none;">
+            <h1>Opening Night - Exhibition</h1>
+            <p>
+                NOVA is an exhibition by the Bachelor of Fine Arts in Digital Arts
+                graduating class of 2025, showcasing 30 artists' dissertation projects.
+                Held on May 22, 2025, at the Faculty of Media and Knowledge Sciences,
+                it highlights diverse disciplines, from virtual reality and game design to fine
+                art and animation.
+                This exhibition celebrates the fusion of digital creativity, perception,
+                and transformation, offering an immersive experience into the future
+                of artistic expression.
+            </p>
+
+            <div class="event-details">
+                <div class="detail">
+                    <h3>Date</h3>
+                    <p>Thursday 22nd May 2025 - Friday 23rd may 2025</p>
+                </div>
+
+                <div class="detail place">
+                    <h3>Place</h3>
+                    <p>Level 4, Faculty of Media and Knowledge Science, University of Malta Msida</p>
+                </div>
+
+                <div class="detail">
+                    <h3>Time</h3>
+                    <p>19:00 onwards</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Navigation arrows -->
+        <div class="navigation">
+            <div class="nav-button" id="prev-button">←</div>
+            <div class="nav-button" id="next-button">→</div>
+        </div>
+
+
+        <script src="style.js"></script>
+    </div>
+</body>
+
+</html>

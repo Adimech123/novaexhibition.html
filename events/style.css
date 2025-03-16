@@ -353,7 +353,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 100px;
+    margin-top: 105px;
 }
 
 .nav-button {
@@ -385,6 +385,7 @@ h1 {
 .countdown {
     display: flex;
     justify-content: center;
+    text-align: center;
     margin: 2rem 0;
     flex-wrap: wrap;
 }
@@ -436,6 +437,51 @@ h1 {
 
 
 
+/* ===============================
+   10. Events slider
+   =============================== */
+/* Event content styling */
+.events-container {
+    position: relative;
+    min-height: 300px;
+    /* Adjust based on your content */
+}
+
+.event-content {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Enhance arrow navigation buttons */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.nav-button {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #000;
+    font-size: 24px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.nav-button:active {
+    transform: scale(0.95);
+}
 
 
 
