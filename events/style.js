@@ -1,5 +1,6 @@
-// Event, Website line
-
+/* ===============================
+   1. Event | Website line
+   =============================== */
 document.addEventListener('DOMContentLoaded', function () {
     // Get the current page URL
     const currentPage = window.location.pathname.split('/').pop();
@@ -31,8 +32,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Countdown timer
 
+/* ===============================
+2. Countdown timer
+=============================== */
 document.addEventListener('DOMContentLoaded', function () {
     // Target date: May 16th, 2025
     const targetDate = new Date('May 16, 2025 00:00:00').getTime();
@@ -85,3 +88,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set interval to update countdown every second
     const countdown = setInterval(updateCountdown, 1000);
 });
+

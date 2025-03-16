@@ -1,3 +1,6 @@
+/* ===============================
+   1. Fonts
+   =============================== */
 * {
     margin: 0;
     padding: 0;
@@ -37,12 +40,20 @@
     font-display: swap;
 }
 
+
+/* ===============================
+   2. Body
+   =============================== */
 body {
     background-color: #ffffff;
     position: relative;
     min-height: 100vh;
     overflow-x: hidden;
 }
+
+/* ===============================
+   3. Circles
+   =============================== */
 
 /* Background gradient with circles */
 .background {
@@ -128,6 +139,10 @@ body {
     }
 }
 
+/* ===============================
+   4. container for navbar, nav-links & logo
+   =============================== */
+
 .container {
     position: relative;
     z-index: 1;
@@ -137,7 +152,10 @@ body {
     padding: 20px;
 }
 
-/* navbar */
+/* ===============================
+  4.1 Navbar
+   =============================== */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -147,7 +165,28 @@ body {
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
 }
 
+/* ===============================
+  4.2 Large Logo for Intro page
+   =============================== */
+.logo1 {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
 
+.logo1 img {
+    width: 700px;
+    height: auto;
+    max-width: 700px;
+    /* You can adjust this value as needed */
+}
+
+/* ===============================
+  4.3 Small Logo for events & website page
+   =============================== */
 .logo {
     position: fixed;
     top: -2%;
@@ -159,6 +198,26 @@ body {
     height: auto;
 
 }
+
+/* ===============================
+  4.4 When clicking on the logo, it will take you to the start page
+   =============================== */
+
+.logo a {
+    cursor: pointer;
+    display: inline-block;
+    /* This ensures the link only takes up as much space as the image */
+}
+
+.logo a:hover {
+    opacity: 0.9;
+    /* Subtle effect when hovering over the logo */
+}
+
+
+/* ===============================
+  4.5 Nav-links
+   =============================== */
 
 .nav-links {
     display: flex;
@@ -200,6 +259,10 @@ body {
     /* Smooth transition when switching */
 }
 
+/* ===============================
+  5. Separator
+   =============================== */
+
 .separator {
     font-size: 24px;
     font-weight: bold;
@@ -207,6 +270,9 @@ body {
     /* Changed to white for better contrast against dark background */
 }
 
+/* ===============================
+  6. Text
+   =============================== */
 .card {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(5px);
@@ -224,6 +290,7 @@ body {
     font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
     font-size: 48px;
     margin-bottom: 20px;
+    color: #000;
 }
 
 .card p {
@@ -232,6 +299,10 @@ body {
     line-height: 1.5;
     margin-bottom: 30px;
 }
+
+/* ===============================
+  7. Events
+   =============================== */
 
 .event-details {
     display: flex;
@@ -266,6 +337,10 @@ body {
     max-width: 300px;
 }
 
+/* ===============================
+  8. Arrows
+   =============================== */
+
 .navigation {
     display: flex;
     justify-content: center;
@@ -289,7 +364,67 @@ body {
 }
 
 
+/* ===============================
+  9. Countdown 
+   =============================== */
 
+h1 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    margin: 0 1rem;
+    min-width: 80px;
+}
+
+.countdown-value {
+
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-bottom: 0.5rem;
+
+}
+
+.countdown-label {
+    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}
+
+
+
+
+/* @media for countdown timer */
+
+@media (max-width: 600px) {
+    .countdown-item {
+        margin: 0.5rem;
+        min-width: 70px;
+    }
+
+    .countdown-value {
+        font-size: 2rem;
+    }
+}
 
 
 
