@@ -290,7 +290,8 @@ body {
 .card h1 {
     font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    margin-left: 0px;
     color: #000;
 }
 
@@ -298,6 +299,7 @@ body {
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
     font-size: 22px;
     margin-bottom: 5px;
+    margin-left: 0px;
     color: black;
 }
 
@@ -305,7 +307,8 @@ body {
     font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
     font-size: 22px;
     line-height: 1.5;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    margin-left: 0px;
 }
 
 /* ===============================
@@ -316,6 +319,7 @@ body {
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
+    margin: 30px auto;
     flex-wrap: wrap;
     /* Added for better mobile responsiveness */
     gap: 20px;
@@ -326,6 +330,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: left;
+    margin-left: 0px;
 }
 
 .detail h3 {
@@ -333,11 +338,13 @@ body {
     font-size: 24px;
     margin-bottom: 10px;
     margin-left: -45px;
+    margin-left: -45px;
 }
 
 .detail p {
     font-family: 'NeueHaasDisplayThin', Helvetica, Arial, sans-serif;
     font-size: 18px;
+    margin-left: -45px;
     margin-left: -45px;
 }
 
@@ -423,7 +430,7 @@ h1 {
     /* Increased gap between arrows */
     position: fixed;
     /* Make it fixed position */
-    bottom: 120px;
+    bottom: 150px;
     /* Position from bottom */
     left: 0;
     right: 0;
