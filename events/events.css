@@ -149,15 +149,15 @@ body {
 
 
 .logo {
-    font-size: 36px;
-    font-weight: bold;
-    color: #000;
-    /* Changed to white for better contrast against dark background */
+    position: fixed;
+    top: -2%;
+    left: 20px;
 }
 
-.logo span {
-    display: inline-block;
-    transform: scaleY(-1);
+.logo img {
+    width: 100px;
+    height: auto;
+
 }
 
 .nav-links {
