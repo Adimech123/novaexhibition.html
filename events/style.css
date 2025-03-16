@@ -345,31 +345,6 @@ body {
     max-width: 300px;
 }
 
-/* ===============================
-  8. Arrows
-   =============================== */
-
-.navigation {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 105px;
-}
-
-.nav-button {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.2);
-    /* Changed for better visibility */
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    color: #000;
-    /* Changed to white for better contrast */
-    font-size: 24px;
-}
 
 
 /* ===============================
@@ -440,30 +415,30 @@ h1 {
 /* ===============================
    10. Events slider
    =============================== */
-/* Event content styling */
-.events-container {
-    position: relative;
-    min-height: 300px;
-    /* Adjust based on your content */
-}
-
-.event-content {
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
-/* Enhance arrow navigation buttons */
+/* Updated navigation arrows styling */
 .navigation {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 40px;
+    gap: 60px;
+    /* Increased gap between arrows */
+    position: fixed;
+    /* Make it fixed position */
+    bottom: 120px;
+    /* Position from bottom */
+    left: 0;
+    right: 0;
+    /* Stretch across to center */
+    margin: 0 auto;
+    /* Center horizontally */
+    z-index: 10;
+    /* Ensure it's above other content */
 }
 
 .nav-button {
     width: 60px;
     height: 60px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Made slightly more visible */
     border-radius: 12px;
     display: flex;
     justify-content: center;
@@ -472,16 +447,20 @@ h1 {
     color: #000;
     font-size: 24px;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Added subtle shadow */
 }
 
 .nav-button:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.6);
     transform: scale(1.05);
 }
 
 .nav-button:active {
     transform: scale(0.95);
 }
+
+
 
 
 
