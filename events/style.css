@@ -395,6 +395,48 @@ body {
 
 
 
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(0);
+    margin: 5px
+        /* Makes the icons black */
+}
+
+/* Set different sizes for each icon */
+.social-icons a:nth-child(1) img {
+    /* Instagram */
+    margin-top: 50px;
+    width: 60px;
+}
+
+.social-icons a:nth-child(2) img {
+    /* Facebook */
+    margin-top: 60px;
+    width: 35px;
+}
+
+.social-icons a:nth-child(3) img {
+    /* TikTok */
+    margin-top: 60px;
+    width: 35px;
+}
+
+/* Hover effect */
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+
+
 /* ===============================
   8. Countdown 
    =============================== */
