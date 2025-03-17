@@ -476,25 +476,15 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 60px;
-    /* Increased gap between arrows */
-    position: fixed;
-    /* Make it fixed position */
-    bottom: 150px;
-    /* Position from bottom */
-    left: 0;
-    right: 0;
-    /* Stretch across to center */
-    margin: 0 auto;
-    /* Center horizontally */
+    position: relative;
+    margin: 30px auto;
     z-index: 10;
-    /* Ensure it's above other content */
 }
 
 .nav-button {
     width: 60px;
     height: 60px;
     background-color: rgba(255, 255, 255, 0.3);
-    /* Made slightly more visible */
     border-radius: 12px;
     display: flex;
     justify-content: center;
@@ -504,7 +494,6 @@ h1 {
     font-size: 24px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Added subtle shadow */
 }
 
 .nav-button:hover {
@@ -529,7 +518,7 @@ h1 {
    9. Responsiveness
    =============================== */
 
-/* Large devices (desktops, less than 1200px) 
+/* Large devices (desktops, less than 1200px)*/
 @media (max-width: 1200px) {
     .logo1 img {
         width: 600px;
@@ -546,7 +535,7 @@ h1 {
     }
 }
 
-/* Medium devices (tablets, less than 992px) 
+/* Medium devices (tablets, less than 992px)*/
 @media (max-width: 992px) {
     .logo1 img {
         width: 500px;
@@ -581,7 +570,7 @@ h1 {
     }
 
     .navigation {
-        bottom: 100px;
+        margin: 20px auto;
     }
 
     .countdown {
@@ -589,7 +578,7 @@ h1 {
     }
 }
 
-/* Small devices (landscape phones, less than 768px) 
+/* Small devices (landscape phones, less than 768px)*/
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -637,13 +626,19 @@ h1 {
     }
 
     .navigation {
-        bottom: 80px;
+        margin: 15px auto;
         gap: 40px;
     }
 
     .nav-button {
         width: 50px;
         height: 50px;
+    }
+
+    .nav-button {
+        width: 50px;
+        height: 50px;
+        margin-bottom: -400px;
     }
 
     .countdown {
