@@ -764,3 +764,100 @@ h1 {
         font-size: 0.8rem;
     }
 }
+
+/* Extra small devices (phones, less than 400px) */
+@media (max-width: 400px) {
+    .circle {
+        filter: blur(40px);
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .logo1 img {
+        width: 280px;
+        top: 40%;
+    }
+
+    .nav-link {
+        font-size: 18px;
+    }
+
+    .nav-item {
+        font-size: 18px;
+        margin-top: -50px;
+        font-weight: bold;
+        color: #000;
+
+    }
+
+    .nav-item.separator-item {
+        margin-top: -75px;
+    }
+
+    .card {
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: -15px;
+    }
+
+    .card h1 {
+        font-size: 28px;
+        text-align: left;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .paragraph {
+        font-size: 14px;
+    }
+
+    .detail h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .detail p {
+        font-size: 14px;
+    }
+
+    .navigation {
+        position: relative;
+        bottom: auto;
+        margin-top: 30px;
+        gap: 30px;
+    }
+
+    .nav-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .countdown {
+        margin-top: -20px;
+    }
+
+    .countdown-item {
+        margin: 0 0.5rem;
+        margin-top: -130px;
+        min-width: 60px;
+    }
+
+    .countdown-value {
+        font-size: 2rem;
+        padding: 0.3rem;
+    }
+
+    .countdown-label {
+        font-size: 0.8rem;
+    }
+}
