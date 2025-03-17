@@ -259,6 +259,51 @@ body {
     /* Smooth transition when switching */
 }
 
+
+
+
+
+
+.nav-links1 {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-left: auto;
+    position: relative;
+    /* Add this for positioning the underline */
+}
+
+.nav-item1 {
+    list-style: none;
+}
+
+.nav-links1 {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    position: relative;
+    /* For the underline positioning */
+    padding-bottom: 5px;
+    /* Space for the underline */
+}
+
+.nav-links1.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    /* Position below the text */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    /* Thickness of the underline */
+    background-color: #000;
+    /* Color of the underline */
+    transition: all 0.3s ease;
+    /* Smooth transition when switching */
+}
+
 /* ===============================
   5. Separator
    =============================== */
@@ -560,7 +605,7 @@ h1 {
     }
 
     .logo1 {
-        top: 30%;
+        top: 40%;
     }
 
     .logo1 img {
@@ -622,6 +667,7 @@ h1 {
 
     .logo1 img {
         width: 280px;
+        top: 40%;
     }
 
     .nav-link {
