@@ -281,6 +281,11 @@ nav-links & logo===============================*/
     /* This centers items vertically */
     position: relative;
     overflow: hidden;
+    z-index: 5;
+}
+
+.exhibitions-container .exhibition:first-child {
+    z-index: 5;
 }
 
 .exhibition-image {
@@ -327,6 +332,7 @@ nav-links & logo===============================*/
 
 
 .button {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
     display: inline-block;
     padding: 10px 15px;
     background: #f78b81;
@@ -343,16 +349,6 @@ nav-links & logo===============================*/
 }
 
 
-
-
-
-
-
-
-
-
-
-
 .exhibition1 {
     background: rgba(255, 255, 255, 0.455);
     backdrop-filter: blur(5px);
@@ -367,4 +363,239 @@ nav-links & logo===============================*/
     left: 0;
     right: 0;
     z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+RESPOSNIVENESS
+   =============================== */
+
+
+/* ===============================
+   MAX-WIDTH: 1200PX
+   =============================== */
+
+/* Large screens (desktops, less than 1200px) */
+@media (max-width: 1200px) {
+    .exhibition {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    .exhibition h2 {
+        font-size: 22px;
+    }
+
+    .exhibition h3 {
+        font-size: 16px;
+    }
+
+    .exhibition p {
+        font-size: 16px;
+        text-align: justify;
+    }
+}
+
+
+
+
+
+/* ===============================
+   MAX-WIDTH: 992PX
+   =============================== */
+
+/* Medium screens (tablets, less than 992px) */
+@media (max-width: 992px) {
+    .exhibitions-container {
+        padding-top: 80px;
+    }
+
+    .exhibition {
+        padding: 20px;
+        margin: 25px auto;
+    }
+
+    .exhibition-image {
+        flex: 0 0 30%;
+    }
+
+    .exhibition-content {
+        flex: 0 0 65%;
+    }
+
+    .exhibition-image img {
+        width: 80%;
+        max-height: 180px;
+    }
+
+    .button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+/* ===============================
+   MAX-WIDTH: 768PX
+   =============================== */
+/* Small screens (small tablets, less than 768px) */
+@media (max-width: 768px) {
+
+    /* Adjust navigation */
+    .nav-links {
+        right: 20px;
+    }
+
+
+    .logo {
+        top: -3px;
+    }
+
+
+    .logo img {
+        width: 80px;
+    }
+
+    /* Adjust exhibition layout to stack at this breakpoint */
+    .exhibition {
+        padding: 20px;
+        margin: 20px auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .exhibitions-container {
+        padding-top: 60px;
+    }
+
+    .exhibition-image {
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .exhibition-content {
+        flex: 0 0 100%;
+    }
+
+    .exhibition-image img {
+        width: 50%;
+        max-height: 150px;
+    }
+
+    /* Adjust text for readability on smaller screens */
+    .exhibition h2 {
+        font-size: 20px;
+    }
+
+    .exhibition h3 {
+        font-size: 15px;
+    }
+
+    .exhibition p {
+        font-size: 15px;
+        /* Restore normal word spacing for better mobile readability */
+        word-spacing: normal;
+        text-align: justify;
+    }
+}
+
+
+
+
+
+
+/* ===============================
+   MAX-WIDTH: 576PX
+   =============================== */
+/* Extra small screens (phones, less than 576px) */
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+
+    .logo {
+        left: 10px;
+        top: -6px;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    .exhibition1 {
+        top: 15px;
+        height: 35px;
+    }
+
+    .nav-links {
+        top: 24px;
+        right: 15px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .exhibitions-container {
+        padding-top: 50px;
+    }
+
+    .exhibition {
+        padding: 15px;
+        margin: 15px auto;
+        min-height: auto;
+    }
+
+    .exhibition-image img {
+        width: 70%;
+        max-height: 120px;
+    }
+
+    .exhibition h2 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .exhibition h3 {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .exhibition p {
+        font-size: 14px;
+        margin-bottom: 12px;
+        text-align: justify;
+    }
+
+    .button {
+        padding: 6px 10px;
+        font-size: 13px;
+        border-radius: 3px;
+    }
+
+    /* Adjust animation for better performance on mobile */
+    .circle {
+        filter: blur(30px);
+    }
 }
