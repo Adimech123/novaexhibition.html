@@ -838,14 +838,16 @@ h1 {
         max-width: 100%;
         max-width: 100%;
         padding: 30px;
+
+
     }
 
     .event-details {
         gap: 40px;
     }
 
-    .countdown {
-        margin-top: -300px;
+    .countdown2-item {
+        margin-bottom: -40px;
     }
 }
 
