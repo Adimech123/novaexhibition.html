@@ -851,6 +851,10 @@ h1 {
         width: 600px;
     }
 
+
+
+
+
     /* Coming soon white box and text */
     .card3 {
         padding: 15px;
@@ -862,13 +866,22 @@ h1 {
 
     .card3 h1 {
         text-align: center;
-        font-size: 55px;
+        font-size: 48px;
+        margin-top: 20px;
     }
 
     .card3 p {
         text-align: justify;
-        font-size: 25px;
+        line-height: 1.5;
+        font-size: 22px;
+        margin: 35px;
     }
+
+
+    .social-icons {
+        margin-top: -30px;
+    }
+
 
 
     .event-details {
@@ -922,13 +935,24 @@ h1 {
 
     .card3 h1 {
         text-align: center;
-        font-size: 55px;
+        font-size: 48px;
+        margin-top: 20px;
     }
 
     .card3 p {
         text-align: justify;
-        font-size: 25px;
+        line-height: 1.5;
+        font-size: 22px;
+        margin: 35px;
     }
+
+
+
+
+    .social-icons {
+        margin-top: -30px;
+    }
+
 
 
 
@@ -973,7 +997,7 @@ h1 {
 
     /* Coming soon countodwn */
     .countdown2-item {
-        margin-bottom: -10px;
+        margin-bottom: 0px;
 
     }
 }
@@ -1072,12 +1096,48 @@ h1 {
     .card3 h1 {
         text-align: center;
         font-size: 45px;
+        margin-top: 20px;
     }
 
     .card3 p {
         text-align: justify;
+        line-height: 1.5;
         font-size: 22px;
+        margin: 35px;
     }
+
+
+
+
+    .card3 h1 {
+        text-align: center;
+        font-size: 48px;
+        margin-top: 20px;
+    }
+
+    .card3 p {
+        text-align: justify;
+        line-height: 1.5;
+        font-size: 22px;
+        margin: 35px;
+    }
+
+
+
+
+    .social-icons {
+        margin-top: -30px;
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 
