@@ -1,7 +1,7 @@
 /* ===============================
    1. Event | Website line
    =============================== */
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
     // Get the current page URL
     const currentPage = window.location.pathname.split("/").pop();
 
@@ -25,12 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
             // But you could add this if you're using AJAX for page navigation
         });
     });
-});
+});*/
 
 /* ===============================
 2. Events slider
 =============================== */
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
     // Get all event content elements
     const eventContents = document.querySelectorAll(".event-content");
     const totalEvents = eventContents.length;
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Show the first event initially
     showEvent(0);
-});
+});*/
 
 /* ===============================
 3. Countdown timer
