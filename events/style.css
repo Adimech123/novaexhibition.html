@@ -139,6 +139,76 @@ body {
     }
 }
 
+
+
+/* ===============================
+   4. c
+   =============================== */
+/* Container styles */
+.closed button {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Close button styles */
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.455);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 345px;
+    margin-top: 90px;
+}
+
+.close-button:hover {
+    background-color: rgba(220, 220, 220, 0.9);
+}
+
+/* Cross/X icon */
+.cross-icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.cross-icon::before,
+.cross-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+
+.cross-icon::before {
+    transform: rotate(45deg);
+}
+
+.cross-icon::after {
+    transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+
 /* ===============================
    4. container for navbar, nav-links & logo
    =============================== */
@@ -165,6 +235,23 @@ body {
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
 }
 
+
+/* ===============================
+  4.3 Small Logo for events & website page
+   =============================== */
+.logo {
+    position: fixed;
+    top: -2%;
+    left: 20px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+
+}
+
+
 /* ===============================
   4.2 Large Logo for Intro page
    =============================== */
@@ -184,19 +271,24 @@ body {
     /* You can adjust this value as needed */
 }
 
+
 /* ===============================
-  4.3 Small Logo for events & website page
+  4.2 Large Logo for Intro page (website and start page together)
    =============================== */
-.logo {
+.logo2 {
     position: fixed;
-    top: -2%;
-    left: 20px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
 }
 
-.logo img {
-    width: 100px;
+.logo2 img {
+    width: 500px;
     height: auto;
-
+    max-width: 700px;
+    margin-top: -300px;
 }
 
 /* ===============================
@@ -309,27 +401,29 @@ body {
 }
 
 /* ===============================
-  6. Text
+  6. Text & White Box for website page
    =============================== */
 .card {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.455);
     backdrop-filter: blur(5px);
     border-radius: 25px;
     padding: 40px;
-    margin: 30px auto;
+    margin: 10px auto;
     max-width: 1000px;
+    min-height: 320px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     text-align: justify;
     word-spacing: -1.75px;
     color: #000;
-    /* Changed to white for better visibility */
+    margin-top: 100px;
+
 }
 
 .card h1 {
     font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
     font-size: 48px;
     margin-bottom: 0px;
-    margin-left: 0px;
+    text-align: center;
     color: #000;
 }
 
@@ -346,8 +440,97 @@ body {
     font-size: 22px;
     line-height: 1.5;
     margin-bottom: 0px;
-    margin-left: 0px;
+    text-align: center;
 }
+
+
+/* ===============================
+  6. Text & White Box for event page
+   =============================== */
+.card2 {
+    background: rgba(255, 255, 255, 0.455);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 40px;
+    margin: 10px auto;
+    max-width: 1000px;
+    min-height: 320px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    word-spacing: -1.75px;
+    color: #000;
+    margin-top: 100px;
+
+}
+
+.card2 h1 {
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    margin-bottom: 0px;
+    text-align: left;
+    color: #000;
+}
+
+.card2 h2 {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    color: #000;
+}
+
+.card2 p {
+    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
+
+/* ===============================
+  6. Text & White Box for website page
+   =============================== */
+.card3 {
+    background: rgba(255, 255, 255, 0.455);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 40px;
+    margin: 10px auto;
+    max-width: 1000px;
+    min-height: 320px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    word-spacing: -1.75px;
+    color: #000;
+    margin-top: 210px;
+
+}
+
+.card3 h1 {
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #000;
+}
+
+.card3 h2 {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    color: #000;
+}
+
+.card3 p {
+    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
 
 
 /* ===============================
@@ -360,6 +543,7 @@ body {
     margin-top: 40px;
     margin-left: 0px;
     gap: 70px;
+
 }
 
 .paragraph {
@@ -395,39 +579,45 @@ body {
 
 
 
+.social-media-container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+    gap: 10px;
+    margin-top: -15px;
+    margin-left: 380px;
 }
 
 .social-icons a img {
     height: auto;
     transition: transform 0.3s ease-in-out;
     filter: brightness(0);
-    margin: 5px
-        /* Makes the icons black */
+    margin: 5px;
+    /* Makes the icons black */
 }
 
 /* Set different sizes for each icon */
 .social-icons a:nth-child(1) img {
     /* Instagram */
-    margin-top: 50px;
-    width: 60px;
+    margin-top: 75%;
+    width: 50px;
 }
 
 .social-icons a:nth-child(2) img {
     /* Facebook */
-    margin-top: 60px;
-    width: 35px;
+    margin-top: 150%;
+    width: 27px;
 }
 
 .social-icons a:nth-child(3) img {
     /* TikTok */
-    margin-top: 60px;
-    width: 35px;
+    margin-top: 170%;
+    width: 23px;
 }
 
 /* Hover effect */
@@ -452,7 +642,7 @@ h1 {
     justify-content: center;
     text-align: center;
     margin: 2rem 0;
-    margin-top: -370px;
+    margin-top: -300px;
     flex-wrap: wrap;
 }
 
@@ -488,6 +678,56 @@ h1 {
 
 
 
+
+/* ===============================
+  8. Countdown for Nova.html
+   =============================== */
+
+h1 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.countdown2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem 0;
+    margin-top: -200px;
+    flex-wrap: wrap;
+}
+
+.countdown2-item {
+    margin: 0 1rem;
+    min-width: 80px;
+}
+
+.countdown2-value {
+
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-bottom: 0.5rem;
+
+}
+
+.countdown2-label {
+    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}
+
+
 /* @media for countdown timer */
 
 @media (max-width: 600px) {
@@ -507,7 +747,7 @@ h1 {
    9. Events slider
    =============================== */
 /* Updated navigation arrows styling */
-.navigation {
+/*.navigation {
     display: flex;
     justify-content: center;
     gap: 60px;
@@ -538,7 +778,7 @@ h1 {
 
 .nav-button:active {
     transform: scale(0.95);
-}
+}*/
 
 
 
