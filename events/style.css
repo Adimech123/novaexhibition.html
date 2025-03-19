@@ -574,20 +574,20 @@ body {
 /* Set different sizes for each icon */
 .social-icons a:nth-child(1) img {
     /* Instagram */
-    margin-top: 75%;
-    width: 50px;
+    margin-top: 185%;
+    width: 20px;
 }
 
 .social-icons a:nth-child(2) img {
     /* Facebook */
-    margin-top: 150%;
-    width: 27px;
+    margin-top: 215%;
+    width: 15px;
 }
 
 .social-icons a:nth-child(3) img {
     /* TikTok */
-    margin-top: 170%;
-    width: 23px;
+    margin-top: 180%;
+    width: 20px;
 }
 
 /* Hover effect */
