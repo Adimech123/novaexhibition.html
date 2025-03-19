@@ -159,7 +159,7 @@ nav-links & logo===============================*/
     padding: 10px 20px;
     position: relative;
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    z-index: 2;
+    z-index: 1000;
     /* Ensure the navbar is above the exhibition1 box */
 }
 
@@ -233,13 +233,16 @@ nav-links & logo===============================*/
 .nav-links {
     position: fixed;
     top: 30px;
-    right: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 3;
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
-.nav-item1 {
+.nav-item {
     list-style: none;
-    margin-top: -10px;
 }
 
 .nav-link {
@@ -251,7 +254,6 @@ nav-links & logo===============================*/
     position: relative;
     padding-bottom: 5px;
 }
-
 
 
 
@@ -282,6 +284,7 @@ nav-links & logo===============================*/
     position: relative;
     overflow: hidden;
     z-index: 5;
+
 }
 
 .exhibitions-container .exhibition:first-child {
@@ -362,7 +365,7 @@ nav-links & logo===============================*/
     top: 20px;
     left: 0;
     right: 0;
-    z-index: 0;
+    z-index: 1000;
 }
 
 

@@ -228,7 +228,7 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: column;
     align-items: center;
     padding: 10px 20px;
     position: relative;
@@ -282,6 +282,8 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
+    z-index: 2;
+    /* Make sure logo is behind nav */
 }
 
 .logo2 img {
@@ -342,13 +344,16 @@ body {
 .nav-links {
     position: fixed;
     top: 30px;
-    right: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 3;
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
-.nav-item1 {
+.nav-item {
     list-style: none;
-    margin-top: -10px;
 }
 
 .nav-link {
@@ -550,43 +555,39 @@ body {
 
 
 .social-media-container {
-    position: fixed;
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin-top: 30px;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: -15px;
-    margin-left: 380px;
+    gap: 20px;
+    align-items: center;
 }
 
 .social-icons a img {
     height: auto;
     transition: transform 0.3s ease-in-out;
     filter: brightness(0);
-    margin: 5px;
     /* Makes the icons black */
 }
 
 /* Set different sizes for each icon */
 .social-icons a:nth-child(1) img {
     /* Instagram */
-    margin-top: 185%;
     width: 20px;
 }
 
 .social-icons a:nth-child(2) img {
     /* Facebook */
-    margin-top: 215%;
     width: 15px;
 }
 
 .social-icons a:nth-child(3) img {
     /* TikTok */
-    margin-top: 180%;
     width: 20px;
 }
 
@@ -919,6 +920,11 @@ h1 {
         margin: 10px auto;
     }
 
+    .nav-link {
+        font-size: 18px;
+        top: 20px;
+    }
+
     .nav-item {
         margin-top: -30px;
         font-weight: bold;
@@ -935,6 +941,13 @@ h1 {
         padding-bottom: 5px;
     }
 
+
+    .card2 {
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: 50px;
+    }
+
     .card {
         padding: 20px;
         margin: 20px auto;
@@ -943,6 +956,8 @@ h1 {
     .card h1 {
         font-size: 32px;
     }
+
+
 
     .event-details {
         flex-direction: column;
@@ -977,6 +992,7 @@ h1 {
 
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 576px) {
+
     .circle {
         filter: blur(40px);
     }
@@ -992,6 +1008,7 @@ h1 {
 
     .nav-link {
         font-size: 18px;
+        top: 41px;
     }
 
     .nav-item {
@@ -1006,10 +1023,10 @@ h1 {
         margin-top: -45px;
     }
 
-    .card {
+    .card2 {
         padding: 15px;
         border-radius: 15px;
-        margin-top: -15px;
+        margin-top: 50px;
     }
 
     .card h1 {
@@ -1035,7 +1052,7 @@ h1 {
     }
 
     .detail p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .navigation {
@@ -1051,6 +1068,7 @@ h1 {
         font-size: 20px;
         margin-bottom: 0;
     }
+
 
     .countdown {
         margin-top: -160px;
@@ -1070,6 +1088,8 @@ h1 {
     .countdown-label {
         font-size: 0.8rem;
     }
+
+
 }
 
 
