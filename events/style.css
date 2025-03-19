@@ -824,8 +824,25 @@ h1 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* ===============================
    9. Responsiveness
+   =============================== */
+
+
+
+/* ===============================
+ MAX-WIDTH - 12000PX
    =============================== */
 
 /* Large devices (desktops, less than 1200px)*/
@@ -834,13 +851,25 @@ h1 {
         width: 600px;
     }
 
-    .card {
-        max-width: 100%;
-        max-width: 100%;
-        padding: 30px;
-
-
+    /* Coming soon white box and text */
+    .card3 {
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: 0px;
+        max-width: 1000px;
+        min-height: 280px;
     }
+
+    .card3 h1 {
+        text-align: center;
+        font-size: 55px;
+    }
+
+    .card3 p {
+        text-align: justify;
+        font-size: 25px;
+    }
+
 
     .event-details {
         gap: 40px;
@@ -849,13 +878,60 @@ h1 {
     .countdown2-item {
         margin-bottom: -40px;
     }
+
+    /* Coming soon countodwn */
+    .countdown2-item {
+        margin-bottom: -10px;
+
+    }
 }
+
+
+
+
+
+
+
+/* ===============================
+ MAX-WIDTH - 992PX
+   =============================== */
 
 /* Medium devices (tablets, less than 992px)*/
 @media (max-width: 992px) {
     .logo1 img {
         width: 500px;
     }
+
+
+    /* Coming soon logo - large image */
+    .logo2 img {
+        width: 360px;
+        margin-top: -30%;
+    }
+
+
+
+    /* Coming soon white box and text */
+    .card3 {
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: -10px;
+        max-width: 1000px;
+        min-height: 280px;
+    }
+
+    .card3 h1 {
+        text-align: center;
+        font-size: 55px;
+    }
+
+    .card3 p {
+        text-align: justify;
+        font-size: 25px;
+    }
+
+
+
 
     .card {
         padding: 25px;
@@ -892,7 +968,21 @@ h1 {
     .countdown {
         margin-top: -300px;
     }
+
+
+
+    /* Coming soon countodwn */
+    .countdown2-item {
+        margin-bottom: -10px;
+
+    }
 }
+
+
+
+/* ===============================
+ MAX-WIDTH - 768PX
+   =============================== */
 
 /* Small devices (landscape phones, less than 768px)*/
 @media (max-width: 768px) {
@@ -917,6 +1007,14 @@ h1 {
     .logo1 img {
         width: 350px;
     }
+
+
+    /* Coming soon logo - large image */
+    .logo2 img {
+        width: 320px;
+        margin-top: -50%;
+    }
+
 
     .nav-links {
         margin: 10px auto;
@@ -961,6 +1059,28 @@ h1 {
 
 
 
+
+    /* Coming soon white box and text */
+    .card3 {
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: -10px;
+        max-width: 1000px;
+        min-height: 280px;
+    }
+
+    .card3 h1 {
+        text-align: center;
+        font-size: 45px;
+    }
+
+    .card3 p {
+        text-align: justify;
+        font-size: 22px;
+    }
+
+
+
     .event-details {
         flex-direction: column;
         gap: 25px;
@@ -990,7 +1110,22 @@ h1 {
         font-size: 2.5rem;
         margin-top: 0px;
     }
+
+
+    /* Coming soon countodwn */
+    .countdown2-item {
+        margin-bottom: 0px;
+
+    }
 }
+
+
+
+
+
+/* ===============================
+ MAX-WIDTH - 576PX
+   =============================== */
 
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 576px) {
@@ -1007,6 +1142,18 @@ h1 {
         width: 280px;
         top: 40%;
     }
+
+
+    /* Coming soon logo - large image */
+    .logo2 img {
+        width: 120px;
+    }
+
+    .logo2 img {
+        width: 300px;
+        margin-top: -50%;
+    }
+
 
     .nav-link {
         font-size: 18px;
@@ -1025,11 +1172,34 @@ h1 {
         margin-top: -45px;
     }
 
+
+
+
+    /* Coming soon white box and text */
+    .card3 {
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: 20px;
+    }
+
+    .card3 h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .card3 p {
+        text-align: justify;
+        font-size: 21px;
+    }
+
+
+
     .card2 {
         padding: 15px;
         border-radius: 15px;
         margin-top: 50px;
     }
+
 
     .card h1 {
         font-size: 28px;
@@ -1091,6 +1261,12 @@ h1 {
         font-size: 0.8rem;
     }
 
+
+    /* Coming soon countodwn */
+    .countdown2-item {
+        margin-bottom: -50px;
+
+    }
 
 }
 
