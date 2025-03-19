@@ -227,21 +227,6 @@ nav-links & logo===============================*/
     /* Space for the underline */
 }
 
-.nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    /* Position below the text */
-    left: 0;
-    width: 100%;
-    height: 3px;
-    /* Thickness of the underline */
-    background-color: #000;
-    /* Color of the underline */
-    transition: all 0.3s ease;
-    /* Smooth transition when switching */
-}
-
 
 
 /* Events | Website - Start page */
@@ -265,29 +250,6 @@ nav-links & logo===============================*/
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
     position: relative;
     padding-bottom: 5px;
-}
-
-
-
-/* ===============================
-  5. Separator
-   =============================== */
-
-.nav-item.separator-item {
-    display: flex;
-    align-items: center;
-    padding-bottom: 5px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.nav-item.separator-item1 {
-    display: flex;
-    align-items: center;
-    padding-bottom: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: -10px;
 }
 
 

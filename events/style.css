@@ -336,30 +336,14 @@ body {
     /* Space for the underline */
 }
 
-.nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    /* Position below the text */
-    left: 0;
-    width: 100%;
-    height: 3px;
-    /* Thickness of the underline */
-    background-color: #000;
-    /* Color of the underline */
-    transition: all 0.3s ease;
-    /* Smooth transition when switching */
-}
-
 
 
 /* Events | Website - Start page */
 .nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin-left: auto;
-    position: relative;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 3;
 }
 
 .nav-item1 {
@@ -378,27 +362,6 @@ body {
 }
 
 
-
-/* ===============================
-  5. Separator
-   =============================== */
-
-.nav-item.separator-item {
-    display: flex;
-    align-items: center;
-    padding-bottom: 5px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.nav-item.separator-item1 {
-    display: flex;
-    align-items: center;
-    padding-bottom: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: -10px;
-}
 
 /* ===============================
   6. Text & White Box for website page
@@ -459,7 +422,8 @@ body {
     text-align: justify;
     word-spacing: -1.75px;
     color: #000;
-    margin-top: 100px;
+    margin-top: 120px;
+    position: relative;
 
 }
 
@@ -496,14 +460,19 @@ body {
     backdrop-filter: blur(5px);
     border-radius: 25px;
     padding: 40px;
-    margin: 10px auto;
+    margin: 0 auto;
     max-width: 1000px;
     min-height: 320px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     text-align: justify;
     word-spacing: -1.75px;
     color: #000;
-    margin-top: 210px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    z-index: 5;
 
 }
 
@@ -693,9 +662,13 @@ h1 {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 2rem 0;
-    margin-top: -200px;
+    position: fixed;
+    bottom: 130px;
+    /* Adjust this value as needed */
+    left: 0;
+    right: 0;
     flex-wrap: wrap;
+    z-index: 10;
 }
 
 .countdown2-item {
@@ -726,6 +699,68 @@ h1 {
     letter-spacing: 1px;
     color: black;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.exhibition1 {
+    background: rgba(255, 255, 255, 0.455);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+
+.exhibitions-container {
+    padding-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* @media for countdown timer */
