@@ -80,7 +80,7 @@ body {
 #circle1 {
     width: 130%;
     height: 130%;
-    background-color: #f0685c;
+    background-color: #f68f85;
     top: -50%;
     left: -60%;
     animation-delay: -1s;
@@ -89,7 +89,7 @@ body {
 #circle2 {
     width: 150%;
     height: 150%;
-    background-color: #46b4ad;
+    background-color: #87ede6;
     top: 300px;
     left: 10%;
     animation-delay: -2.5s;
@@ -98,7 +98,7 @@ body {
 #circle3 {
     width: 130%;
     height: 130%;
-    background-color: #27265e;
+    background-color: #4d4c97;
     top: -40%;
     left: 55px;
     animation-delay: -4.5s;
@@ -107,7 +107,25 @@ body {
 #circle4 {
     width: 100%;
     height: 100%;
-    background-color: #244c9d;
+    background-color: #5579c3;
+    top: 50%;
+    left: -25%;
+    animation-delay: -4.5s;
+}
+
+#circle5 {
+    width: 50%;
+    height: 50%;
+    background-color: #e2ecff;
+    top: 50%;
+    left: -25%;
+    animation-delay: -4.5s;
+}
+
+#circle6 {
+    width: 50%;
+    height: 50%;
+    background-color: #e2ecff;
     top: 50%;
     left: -25%;
     animation-delay: -4.5s;
