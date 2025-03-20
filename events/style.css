@@ -115,7 +115,23 @@ body {
     animation-delay: -4.5s;
 }
 
+#circle5 {
+    width: 50%;
+    height: 50%;
+    background-color: #e2ecff;
+    top: 40%;
+    left: -25%;
+    animation-delay: -4.5s;
+}
 
+#circle6 {
+    width: 50%;
+    height: 50%;
+    background-color: #e2ecff;
+    top: 10%;
+    left: 60%;
+    animation-delay: -4.5s;
+}
 
 @keyframes float {
     0% {

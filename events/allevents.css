@@ -117,7 +117,7 @@ body {
     width: 50%;
     height: 50%;
     background-color: #e2ecff;
-    top: 50%;
+    top: 40%;
     left: -25%;
     animation-delay: -4.5s;
 }
@@ -126,8 +126,8 @@ body {
     width: 50%;
     height: 50%;
     background-color: #e2ecff;
-    top: 50%;
-    left: -25%;
+    top: 10%;
+    left: 60%;
     animation-delay: -4.5s;
 }
 
