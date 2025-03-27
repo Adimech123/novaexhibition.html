@@ -285,6 +285,20 @@ nav .logo {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===============================
    6. Contact page 
    =============================== */
@@ -352,7 +366,6 @@ nav .logo {
 /* ===============================
    Contact page  - small white box and text - full name
    =============================== */
-
 .smallwhite-box-container {
     padding: 20px;
 }
@@ -364,18 +377,94 @@ nav .logo {
     padding: 30px;
     margin: 30px auto;
     max-width: 1000px;
-    min-height: 200px;
+    min-height: 5px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     text-align: justify;
     word-spacing: -1.75px;
     color: #000;
     display: flex;
-    align-items: center;
+    align-items: left;
     position: absolute;
     /* Changed from fixed */
-    top: 30%;
+    top: 28%;
     /* Center vertically */
-    left: 50%;
+    left: 41.5%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjust position to true center */
+    width: calc(100% - 200px);
+    /* Responsive width with some margin */
+    max-width: 1000px;
+    z-index: 5;
+    overflow: hidden;
+}
+
+
+
+/* ===============================
+   Contact page  - small white box and text - full name
+   =============================== */
+.smallwhite-box2-container {
+    padding: 20px;
+}
+
+.smallwhite-box2 {
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1000px;
+    min-height: 5px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    word-spacing: -1.75px;
+    color: #000;
+    display: flex;
+    align-items: left;
+    position: absolute;
+    /* Changed from fixed */
+    top: 50%;
+    /* Center vertically */
+    left: 41.5%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjust position to true center */
+    width: calc(100% - 200px);
+    /* Responsive width with some margin */
+    max-width: 1000px;
+    z-index: 5;
+    overflow: hidden;
+}
+
+
+
+/* ===============================
+   Contact page  - small white box and text - full name
+   =============================== */
+.smallwhite-box3-container {
+    padding: 20px;
+}
+
+.smallwhite-box3 {
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1000px;
+    min-height: 5px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    word-spacing: -1.75px;
+    color: #000;
+    display: flex;
+    align-items: left;
+    position: absolute;
+    /* Changed from fixed */
+    top: 73.5%;
+    /* Center vertically */
+    left: 41.5%;
     /* Center horizontally */
     transform: translate(-50%, -50%);
     /* Adjust position to true center */
