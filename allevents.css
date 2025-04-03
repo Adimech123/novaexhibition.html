@@ -62,7 +62,7 @@ nav {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
     background: rgba(255, 255, 255, 0.8);
@@ -233,6 +233,7 @@ nav .links,
     z-index: 1;
     width: 100%;
     min-height: 100vh;
+    padding-top: 60px;
 }
 
 /* 5.2 Logo */
@@ -358,20 +359,45 @@ nav .logo {
 
 
 .close-button {
-    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    display: inline-block;
-    padding: 10px 15px;
-    background: #f78b81;
-    color: black;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.684);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     transition: background-color 0.3s ease;
-    word-spacing: 0.8px;
+    margin-right: 345px;
+    margin-top: 90px;
 }
 
 .close-button:hover {
     background: #f56c5f;
+}
+
+/* Update the cross icon to change color on hover */
+.cross-icon::before,
+.cross-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+    /* Add transition for smooth color change */
+}
+
+/* Make the X darker when hovering */
+.close-button:hover .cross-icon::before,
+.close-button:hover .cross-icon::after {
+    background-color: #f56c5f;
+    /* Darker color for better contrast on orange */
 }
 
 /* ===============================
@@ -509,7 +535,7 @@ nav .logo {
 }
 
 .close-button:hover {
-    background-color: rgba(220, 220, 220, 0.9);
+    background-color: rgba(255, 255, 255, 0.684);
 }
 
 /* Cross/X icon */
