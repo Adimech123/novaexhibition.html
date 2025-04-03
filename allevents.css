@@ -48,6 +48,8 @@ body {
     position: relative;
     min-height: 100vh;
     overflow-x: hidden;
+    font-size: 16px;
+    /* Base font size for responsive sizing */
 }
 
 /* ===============================
@@ -57,7 +59,7 @@ nav {
     width: 100%;
     max-width: 100%;
     margin: 0;
-    padding: 0 20px;
+    padding: 0 min(5vw, 20px);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -67,21 +69,20 @@ nav {
     z-index: 1000;
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: min(60px, 12vw);
 }
 
 nav .logo {
     display: flex;
     align-items: center;
-    padding-left: 20px;
-    /* Add padding to the logo container */
+    padding-left: min(5vw, 20px);
 }
 
 nav .links {
     display: flex;
     align-items: center;
     margin: 0;
-    margin-left: 20px;
-    /* Add some space between logo and links */
+    margin-left: min(5vw, 20px);
     padding: 0;
     list-style: none;
     gap: clamp(10px, 2vw, 20px);
@@ -90,7 +91,7 @@ nav .links {
 }
 
 .navbar-brand img {
-    height: 60px;
+    height: min(60px, 12vw);
     width: auto;
 }
 
@@ -99,7 +100,7 @@ nav ul a {
     opacity: 0.7;
     transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
     white-space: nowrap;
-    font-size: 15px;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     font-weight: bold;
     text-decoration: none;
     font-family: 'Neue Haas Grotesk Display Pro', 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
@@ -113,7 +114,6 @@ nav ul a:hover {
 nav .links,
 .nav-links {
     position: relative;
-    /* Not fixed */
     display: flex;
     align-items: center;
     list-style: none;
@@ -121,7 +121,6 @@ nav .links,
     margin-top: 8px;
     padding: 0;
     transform: none;
-    /* Remove any transforms */
 }
 
 /* ===============================
@@ -140,7 +139,7 @@ nav .links,
 .circle {
     position: absolute;
     border-radius: 50%;
-    filter: blur(60px);
+    filter: blur(min(60px, 10vw));
     opacity: 0.7;
     mix-blend-mode: screen;
     animation: float 30s infinite ease-in-out;
@@ -233,7 +232,7 @@ nav .links,
     z-index: 1;
     width: 100%;
     min-height: 100vh;
-    padding-top: 60px;
+    padding-top: min(60px, 12vw);
 }
 
 /* 5.2 Logo */
@@ -247,7 +246,7 @@ nav .links,
 }
 
 .logo img {
-    width: 170px;
+    width: clamp(80px, 15vw, 170px);
     height: auto;
 }
 
@@ -263,28 +262,27 @@ nav .links,
 .logo,
 nav .logo {
     position: relative;
-    /* Not fixed or absolute */
     display: flex;
     align-items: center;
-    margin-right: 20px;
-    /* Space after the logo */
+    margin-right: min(5vw, 20px);
 }
 
 /* ===============================
    6. Exhibition Components
    =============================== */
 .exhibitions-container {
-    padding: 20px;
+    padding: min(5vw, 20px);
+    padding-top: min(100px, 15vw);
 }
 
 .exhibition {
     background: rgba(255, 255, 255, 0.684);
     backdrop-filter: blur(5px);
-    border-radius: 25px;
-    padding: 30px;
-    margin: 30px auto;
-    max-width: 1000px;
-    min-height: 200px;
+    border-radius: min(25px, 5vw);
+    padding: min(30px, 5vw);
+    margin: min(30px, 5vw) auto;
+    max-width: min(1000px, 90%);
+    min-height: min(200px, 40vw);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     text-align: justify;
     word-spacing: -1.75px;
@@ -294,6 +292,7 @@ nav .logo {
     position: relative;
     overflow: hidden;
     z-index: 5;
+    flex-wrap: wrap;
 }
 
 .exhibitions-container .exhibition:first-child {
@@ -301,8 +300,8 @@ nav .logo {
 }
 
 .exhibition-image {
-    flex: 0 0 25%;
-    margin-right: 20px;
+    flex: 0 1 min(25%, 200px);
+    margin-right: min(20px, 4vw);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -310,60 +309,60 @@ nav .logo {
 }
 
 .exhibition-image img {
-    width: 65%;
-    max-height: 200px;
-    border-radius: 15px;
+    width: min(65%, 150px);
+    max-height: min(200px, 40vw);
+    border-radius: min(15px, 3vw);
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .exhibition-content {
-    flex: 0 0 70%;
+    flex: 1 1 min(70%, 400px);
 }
 
 .exhibition h2 {
     margin: 0 0 10px;
     font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
-    font-size: 25px;
+    font-size: clamp(18px, 3vw, 25px);
 }
 
 .exhibition h3 {
     margin: 0 0 10px;
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: clamp(14px, 2.5vw, 18px);
 }
 
 .exhibition p {
     margin: 0 0 15px;
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: clamp(14px, 2.5vw, 18px);
     color: #343333;
 }
 
 .button {
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
     display: inline-block;
-    padding: 10px 15px;
+    padding: clamp(6px, 1.5vw, 10px) clamp(10px, 2vw, 15px);
     background: #f78b81;
     color: black;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: min(10px, 2vw);
     font-weight: bold;
     transition: background-color 0.3s ease;
     word-spacing: 0.8px;
+    font-size: clamp(13px, 2vw, 16px);
 }
 
 .button:hover {
     background: #f56c5f;
 }
 
-
 .close-button {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 40px;
-    height: 40px;
+    width: min(40px, 8vw);
+    height: min(40px, 8vw);
     background: rgba(255, 255, 255, 0.684);
     border-radius: 4px;
     display: flex;
@@ -371,15 +370,14 @@ nav .logo {
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-right: 345px;
-    margin-top: 90px;
+    margin-right: min(345px, 30vw);
+    margin-top: min(90px, 15vw);
 }
 
 .close-button:hover {
     background: #f56c5f;
 }
 
-/* Update the cross icon to change color on hover */
 .cross-icon::before,
 .cross-icon::after {
     content: '';
@@ -390,14 +388,11 @@ nav .logo {
     height: 2px;
     background-color: #333;
     transition: background-color 0.3s ease;
-    /* Add transition for smooth color change */
 }
 
-/* Make the X darker when hovering */
 .close-button:hover .cross-icon::before,
 .close-button:hover .cross-icon::after {
     background-color: #f56c5f;
-    /* Darker color for better contrast on orange */
 }
 
 /* ===============================
@@ -406,23 +401,22 @@ nav .logo {
 .card2 {
     background: rgba(255, 255, 255, 0.684);
     backdrop-filter: blur(5px);
-    border-radius: 25px;
-    padding: 40px;
+    border-radius: min(25px, 5vw);
+    padding: min(40px, 6vw);
     margin: 10px auto;
-    max-width: 1000px;
-    min-height: 320px;
+    max-width: min(1000px, 90%);
+    min-height: min(320px, 50vw);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     text-align: justify;
     word-spacing: -1.75px;
     color: #000;
-    margin-top: 120px;
+    margin-top: min(120px, 16vw);
     position: relative;
-
 }
 
 .card2 h1 {
     font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
-    font-size: 48px;
+    font-size: clamp(28px, 5vw, 48px);
     margin-bottom: 0px;
     text-align: left;
     color: #000;
@@ -430,7 +424,7 @@ nav .logo {
 
 .card2 h2 {
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    font-size: 22px;
+    font-size: clamp(16px, 3vw, 22px);
     margin-bottom: 5px;
     margin-left: 0px;
     color: #000;
@@ -438,13 +432,11 @@ nav .logo {
 
 .card2 p {
     font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
-    font-size: 22px;
+    font-size: clamp(16px, 3vw, 22px);
     line-height: 1.5;
     margin-bottom: 0px;
     text-align: justify;
 }
-
-
 
 /* ===============================
   6. Text & White Box for website page
@@ -452,22 +444,21 @@ nav .logo {
 .card {
     background: rgba(255, 255, 255, 0.684);
     backdrop-filter: blur(5px);
-    border-radius: 25px;
-    padding: 40px;
+    border-radius: min(25px, 5vw);
+    padding: min(40px, 6vw);
     margin: 10px auto;
-    max-width: 1000px;
-    min-height: 320px;
+    max-width: min(1000px, 90%);
+    min-height: min(320px, 50vw);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     text-align: justify;
     word-spacing: -1.75px;
     color: #000;
-    margin-top: 100px;
-
+    margin-top: min(100px, 15vw);
 }
 
 .card h1 {
     font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
-    font-size: 48px;
+    font-size: clamp(28px, 5vw, 48px);
     margin-bottom: 0px;
     text-align: center;
     color: #000;
@@ -475,7 +466,7 @@ nav .logo {
 
 .card h2 {
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    font-size: 22px;
+    font-size: clamp(16px, 3vw, 22px);
     margin-bottom: 5px;
     margin-left: 0px;
     color: #000;
@@ -483,7 +474,7 @@ nav .logo {
 
 .card p {
     font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
-    font-size: 22px;
+    font-size: clamp(16px, 3vw, 22px);
     line-height: 1.5;
     margin-bottom: 0px;
     text-align: center;
@@ -500,29 +491,22 @@ nav .logo {
     text-align: center;
     width: 100%;
     z-index: 2;
-    /* Make sure logo is behind nav */
 }
 
 .logo2 img {
-    width: 500px;
+    width: min(500px, 70vw);
     height: auto;
     max-width: 700px;
-    margin-top: -300px;
+    margin-top: min(-300px, -30vh);
 }
-
-
-/* ===============================
-   4. c
-   =============================== */
-/* Container styles */
 
 /* Close button styles */
 .close-button {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 40px;
-    height: 40px;
+    width: min(40px, 8vw);
+    height: min(40px, 8vw);
     background: rgba(255, 255, 255, 0.684);
     border-radius: 4px;
     display: flex;
@@ -530,8 +514,8 @@ nav .logo {
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-right: 345px;
-    margin-top: 90px;
+    margin-right: min(345px, 30vw);
+    margin-top: min(90px, 15vw);
 }
 
 .close-button:hover {
@@ -541,8 +525,8 @@ nav .logo {
 /* Cross/X icon */
 .cross-icon {
     position: relative;
-    width: 20px;
-    height: 20px;
+    width: min(20px, 4vw);
+    height: min(20px, 4vw);
 }
 
 .cross-icon::before,
@@ -564,20 +548,17 @@ nav .logo {
     transform: rotate(-45deg);
 }
 
-
-
-
 /* ===============================
   6. Text & White Box for website page
    =============================== */
 .card3 {
     background: rgba(255, 255, 255, 0.684);
     backdrop-filter: blur(5px);
-    border-radius: 25px;
-    padding: 40px;
+    border-radius: min(25px, 5vw);
+    padding: min(40px, 6vw);
     margin: 0 auto;
-    max-width: 1000px;
-    min-height: 320px;
+    max-width: min(1000px, 90%);
+    min-height: min(320px, 50vw);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     text-align: justify;
     word-spacing: -1.75px;
@@ -586,13 +567,13 @@ nav .logo {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: calc(100% - 40px);
+    width: calc(100% - min(40px, 8vw));
     z-index: 5;
 }
 
 .card3 h1 {
     font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
-    font-size: 48px;
+    font-size: clamp(28px, 5vw, 48px);
     margin-bottom: 0px;
     text-align: center;
     color: #000;
@@ -600,7 +581,7 @@ nav .logo {
 
 .card3 h2 {
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    font-size: 22px;
+    font-size: clamp(16px, 3vw, 22px);
     margin-bottom: 5px;
     margin-left: 0px;
     color: #000;
@@ -608,31 +589,28 @@ nav .logo {
 
 .card3 p {
     font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
-    font-size: 22px;
+    font-size: clamp(16px, 3vw, 22px);
     line-height: 1.5;
     margin-bottom: 0px;
     text-align: center;
 }
 
-
-
 /* ===============================
   7. Events
    =============================== */
-
 .event-details {
     display: flex;
     justify-content: left;
-    margin-top: 40px;
+    margin-top: min(40px, 6vw);
     margin-left: 0px;
-    gap: 70px;
-
+    gap: min(70px, 8vw);
+    flex-wrap: wrap;
 }
 
 .paragraph {
     font-family: 'NeueHaasDisplayThin', Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    margin-top: 20px;
+    font-size: clamp(14px, 2.5vw, 18px);
+    margin-top: min(20px, 3vw);
     margin-left: 0px;
 }
 
@@ -641,38 +619,38 @@ nav .logo {
     flex-direction: column;
     margin-top: 0px;
     margin-left: 0px;
+    flex: 1 1 min(200px, 40%);
 }
 
 .detail h3 {
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    font-size: 24px;
+    font-size: clamp(18px, 3vw, 24px);
     margin-bottom: 10px;
     margin-left: 0px;
 }
 
 .detail p {
     font-family: 'NeueHaasDisplayThin', Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: clamp(14px, 2.5vw, 18px);
     margin-left: 0px;
+    text-align: left;
 }
 
 .place {
     max-width: 100%;
 }
 
-
-
 .social-media-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 30px;
+    margin-top: min(30px, 5vw);
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: min(20px, 4vw);
     align-items: center;
 }
 
@@ -680,23 +658,22 @@ nav .logo {
     height: auto;
     transition: transform 0.3s ease-in-out;
     filter: brightness(0);
-    /* Makes the icons black */
 }
 
 /* Set different sizes for each icon */
 .social-icons a:nth-child(1) img {
     /* Instagram */
-    width: 20px;
+    width: min(20px, 4vw);
 }
 
 .social-icons a:nth-child(2) img {
     /* Facebook */
-    width: 15px;
+    width: min(15px, 3vw);
 }
 
 .social-icons a:nth-child(3) img {
     /* TikTok */
-    width: 20px;
+    width: min(20px, 4vw);
 }
 
 /* Hover effect */
@@ -704,16 +681,13 @@ nav .logo {
     transform: scale(1.1);
 }
 
-
-
 /* ===============================
   8. Countdown 
    =============================== */
-
 h1 {
     color: #2c3e50;
     margin-top: 0;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .countdown {
@@ -721,89 +695,75 @@ h1 {
     justify-content: center;
     text-align: center;
     margin: 2rem 0;
-    margin-top: -300px;
+    margin-top: min(-300px, -30vh);
     flex-wrap: wrap;
+    gap: min(10px, 2vw);
 }
 
 .countdown-item {
-    margin: 0 1rem;
-    min-width: 80px;
+    margin: 0 min(1rem, 2vw);
+    min-width: min(80px, 20vw);
 }
 
 .countdown-value {
-
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     text-align: center;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(5px);
-    border-radius: 25px;
-    padding: 0.5rem;
+    border-radius: min(25px, 5vw);
+    padding: min(0.5rem, 1vw);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     display: block;
     margin-bottom: 0.5rem;
-
 }
 
 .countdown-label {
     font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
-    font-size: 0.95rem;
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: black;
 }
 
-
-
-
-
 /* ===============================
   8. Countdown for index.html
    =============================== */
-
-h1 {
-    color: #2c3e50;
-    margin-top: 0;
-    font-size: 2rem;
-}
-
 .countdown2 {
     display: flex;
     justify-content: center;
     text-align: center;
     position: fixed;
-    bottom: 200px;
-    /* Adjust this value as needed */
+    bottom: min(200px, 25vh);
     left: 0;
     right: 0;
     flex-wrap: wrap;
     z-index: 10;
+    gap: min(10px, 2vw);
 }
 
 .countdown2-item {
-    margin: 0 1rem;
-    min-width: 80px;
+    margin: 0 min(1rem, 2vw);
+    min-width: min(80px, 20vw);
 }
 
 .countdown2-value {
-
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     text-align: center;
     background: rgba(255, 255, 255, 0.684);
     backdrop-filter: blur(5px);
-    border-radius: 25px;
-    padding: 0.5rem;
+    border-radius: min(25px, 5vw);
+    padding: min(0.5rem, 1vw);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     display: block;
     margin-bottom: 0.5rem;
-
 }
 
 .countdown2-label {
     font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
-    font-size: 0.95rem;
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -813,11 +773,11 @@ h1 {
 .exhibition1 {
     background: rgba(255, 255, 255, 0.684);
     backdrop-filter: blur(5px);
-    border-radius: 25px;
+    border-radius: min(25px, 5vw);
     padding: 10px;
     margin: 0 auto;
     max-width: 100%;
-    height: 40px;
+    height: min(40px, 8vw);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 20px;
@@ -826,204 +786,28 @@ h1 {
     z-index: 0;
 }
 
-
-.exhibitions-container {
-    padding-top: 100px;
-}
-
-/* ===============================
-   7. Responsive Styles
-   =============================== */
-
-/* Large screens (desktops, less than 1200px) */
-@media (max-width: 1200px) {
+/* Only use media query for mobile-specific adjustments */
+@media (max-width: 576px) {
     .exhibition {
-        max-width: 90%;
-        padding: 25px;
-    }
-
-    .exhibition h2 {
-        font-size: 22px;
-    }
-
-    .exhibition h3,
-    .exhibition p {
-        font-size: 16px;
-    }
-}
-
-/* Medium screens (tablets, less than 992px) */
-@media (max-width: 992px) {
-    .exhibitions-container {
-        padding-top: 80px;
-    }
-
-    .exhibition {
-        padding: 20px;
-        margin: 25px auto;
-    }
-
-    .exhibition-image {
-        flex: 0 0 30%;
-    }
-
-    .exhibition-content {
-        flex: 0 0 65%;
-    }
-
-    .exhibition-image img {
-        width: 80%;
-        max-height: 180px;
-    }
-
-    .button {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-}
-
-/* Small screens (small tablets, less than 768px) */
-@media (max-width: 768px) {
-    .logo {
-        top: -3px;
-    }
-
-    .logo img {
-        width: 80px;
-    }
-
-    .exhibition {
-        padding: 20px;
-        margin: 20px auto;
         flex-direction: column;
         text-align: center;
     }
 
-    .exhibitions-container {
-        padding-top: 60px;
-    }
-
     .exhibition-image {
-        flex: 0 0 100%;
         margin-right: 0;
         margin-bottom: 15px;
     }
 
     .exhibition-content {
-        flex: 0 0 100%;
-    }
-
-    .exhibition-image img {
-        width: 50%;
-        max-height: 150px;
-    }
-
-    .exhibition h2 {
-        font-size: 20px;
-    }
-
-    .exhibition h3 {
-        font-size: 15px;
+        text-align: center;
     }
 
     .exhibition p {
-        font-size: 15px;
-        word-spacing: normal;
-        text-align: justify;
+        text-align: center;
     }
 
-    nav .links {
-        gap: 10px;
-    }
-
-    nav ul a {
-        font-size: 0.85rem;
-    }
-}
-
-/* Extra small screens (phones, less than 576px) */
-@media (max-width: 576px) {
-    .container {
-        padding: 10px;
-    }
-
-    .logo {
-        left: 10px;
-        top: -6px;
-    }
-
-    .logo img {
-        width: 70px;
-    }
-
-    .exhibition1 {
-        top: 15px;
-        height: 35px;
-    }
-
-    .nav-links {
-        top: 24px;
-        right: 15px;
-    }
-
-    .nav-link {
-        font-size: 16px;
-    }
-
-    .exhibitions-container {
-        padding-top: 50px;
-    }
-
-    .exhibition {
-        padding: 15px;
-        margin: 15px auto;
-        min-height: auto;
-    }
-
-    .exhibition-image img {
-        width: 70%;
-        max-height: 120px;
-    }
-
-    .exhibition h2 {
-        font-size: 18px;
-        margin-bottom: 8px;
-    }
-
-    .exhibition h3 {
-        font-size: 14px;
-        margin-bottom: 8px;
-    }
-
-    .exhibition p {
-        font-size: 14px;
-        margin-bottom: 12px;
-    }
-
-    .button {
-        padding: 6px 10px;
-        font-size: 13px;
-        border-radius: 3px;
-    }
-
-    .circle {
-        filter: blur(30px);
-    }
-
-    nav {
-        padding: 0.75rem 1rem;
-    }
-
-    .navbar-brand img {
-        height: 16px;
-    }
-
-    nav .links {
-        gap: 8px;
-    }
-
-    nav ul a {
-        font-size: 0.8rem;
+    .event-details {
+        flex-direction: column;
     }
 }
 
