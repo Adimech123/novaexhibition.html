@@ -1,0 +1,536 @@
+/* ===============================
+   1. Fonts
+   =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Neue Haas Grotesk Display Pro';
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayBold';
+    src: url('fonts/NeueHaasDisplayBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayMedium';
+    src: url('fonts/NeueHaasDisplayMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayLight';
+    src: url('fonts/NeueHaasDisplayLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayThin';
+    src: url('fonts/NeueHaasDisplayThin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ===============================
+   2. Body
+   =============================== */
+body {
+    background-color: #ffffff;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===============================
+   3. Navigation Styles
+   =============================== */
+nav {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    padding-top: 80px;
+    /* Adjust this value to match the height of your navbar */
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    /* Add padding to the logo container */
+}
+
+nav .links {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 20px;
+    /* Add some space between logo and links */
+    padding: 0;
+    list-style: none;
+    gap: clamp(10px, 2vw, 20px);
+    flex-wrap: nowrap;
+    font-family: 'Neue Haas Grotesk Display Pro';
+}
+
+.navbar-brand img {
+    height: 60px;
+    width: auto;
+}
+
+nav ul a {
+    color: #000;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Neue Haas Grotesk Display Pro', 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+}
+
+nav ul a:hover {
+    opacity: 1;
+    color: #f0685c;
+}
+
+nav .links,
+.nav-links {
+    position: relative;
+    /* Not fixed */
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: clamp(10px, 2vw, 20px);
+    margin-top: 8px;
+    padding: 0;
+    transform: none;
+    /* Remove any transforms */
+}
+
+/* ===============================
+   4. Circles
+   =============================== */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.7;
+    mix-blend-mode: screen;
+    animation: float 30s infinite ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#circle1 {
+    width: 130%;
+    height: 130%;
+    background-color: #f88b81;
+    top: -50%;
+    left: -60%;
+    animation-delay: -1s;
+}
+
+#circle2 {
+    width: 150%;
+    height: 150%;
+    background-color: #99f1ec;
+    top: 300px;
+    left: 10%;
+    animation-delay: -2.5s;
+}
+
+#circle3 {
+    width: 130%;
+    height: 130%;
+    background-color: #4f4e95;
+    top: -40%;
+    left: 55px;
+    animation-delay: -4.5s;
+}
+
+#circle4 {
+    width: 100%;
+    height: 100%;
+    background-color: #466dbd;
+    top: 50%;
+    left: -25%;
+    animation-delay: -4.5s;
+}
+
+#circle5 {
+    width: 50%;
+    height: 50%;
+    background-color: #e2ecff;
+    top: 50%;
+    left: -25%;
+    animation-delay: -4.5s;
+}
+
+#circle6 {
+    width: 50%;
+    height: 50%;
+    background-color: #e2ecff;
+    top: 10%;
+    left: 60%;
+    animation-delay: -4.5s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(7%, 7%) scale(1.08);
+    }
+
+    50% {
+        transform: translate(0, 14%) scale(0.92);
+    }
+
+    75% {
+        transform: translate(-7%, 7%) scale(1.08);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* ===============================
+   5. Layout
+   =============================== */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Logo */
+.logo {
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 170px;
+    height: auto;
+}
+
+.logo a {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.logo a:hover {
+    opacity: 0.9;
+}
+
+.logo,
+nav .logo {
+    position: relative;
+    /* Not fixed or absolute */
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    /* Space after the logo */
+}
+
+
+/* Define CSS variables for the new navigation styles */
+:root {
+    --text-color: #ffffff;
+    --accent-color: #f78b81;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   6. Contact page 
+   =============================== */
+
+
+/* ===============================
+   Contact page  - Large white box and text
+   =============================== */
+
+.white-box-container {
+    padding: 20px;
+}
+
+.white-box {
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 600px;
+    min-height: 200px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    word-spacing: -1.75px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 30%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjust position to true center */
+    width: calc(100% - 200px);
+    /* Responsive width with some margin */
+    max-width: 1000px;
+    z-index: 5;
+    overflow: hidden;
+}
+
+
+.text {
+    position: relative;
+    z-index: 10;
+    /* Higher than the smallwhite-boxes */
+    width: 100%;
+}
+
+
+.text h1 {
+    margin: 0 0 10px;
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    position: relative;
+    z-index: 10;
+}
+
+.text h2 {
+    margin: 0 0 10px;
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    position: relative;
+    z-index: 10;
+}
+
+.text p {
+    margin: 0 0 15px;
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #343333;
+    position: relative;
+    z-index: 10;
+}
+
+
+.text p1 {
+    margin: 0 0 5px;
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #343333;
+    position: relative;
+    z-index: 10;
+    left: 50%;
+    top: 10px;
+}
+
+
+
+/* ===============================
+   Contact page  - small white box and text - full name
+   =============================== */
+.smallwhite-box-container {
+    padding: 20px;
+}
+
+.smallwhite-box {
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 1000px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    word-spacing: -1.75px;
+    color: #000;
+    display: flex;
+    align-items: left;
+    position: absolute;
+    /* Changed from fixed */
+    top: 18%;
+    /* Center vertically */
+    left: -1%;
+    /* Center horizontally */
+    transform: none;
+    /* Adjust position to true center */
+    width: 100%;
+    /* Responsive width with some margin */
+    max-width: 1000px;
+    z-index: 5;
+    overflow: hidden;
+}
+
+
+
+/* ===============================
+   Contact page  - small white box and text - full name
+   =============================== */
+.smallwhite-box2-container {
+    padding: 20px;
+}
+
+.smallwhite-box2 {
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 1000px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    word-spacing: -1.75px;
+    color: #000;
+    display: flex;
+    align-items: left;
+    position: absolute;
+    /* Changed from fixed */
+    top: 43%;
+    /* Center vertically */
+    left: -1%;
+    /* Center horizontally */
+    transform: none;
+    /* Adjust position to true center */
+    width: 100%;
+    /* Responsive width with some margin */
+    max-width: 1000px;
+    z-index: 5;
+    overflow: hidden;
+}
+
+
+
+/* ===============================
+   Contact page  - small white box and text - full name
+   =============================== */
+.smallwhite-box3-container {
+    padding: 20px;
+}
+
+.smallwhite-box3 {
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 1000px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    word-spacing: -1.75px;
+    color: #000;
+    display: flex;
+    align-items: left;
+    position: absolute;
+    /* Changed from fixed */
+    top: 68%;
+    /* Center vertically */
+    left: -1%;
+    /* Center horizontally */
+    transform: none;
+    /* Adjust position to true center */
+    width: 100%;
+    /* Responsive width with some margin */
+    max-width: 1000px;
+    z-index: 5;
+    overflow: hidden;
+}
+
+
+
+
+/* ===============================
+   Contact page  - small white box and text - full name
+   =============================== */
+.smallwhite-box4-container {
+    padding: 20px;
+}
+
+.smallwhite-box4 {
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 1000px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    word-spacing: -1.75px;
+    color: #000;
+    display: flex;
+    align-items: left;
+    position: absolute;
+    /* Changed from fixed */
+    top: 88%;
+    /* Center vertically */
+    left: 45%;
+    /* Center horizontally */
+    transform: none;
+    /* Adjust position to true center */
+    width: 15%;
+    /* Responsive width with some margin */
+    max-width: 1000px;
+    z-index: 5;
+    overflow: hidden;
+}
