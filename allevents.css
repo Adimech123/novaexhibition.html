@@ -232,7 +232,7 @@ nav .links,
     position: relative;
     z-index: 1;
     width: 100%;
-    padding-top: 60px;
+
 }
 
 /* 5.2 Logo */
@@ -581,12 +581,7 @@ nav .logo {
     text-align: justify;
     word-spacing: -1.75px;
     color: #000;
-    position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 40px);
-    z-index: 5;
+    margin-top: 60px;
 }
 
 .card3 h1 {
@@ -723,14 +718,7 @@ h1 {
 .countdown2 {
     display: flex;
     justify-content: center;
-    text-align: center;
-    position: fixed;
-    bottom: 200px;
-    /* Adjust this value as needed */
-    left: 0;
-    right: 0;
-    flex-wrap: wrap;
-    z-index: 10;
+    margin-top: 50px;
 }
 
 .countdown2-item {
@@ -802,6 +790,10 @@ h1 {
     .exhibition p {
         font-size: 16px;
     }
+
+    .card3 {
+        margin-top: 10%;
+    }
 }
 
 /* Medium screens (tablets, less than 992px) */
@@ -832,6 +824,12 @@ h1 {
         padding: 8px 12px;
         font-size: 14px;
     }
+
+    .card3 {
+        margin-top: 10%;
+        max-width: 800px;
+    }
+
 }
 
 /* Small screens (small tablets, less than 768px) */
@@ -842,6 +840,11 @@ h1 {
 
     .logo img {
         width: 80px;
+    }
+
+    .card3 {
+        margin-top: 10%;
+        max-width: 600px;
     }
 
     .exhibition {
@@ -893,6 +896,7 @@ h1 {
     }
 }
 
+
 /* Extra small screens (phones, less than 576px) */
 @media (max-width: 576px) {
     .container {
@@ -907,6 +911,12 @@ h1 {
     .logo img {
         width: 70px;
     }
+
+    .card3 {
+        margin-top: 10%;
+        max-width: 450px;
+    }
+
 
     .exhibition1 {
         top: 15px;
