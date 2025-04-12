@@ -989,6 +989,17 @@ h1 {
     }
 }
 
+/* small  mobiles) */
+@media (max-width: 420px) {
+
+    .card3 {
+        margin-top: 20%;
+        max-width: 350px;
+    }
+
+}
+
+
 /* Define CSS variables for the new navigation styles */
 :root {
     --text-color: #ffffff;
