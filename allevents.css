@@ -807,6 +807,15 @@ h1 {
         margin-top: 14%;
     }
 
+    .flex-row .detail h2 {
+        margin-top: 5%;
+        font-size: 27px;
+    }
+
+    .flex-row .detail h3 {
+        font-size: 21px;
+    }
+
     .close-button {
         margin-top: -6%;
         margin-right: 6.5%;
@@ -831,7 +840,6 @@ h1 {
         text-align: justify;
     }
 
-
     .card2 {
         margin-top: 17%;
         width: 85%;
@@ -845,6 +853,15 @@ h1 {
     .card2 p {
         font-size: 20px;
 
+    }
+
+    .flex-row .detail h2 {
+        margin-top: 5%;
+        font-size: 25px;
+    }
+
+    .flex-row .detail h3 {
+        font-size: 22px;
     }
 
     .close-button {
@@ -921,6 +938,15 @@ h1 {
     }
 
     .card2 p {
+        font-size: 19px;
+    }
+
+    .flex-row .detail h2 {
+        margin-top: 5%;
+        font-size: 24px;
+    }
+
+    .flex-row .detail h3 {
         font-size: 19px;
     }
 
@@ -1005,6 +1031,16 @@ h1 {
         font-size: 22px;
         text-align: justify;
     }
+
+
+    .flex-row .detail h2 {
+        margin-top: 5%;
+    }
+
+    .flex-row .detail h3 {
+        font-size: 16px;
+    }
+
 
     .exhibition1 {
         top: 15px;
@@ -1129,9 +1165,10 @@ h1 {
     }
 
     .close-button {
-        margin-top: 20%;
-        margin-right: 3.5%;
+        margin-top: 16.5%;
+        margin-right: 4.5%;
     }
+
 
 
     .card2 {
@@ -1173,6 +1210,15 @@ h1 {
         font-weight: 305;
         /* Add this line to make it not bold */
     }
+
+    .flex-row .detail h3 {
+        font-size: 16px;
+    }
+
+    .exhibitions-container {
+        margin-top: 3%;
+    }
+
 
     .event-details {
         display: flex;
