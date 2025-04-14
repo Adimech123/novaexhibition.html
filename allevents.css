@@ -843,7 +843,7 @@ h1 {
     }
 
     .card3 {
-        margin-top: 10%;
+        margin-top: 13%;
         max-width: 600px;
     }
 
@@ -913,7 +913,7 @@ h1 {
     }
 
     .card3 {
-        margin-top: 10%;
+        margin-top: 13%;
         max-width: 450px;
     }
 
@@ -989,15 +989,50 @@ h1 {
     }
 }
 
-/* small  mobiles) */
-@media (max-width: 420px) {
 
+/* Extra small screens (phones, less than 420px) */
+@media (max-width: 420px) {
     .card3 {
         margin-top: 20%;
         max-width: 350px;
     }
 
+    .card3 h1 {
+        font-size: 32px;
+    }
+
+    .card3 h2 {
+        font-size: 18px;
+    }
+
+    .card3 p {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .paragraph {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .detail h3 {
+        font-size: 18px;
+    }
+
+    .detail p {
+        font-size: 14px;
+    }
+
+    /* Countdown adjustments */
+    .countdown2-value {
+        font-size: 2rem;
+    }
+
+    .countdown2-label {
+        font-size: 0.8rem;
+    }
 }
+
 
 
 /* Define CSS variables for the new navigation styles */
