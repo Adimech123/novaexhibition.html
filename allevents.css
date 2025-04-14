@@ -798,6 +798,23 @@ h1 {
 
 /* Medium screens (tablets, less than 992px) */
 @media (max-width: 992px) {
+
+    .card3 {
+        margin-top: 12%;
+        max-width: 800px;
+    }
+
+    .card3 h1 {
+        font-size: 45px;
+
+    }
+
+    .card3 p {
+        font-size: 25px;
+        text-align: justify;
+    }
+
+
     .exhibitions-container {
         padding-top: 80px;
     }
@@ -825,11 +842,11 @@ h1 {
         font-size: 14px;
     }
 
-    .card3 {
-        margin-top: 10%;
-        max-width: 800px;
-    }
 
+    .countdown2-item {
+        margin-top: 1.5%;
+
+    }
 }
 
 /* Small screens (small tablets, less than 768px) */
@@ -846,6 +863,17 @@ h1 {
         margin-top: 13%;
         max-width: 600px;
     }
+
+    .card3 h1 {
+        font-size: 42px;
+
+    }
+
+    .card3 p {
+        font-size: 23px;
+        text-align: justify;
+    }
+
 
     .exhibition {
         padding: 20px;
@@ -899,6 +927,7 @@ h1 {
 
 /* Extra small screens (phones, less than 576px) */
 @media (max-width: 576px) {
+
     .container {
         padding: 10px;
     }
@@ -913,24 +942,25 @@ h1 {
     }
 
     .card3 {
-        margin-top: 13%;
+        margin-top: 15%;
         max-width: 450px;
     }
 
+    .card3 h1 {
+        font-size: 40px;
+
+    }
+
+    .card3 p {
+        font-size: 22px;
+        text-align: justify;
+    }
 
     .exhibition1 {
         top: 15px;
         height: 35px;
     }
 
-    .nav-links {
-        top: 24px;
-        right: 15px;
-    }
-
-    .nav-link {
-        font-size: 16px;
-    }
 
     .exhibitions-container {
         padding-top: 50px;
@@ -972,21 +1002,30 @@ h1 {
         filter: blur(30px);
     }
 
-    nav {
-        padding: 0.75rem 1rem;
-        margin-left: -3%;
-    }
-
-    .navbar-brand img {
-        height: 16px;
-    }
 
     nav .links {
         gap: 8px;
     }
 
-    nav ul a {
-        font-size: 0.8rem;
+    nav {
+        height: 70px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        margin-left: -3%;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+    }
+
+    .navbar-brand img {
+        height: 55px;
+        width: auto;
+        margin-top: 15%;
     }
 }
 
@@ -1009,7 +1048,7 @@ h1 {
     }
 
     .navbar-brand img {
-        height: 50px;
+        height: 55px;
         width: auto;
         margin-top: 15%;
     }
