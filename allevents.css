@@ -974,6 +974,7 @@ h1 {
 
     nav {
         padding: 0.75rem 1rem;
+        margin-left: -3%;
     }
 
     .navbar-brand img {
@@ -992,6 +993,28 @@ h1 {
 
 /* Extra small screens (phones, less than 420px) */
 @media (max-width: 420px) {
+
+    nav {
+        height: 70px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+    }
+
+    .navbar-brand img {
+        height: 50px;
+        width: auto;
+        margin-top: 15%;
+    }
+
+
     .card3 {
         margin-top: 20%;
         max-width: 350px;
@@ -1023,17 +1046,38 @@ h1 {
         font-size: 14px;
     }
 
-    /* Countdown adjustments */
+    .social-media-container {
+        width: 80%;
+        margin-left: 10%;
+
+    }
+
+
+    .countdown2-item {
+        margin: 0 0.5rem;
+        min-width: 60px;
+        text-align: center;
+    }
+
+    /* You can also adjust the parent container if needed */
+    .countdown2 {
+        gap: 5px;
+        /* Add a small gap property */
+    }
+
     .countdown2-value {
         font-size: 2rem;
     }
 
     .countdown2-label {
+        font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
         font-size: 0.8rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: black;
     }
 }
-
-
 
 /* Define CSS variables for the new navigation styles */
 :root {
