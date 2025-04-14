@@ -800,7 +800,7 @@ h1 {
 @media (max-width: 992px) {
 
     .card3 {
-        margin-top: 12%;
+        margin-top: 15%;
         max-width: 800px;
     }
 
@@ -844,7 +844,7 @@ h1 {
 
 
     .countdown2-item {
-        margin-top: 1.5%;
+        margin-top: -1%;
 
     }
 }
@@ -942,7 +942,7 @@ h1 {
     }
 
     .card3 {
-        margin-top: 15%;
+        margin-top: 17%;
         max-width: 450px;
     }
 
@@ -1027,6 +1027,11 @@ h1 {
         width: auto;
         margin-top: 15%;
     }
+
+    .countdown2-item {
+        margin-top: -3.5%;
+
+    }
 }
 
 
@@ -1055,7 +1060,7 @@ h1 {
 
 
     .card3 {
-        margin-top: 20%;
+        margin-top: 25%;
         max-width: 350px;
     }
 
