@@ -782,6 +782,36 @@ h1 {
 /* ===============================
    7. Responsive Styles
    =============================== */
+/* Large screens (desktops, less than 1200px) */
+@media (max-width: 3456px) {
+
+
+
+    .card3 {
+        position: fixed;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 1200px;
+        z-index: 10;
+        margin-top: 0;
+    }
+
+    .countdown2 {
+        position: fixed;
+        bottom: 250px;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        margin-top: 0;
+    }
+}
+
+
+
+
+
 
 /* Large screens (desktops, less than 1200px) */
 @media (max-width: 1200px) {
@@ -800,7 +830,11 @@ h1 {
     }
 
     .card3 {
-        margin-top: 10%;
+        margin-top: 0%;
+    }
+
+    .countdown2 {
+        bottom: 22%;
     }
 
     .card2 {
@@ -826,7 +860,7 @@ h1 {
 @media (max-width: 992px) {
 
     .card3 {
-        margin-top: 15%;
+        margin-top: 0%;
         max-width: 800px;
     }
 
@@ -915,7 +949,7 @@ h1 {
     }
 
     .card3 {
-        margin-top: 13%;
+        margin-top: 0%;
         max-width: 600px;
     }
 
@@ -926,6 +960,16 @@ h1 {
 
     .card3 p {
         font-size: 23px;
+        text-align: justify;
+    }
+
+    .countdown2 {
+        font-size: 23px;
+        text-align: justify;
+        bottom: 14%;
+    }
+
+    .countdown2-label {
         text-align: justify;
     }
 
@@ -1018,7 +1062,7 @@ h1 {
     }
 
     .card3 {
-        margin-top: 17%;
+        margin-top: 0%;
         max-width: 450px;
     }
 
@@ -1098,7 +1142,7 @@ h1 {
         padding: 0 10px;
         display: flex;
         align-items: center;
-        margin-left: -3%;
+        margin-left: -1.7%;
     }
 
     .navbar-brand {
@@ -1114,10 +1158,15 @@ h1 {
         margin-top: 15%;
     }
 
-    .countdown2-item {
-        margin-top: -3.5%;
-
+    .countdown2 {
+        bottom: 10%;
     }
+
+    .countdown2-value {
+        font-size: 32px;
+    }
+
+
 }
 
 
@@ -1147,7 +1196,7 @@ h1 {
 
 
     .card3 {
-        margin-top: 25%;
+        margin-top: 0%;
         max-width: 350px;
     }
 
@@ -1266,11 +1315,11 @@ h1 {
     /* You can also adjust the parent container if needed */
     .countdown2 {
         gap: 5px;
-        /* Add a small gap property */
+        bottom: 15%;
     }
 
     .countdown2-value {
-        font-size: 2rem;
+        font-size: 30px;
     }
 
     .countdown2-label {
