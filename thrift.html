@@ -5,41 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="allevents.css">
-    <title>Exhibition</title>
+    <title>Thrift Sale </title>
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="allevents.css" />
 </head>
 
 <body>
-    <!-- Gradient background with circles moved outside the container -->
+    <!-- Background Circles -->
     <div class="background">
         <div class="circle" id="circle1"></div>
         <div class="circle" id="circle2"></div>
         <div class="circle" id="circle3"></div>
-        <div class="circle" id="circle4"></div>
-        <div class="circle" id="circle5"></div>
-        <div class="circle" id="circle6"></div>
-
     </div>
 
-    <div class="container">
-        <nav>
+
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/novalogo.png" alt="Logo" class="logo">
+                <img src="images/novalogo.png" alt="Logo">
             </a>
-            <ul class="links">
-                <!-- <li><a href="index.html#about">ABOUT</a></li> -->
-                <li><a href="allevents.html">EVENTS</a></li>
-                <!-- <li><a href="index.html#sponsors">SPONSORS</a></li> -->
-            </ul>
-        </nav>
-
-
-
-        <div class="close">
-            <!-- Close button with link -->
-            <a href="allevents.html" class="close-button" aria-label="Close and navigate to next page">
-                <div class="cross-icon"></div>
-            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="allevents.html">Events</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+
+
+    <div class="close">
+        <!-- Close button with link -->
+        <a href="allevents.html" class="close-button" aria-label="Close and navigate to next page">
+            <div class="cross-icon"></div>
+        </a>
+    </div>
     </div>
 
     <div class="card2">
@@ -75,6 +86,8 @@
             </div>
 
 
+            <!-- Scripts -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
             <script src="style.js"></script>
         </div>
 
