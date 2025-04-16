@@ -50,6 +50,7 @@ body {
     min-height: 100vh;
 }
 
+
 /* ===============================
    3. Navigation Styles
    =============================== */
@@ -738,9 +739,15 @@ h1 {
     padding-top: 100px;
 }
 
+
+
+
+
+
+
 /* ===============================
    7. Responsive Styles
-   =============================== */
+   =============================== 
 @media (max-width: 3456px) {
 
 
@@ -780,7 +787,7 @@ h1 {
 
 
 
-/* Large screens (desktops, less than 1200px) */
+/* Large screens (desktops, less than 1200px) 
 @media (max-width: 1200px) {
     .exhibition {
         max-width: 90%;
@@ -823,7 +830,7 @@ h1 {
     }
 }
 
-/* Medium screens (tablets, less than 992px) */
+/* Medium screens (tablets, less than 992px) 
 @media (max-width: 992px) {
 
     .card3 {
@@ -905,7 +912,7 @@ h1 {
     }
 }
 
-/* Small screens (small tablets, less than 768px) */
+/* Small screens (small tablets, less than 768px) 
 @media (max-width: 768px) {
     .logo {
         top: -3px;
@@ -1011,7 +1018,7 @@ h1 {
 }
 
 
-/* Extra small screens (phones, less than 576px) */
+/* Extra small screens (phones, less than 576px) 
 @media (max-width: 576px) {
 
     .container {
@@ -1121,10 +1128,15 @@ h1 {
 }
 
 
-/* Extra small screens (phones, less than 420px) */
+/* Extra small screens (phones, less than 420px)*/
 @media (max-width: 420px) {
 
-    .card3 {
+    .exhibitions-container {
+        margin-top: -20%;
+    }
+
+
+    /* .card3 {
         margin-top: 0%;
         max-width: 350px;
     }
@@ -1186,19 +1198,14 @@ h1 {
         margin-bottom: 5px;
         margin-left: 0px;
         font-weight: 305;
-        /* Add this line to make it not bold */
+        /* Add this line to make it not bold 
     }
 
     .flex-row .detail h3 {
         font-size: 16px;
     }
 
-    .exhibitions-container {
-        margin-top: 3%;
-    }
-
-
-    .event-details {
+     .event-details {
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -1241,7 +1248,7 @@ h1 {
         text-align: center;
     }
 
-    /* You can also adjust the parent container if needed */
+  You can also adjust the parent container if needed 
     .countdown2 {
         gap: 5px;
         bottom: 10%;
@@ -1258,7 +1265,7 @@ h1 {
         text-transform: uppercase;
         letter-spacing: 1px;
         color: black;
-    }
+    }*/
 }
 
 /* Define CSS variables for the new navigation styles */
