@@ -574,15 +574,6 @@ body {
   7. Events
    =============================== */
 
-.event-details {
-    display: flex;
-    justify-content: left;
-    margin-top: 40px;
-    margin-left: 0px;
-    gap: 70px;
-
-}
-
 .paragraph {
     font-family: 'NeueHaasDisplayThin', Helvetica, Arial, sans-serif;
     font-size: 18px;
@@ -597,23 +588,31 @@ body {
     margin-left: 0px;
 }
 
-.detail h3 {
-    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    font-size: 24px;
+.event-content h1 {
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
+    font-size: 50px;
     margin-bottom: 10px;
     margin-left: 0px;
 }
 
-.detail p {
-    font-family: 'NeueHaasDisplayThin', Helvetica, Arial, sans-serif;
-    font-size: 18px;
+.detail h2 {
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    margin-top: 50px;
     margin-left: 0px;
 }
+
+.detail h3 {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
 
 .place {
     max-width: 100%;
 }
-
 
 
 .social-media-container {
