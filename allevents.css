@@ -1323,7 +1323,7 @@ h1 {
     /* You can also adjust the parent container if needed */
     .countdown2 {
         gap: 5px;
-        bottom: 15%;
+        bottom: 10%;
     }
 
     .countdown2-value {
