@@ -53,6 +53,7 @@ body {
 /* ===============================
    3. Navigation Styles
    =============================== */
+
 .custom-navbar {
     position: sticky;
     top: 0;
@@ -72,6 +73,7 @@ body {
     margin: -8px 0;
     transform-origin: left center;
 }
+
 
 /* Align items and spacing in nav */
 .navbar-nav {
@@ -222,6 +224,7 @@ body {
    =============================== */
 .exhibitions-container {
     padding: 20px;
+    margin-top: -5%;
 }
 
 .exhibition {
@@ -738,7 +741,6 @@ h1 {
 /* ===============================
    7. Responsive Styles
    =============================== */
-/* Large screens (desktops, less than 1200px) */
 @media (max-width: 3456px) {
 
 
@@ -1005,13 +1007,7 @@ h1 {
         text-align: justify;
     }
 
-    nav .links {
-        gap: 10px;
-    }
 
-    nav ul a {
-        font-size: 0.85rem;
-    }
 }
 
 
@@ -1112,30 +1108,6 @@ h1 {
     }
 
 
-    nav .links {
-        gap: 8px;
-    }
-
-    nav {
-        height: 70px;
-        padding: 0 10px;
-        display: flex;
-        align-items: center;
-        margin-left: -1.7%;
-    }
-
-    .navbar-brand {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        padding: 0;
-    }
-
-    .navbar-brand img {
-        height: 55px;
-        width: auto;
-        margin-top: 15%;
-    }
 
     .countdown2 {
         bottom: 10%;
@@ -1151,28 +1123,6 @@ h1 {
 
 /* Extra small screens (phones, less than 420px) */
 @media (max-width: 420px) {
-
-    nav {
-        height: 70px;
-        padding: 0 10px;
-        display: flex;
-        align-items: center;
-        margin-left: -2.4%;
-    }
-
-    .navbar-brand {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        padding: 0;
-    }
-
-    .navbar-brand img {
-        height: 55px;
-        width: auto;
-        margin-top: 15%;
-    }
-
 
     .card3 {
         margin-top: 0%;
