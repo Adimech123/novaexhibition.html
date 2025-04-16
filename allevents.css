@@ -1131,10 +1131,37 @@ h1 {
 /* Extra small screens (phones, less than 420px)*/
 @media (max-width: 420px) {
 
+
     .exhibitions-container {
         margin-top: -20%;
     }
 
+    .exhibition {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .exhibition-image {
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+        order: -1;
+        /* This ensures the image comes first */
+        width: 30%;
+        height: auto;
+    }
+
+    .exhibition-content {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .exhibition-image img {
+        width: 70%;
+        max-height: 120px;
+    }
 
     /* .card3 {
         margin-top: 0%;
