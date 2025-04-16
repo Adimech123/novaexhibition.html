@@ -531,7 +531,7 @@ button[type="submit"]:hover {
 
 
 
-@@media (max-width: 480px) {
+@media (max-width: 480px) {
     .countdown2 {
         flex-wrap: nowrap;
         /* Prevent wrapping */
