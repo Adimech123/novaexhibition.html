@@ -806,6 +806,15 @@ h1 {
         margin-top: 0;
     }
 
+
+    .card2 {
+        margin-top: 11%;
+    }
+
+    .close-button {
+        margin-top: -4%;
+    }
+
     .countdown2 {
         position: fixed;
         bottom: 250px;
