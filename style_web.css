@@ -530,7 +530,19 @@ button[type="submit"]:hover {
 }
 
 
-@media (max-width: 480px) {
+
+@@media (max-width: 480px) {
+    .countdown2 {
+        flex-wrap: nowrap;
+        /* Prevent wrapping */
+        gap: 5px;
+        margin-top: -1%;
+    }
+
+    .card3 {
+        margin-top: -7%;
+    }
+
     .countdown2-value {
         font-size: 1.5rem;
         padding: 0.4rem 0.8rem;
