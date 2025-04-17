@@ -128,6 +128,15 @@ main {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* Ensure images stay within the sponsor container */
+.sponsor img {
+    width: 100%; /* Ensure image fills the container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure image stays within the bounds of its container */
+    max-width: 100%; /* Prevents the image from growing beyond the container width */
+    max-height: 100%; /* Prevents the image from growing beyond the container height */
+}
+
 
 /* ===============================
    4. Circles
