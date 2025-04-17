@@ -476,6 +476,13 @@ body {
    =============================== */
 /* Container styles */
 
+.position-fixed {
+    position: fixed;
+    z-index: 1050 !important;
+    top: 95px !important;
+    right: 135px !important;
+}
+
 /* Close button styles */
 /* Fixed position close button styling */
 .btn-close-custom {
@@ -490,8 +497,8 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-left: -750%;
-    margin-top: -30%;
+    margin-left: 40%;
+    margin-top: -160%;
 }
 
 .btn-close-custom:hover {
@@ -600,7 +607,6 @@ body {
 
 .detail {
     padding: 0;
-
 }
 
 .event-content h1 {
@@ -812,7 +818,8 @@ h1 {
 
 /* Large screens (desktops, less than 1200px) 
 @media (max-width: 1200px) {
-    .exhibition {
+   
+.exhibition {
         max-width: 90%;
         padding: 25px;
     }
@@ -854,9 +861,22 @@ h1 {
 }
 
 /* Medium screens (tablets, less than 992px) 
-@media (max-width: 992px) {
+@media (max-width: 992px) {      */
 
-    .card3 {
+.card2 {
+    width: 90%;
+}
+
+
+
+/*.card2 {
+        margin-top: 17%;
+        width: 85%;
+    }
+
+
+
+.card3 {
         margin-top: 0%;
         max-width: 800px;
     }
@@ -870,12 +890,7 @@ h1 {
         font-size: 25px;
         text-align: justify;
     }
-
-    .card2 {
-        margin-top: 17%;
-        width: 85%;
-    }
-
+        
     .card2 h1 {
         font-size: 43px;
 
@@ -935,10 +950,18 @@ h1 {
     }
 }
 
-/* Small screens (small tablets, less than 768px) 
+ Small screens (small tablets, less than 768px) */
 @media (max-width: 768px) {
-   
-.logo {
+    .position-fixed {
+        top: 95px !important;
+        right: -290px !important;
+    }
+}
+
+
+
+
+/*.logo {
         top: -3px;
     }
 
