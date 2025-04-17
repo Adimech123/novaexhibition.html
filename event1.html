@@ -46,22 +46,24 @@
 
 
 
-    <div class="close">
-        <!-- Close button with link -->
-        <a href="allevents.html" class="close-button" aria-label="Close and navigate to next page">
-            <div class="cross-icon"></div>
-        </a>
-    </div>
 
-    <div class="card2">
+    <div class="card2 position-relative">
+        <!-- Add this close button inside the card2 -->
+        <div class="position-absolute top-0 end-0 p-3">
+            <a href="allevents.html" class="btn-close-custom" aria-label="Close and navigate to next page">
+                <div class="cross-icon"></div>
+            </a>
+        </div>
+
+
+
+
         <div class="events-container">
-
             <!-- Event 1 -->
-            <div class="event-content" data-event-index="0">
+            <div class="event-content" data-event-index="2">
                 <h2> Event 1 </h2>
                 <h1>Figure Drawing Workshop</h1>
-
-                <p class="paragraph">
+                <p class="paragraph mb-4">
                     We're BFA students organising a live figure drawing session to support our exhibition NOVA.
 
                     Whether you're an experienced artist or just want to give it a try, this is a great chance to
@@ -69,38 +71,52 @@
                     and improve your skills in a relaxed, creative environment.
                 </p>
 
-                <div class="flex-row">
-                    <div class="detail">
-                        <h2>Date</h2>
-                        <h3>Friday 21 March 2025</h3>
+                <!-- Bootstrap row with columns for event details -->
+                <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+                    <!-- Date Column -->
+                    <div class="col">
+                        <div class="detail">
+                            <h2 class="mb-2">Date</h2>
+                            <h3>Friday 21 March 2025</h3>
+                        </div>
                     </div>
 
-                    <div class="detail place">
-                        <h2>Place</h2>
-                        <h3>Room 415, Faculty of Media and Knowledge</h3>
-                        <h3>Science, University of Malta, Msida</h3>
+                    <!-- Place Column -->
+                    <div class="col">
+                        <div class="detail">
+                            <h2 class="mb-2">Place</h2>
+                            <h3>Room 415, Faculty of Media and Knowledge</h3>
+                            <h3>Science, University of Malta, Msida</h3>
+                        </div>
                     </div>
 
-                    <div class="detail">
-                        <h2>Time</h2>
-                        <h3>16:00-18:00</h3>
+                    <!-- Time Column -->
+                    <div class="col">
+                        <div class="detail">
+                            <h2 class="mb-2">Time</h2>
+                            <h3>16:00-18:00</h3>
+                        </div>
                     </div>
 
-                    <div class="detail">
-                        <h2>Price</h2>
-                        <h3>€10</h3>
+                    <div class="col">
+                        <div class="detail">
+                            <h2 class="mb-2">Price</h2>
+                            <h3>€10</h3>
+
+                        </div>
                     </div>
+
                 </div>
             </div>
-
-
-            <!-- Scripts -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="style.js"></script>
-
-
         </div>
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="style.js"></script>
+
+
     </div>
+
 </body>
 
 </html>
