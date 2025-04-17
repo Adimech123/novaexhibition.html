@@ -543,6 +543,14 @@ button[type="submit"]:hover {
         margin-top: -7%;
     }
 
+    .card3 h1 {
+        font-size: 30px;
+    }
+
+    .card3 p {
+        font-size: 21px;
+    }
+
     .countdown2-value {
         font-size: 1.5rem;
         padding: 0.4rem 0.8rem;
