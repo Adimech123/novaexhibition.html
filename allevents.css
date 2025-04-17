@@ -560,10 +560,11 @@ body {
 
 .card3 h1 {
     font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
-    font-size: 48px;
+    font-size: 35px;
     margin-bottom: 0px;
     text-align: center;
     color: #000;
+
 }
 
 .card3 h2 {
@@ -576,12 +577,11 @@ body {
 
 .card3 p {
     font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.5;
     margin-bottom: 0px;
-    text-align: center;
+    text-align: justify;
 }
-
 
 
 /* ===============================
