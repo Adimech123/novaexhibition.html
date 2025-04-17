@@ -1,31 +1,43 @@
 /* ===============================
-   Fonts
+   1. Fonts
    =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+}
+
 @font-face {
     font-family: 'NeueHaasDisplayBold';
     src: url('../fonts/NeueHaasDisplayBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'NeueHaasDisplayMedium';
     src: url('../fonts/NeueHaasDisplayMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'NeueHaasDisplayLight';
     src: url('../fonts/NeueHaasDisplayLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'NeueHaasDisplayThin';
     src: url('../fonts/NeueHaasDisplayThin.ttf') format('truetype');
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Neue Haas Grotesk Display Pro', 'NeueHaasDisplayLight', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* ===============================
