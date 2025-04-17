@@ -1,0 +1,152 @@
+/* ===============================
+   Fonts
+   =============================== */
+@font-face {
+    font-family: 'NeueHaasDisplayBold';
+    src: url('../fonts/NeueHaasDisplayBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayMedium';
+    src: url('../fonts/NeueHaasDisplayMedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayLight';
+    src: url('../fonts/NeueHaasDisplayLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayThin';
+    src: url('../fonts/NeueHaasDisplayThin.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Neue Haas Grotesk Display Pro', 'NeueHaasDisplayLight', sans-serif;
+}
+
+/* ===============================
+   Page Background & Layout
+   =============================== */
+body {
+    background: #fff;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    color: #000;
+}
+
+/* ===============================
+   Header
+   =============================== */
+header {
+    font-family: 'NeueHaasDisplayBold';
+    font-size: 2rem;
+    color: #fff;
+    background: #000;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* ===============================
+   Sponsor Sections
+   =============================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.sponsor-tier {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.sponsor-tier h2 {
+    font-family: 'NeueHaasDisplayMedium';
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* ===============================
+   Sponsor Card
+   =============================== */
+.sponsor {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 220px;
+    max-width: 90vw;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'NeueHaasDisplayLight';
+    font-size: 1rem;
+    color: #000;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   Call to Action
+   =============================== */
+.cta {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1rem;
+    font-family: 'NeueHaasDisplayLight';
+}
+
+.cta a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #f78b81;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'NeueHaasDisplayBold';
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta a:hover {
+    background-color: #e66759;
+    transform: translateY(-2px);
+}
+
+/* ===============================
+   Responsive
+   =============================== */
+@media (max-width: 600px) {
+    .sponsor {
+        width: 90%;
+    }
+
+    .sponsor-tier h2 {
+        font-size: 1.25rem;
+    }
+
+    header {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+}
