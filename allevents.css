@@ -774,6 +774,24 @@ h1 {
 }
 
 
+/* ===============================
+   grey-overlay
+   =============================== */
+.grey-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(147, 147, 147, 0.25);
+    /* Grey with 25% opacity */
+    border-radius: 25px;
+    /* Match parent container's border-radius */
+    pointer-events: none;
+    /* Allows clicks to pass through to elements below */
+    z-index: 2;
+    /* Positioned above content but below buttons/interactive elements */
+}
 
 
 
