@@ -67,6 +67,24 @@ body {
 }
 
 
+.button {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    display: inline-block;
+    padding: 10px 15px;
+    background: #f78b81;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    word-spacing: 0.8px;
+}
+
+.button:hover {
+    background: #f56c5f;
+}
+
+
 /* ===============================
    3. Navigation Styles
    =============================== */

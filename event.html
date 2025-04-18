@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NOVA Exhibition - Event Details">
+    <title>NOVA Event Details</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style_web.css">
+    <link rel="stylesheet" href="allevents.css">
+</head>
+
+<body>
+    <!-- Background Circles -->
+    <div class="background">
+        <div class="circle" id="circle1"></div>
+        <div class="circle" id="circle2"></div>
+        <div class="circle" id="circle3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/novalogo.png" alt="NOVA Logo" width="150" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="allevents.html">Events</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="card2 position-relative">
+        <!-- Close button -->
+        <div class="position-absolute top-0 end-0 p-3">
+            <a href="allevents.html" class="btn-close-custom" aria-label="Close and navigate to events page">
+                <div class="cross-icon"></div>
+            </a>
+        </div>
+
+        <!-- Dynamic Event Content Container -->
+        <div class="events-container" id="event-details-container">
+            <!-- Content will be dynamically inserted here -->
+            <div class="text-center py-5">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-3">Loading event details...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="style.js" defer></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Event data object
+            const eventData = {
+                "tattoo-raffle": {
+                    title: "Tattoo Raffle",
+                    description: "We are organising a giveaway raffle to help support our exhibition on the 22nd-23rd of May, held in the Faculty of Media and Knowledge Sciences. We have partnered with The Lucky Cat Tattoo Parlour to offer people a chance to win a tattoo worth €200!",
+                    details: [
+                        {
+                            label: "Date",
+                            value: "Ongoing"
+                        },
+                        {
+                            label: "Prize",
+                            value: "Tattoo worth €200"
+                        },
+                        {
+                            label: "Provider",
+                            value: "The Lucky Cat Tattoo Parlour"
+                        },
+                        {
+                            label: "Price",
+                            values: [
+                                "1 ticket: €2.50",
+                                "3 tickets: €5.00"
+                            ]
+                        }
+                    ],
+                    actionLink: "https://docs.google.com/forms/d/e/1FAIpQLSeeJuPHIlgSoBoqn3-nyaQL2mFSG6AWmhzlK4pvmi1aEqYd3Q/viewform",
+                    actionText: "Buy Raffle Ticket"
+                },
+                "trivia": {
+                    title: "Trivia Night",
+                    description: "Join us for our next event, TRIVIA NIGHT. A night jam-packed with fun. We really hope to see you there.",
+                    details: [
+                        {
+                            label: "Date",
+                            value: "Friday 2 May 2025"
+                        },
+                        {
+                            label: "Place",
+                            value: "The Anvil Pub,<br>St Julian's"
+                        },
+                        {
+                            label: "Time",
+                            value: "20:00-22:00"
+                        },
+                        {
+                            label: "Price",
+                            value: "€5"
+                        }
+                    ],
+                    actionLink: "https://docs.google.com/forms/d/1f8hHQk7WHfzZZHBJLiJPvYZ4VERGfSDLWT5ZsGJqw6o/viewform",
+                    actionText: "Buy Tickets"
+                },
+                "opening-exhibition": {
+                    title: "Opening Night - Exhibition",
+                    description: "NOVA is an exhibition by the Bachelor of Fine Arts in Digital Arts graduating class of 2025, showcasing 30 artists’ dissertation projects. Held on May 22, 2025, at the Faculty of Media and Knowledge Sciences, it highlights diverse disciplines, from virtual reality and game design to fine art and animation. This exhibition celebrates the fusion of digital creativity, perception, and transformation, offering an immersive experience into the future of artistic expression.",
+                    details: [
+                        {
+                            label: "Date",
+                            value: "Thursday 22 May 2025"
+                        },
+                        {
+                            label: "Place",
+                            value: "Level 4,<br> Faculty of Media and Knowledge Sciences,<br>University of Malta,<br> Msida"
+                        },
+                        {
+                            label: "Time",
+                            value: "19:00 onwards"
+                        },
+                        {
+                            label: "Entry",
+                            value: "Free"
+                        }
+                    ],
+                    // No action button for this event
+                },
+                "exhibition": {
+                    title: "Exhibition",
+                    description: "NOVA is an exhibition by the Bachelor of Fine Arts in Digital Arts graduating class of 2025, showcasing 30 artists’ dissertation projects. Held on May 22, 2025, at the Faculty of Media and Knowledge Sciences, it highlights diverse disciplines, from virtual reality and game design to fine art and animation. This exhibition celebrates the fusion of digital creativity, perception, and transformation, offering an immersive experience into the future of artistic expression.",
+                    details: [
+                        {
+                            label: "Date",
+                            value: "Friday 23 May 2025"
+                        },
+                        {
+                            label: "Place",
+                            value: "Level 4,<br> Faculty of Media and Knowledge Sciences,<br>University of Malta,<br> Msida"
+                        },
+                        {
+                            label: "Time",
+                            value: "09:00-16:00"
+                        },
+                        {
+                            label: "Entry",
+                            value: "Free"
+                        }
+                    ]
+                    // No action button for this event
+                },
+                "figure-drawing": {
+                    title: "Figure Drawing Workshop",
+                    description: "Whether you are an experienced artist or just want to give it a try, this is a great chance to practice and improve your skills in a relaxed, creative environment.",
+                    details: [
+                        {
+                            label: "Date",
+                            value: "Friday 21 March 2025"
+                        },
+                        {
+                            label: "Place",
+                            value: "Room 415,<br> Faculty of Media and Knowledge Science,<br> University of Malta"
+                        },
+                        {
+                            label: "Time",
+                            value: "16:00-18:00"
+                        },
+                        {
+                            label: "Status",
+                            value: "Event Over"
+                        }
+                    ],
+                    eventOver: true
+                },
+                "thrift": {
+                    title: "Thrift Sale",
+                    description: "Join us for our next event packed with hidden gems, great deals, and sustainable finds! Every purchase supports our exhibition, so come browse, shop, and make a difference!",
+                    details: [
+                        {
+                            label: "Date",
+                            value: "Tuesday 8  April 2005<br>Wednesday 9 April 2025"
+                        },
+                        {
+                            label: "Place",
+                            value: "Outside University Main Campus Library"
+                        },
+                        {
+                            label: "Time",
+                            value: "10:00-16:00"
+                        },
+                        {
+                            label: "Status",
+                            value: "Event Over"
+                        }
+                    ],
+                    eventOver: true
+                }
+            };
+
+            // Function to get URL parameter
+            function getEventId() {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get('event');
+            }
+
+            // Function to render event details
+            function renderEventDetails() {
+                const eventId = getEventId();
+                const container = document.getElementById('event-details-container');
+                
+                // If event ID exists and is in our data
+                if (eventId && eventData[eventId]) {
+                    const event = eventData[eventId];
+                    
+                    // Create HTML for event details
+                    let detailsHTML = '';
+                    event.details.forEach(detail => {
+                        let valueHTML = '';
+                        
+                        // Check if the detail has multiple values
+                        if (detail.values && Array.isArray(detail.values)) {
+                            detail.values.forEach(val => {
+                                valueHTML += `<h3>${val}</h3>`;
+                            });
+                        } else if (detail.value) {
+                            valueHTML = `<h3>${detail.value}</h3>`;
+                        }
+                        
+                        detailsHTML += `
+                            <div class="col">
+                                <div class="detail">
+                                    <h2 class="mb-2">${detail.label}</h2>
+                                    ${valueHTML}
+                                </div>
+                            </div>
+                        `;
+                    });
+                    
+                    // Set page title
+                    document.title = `${event.title} | NOVA Exhibition`;
+                    
+                    // Create action button HTML only if actionLink and actionText exist
+                    let actionButtonHTML = '';
+                    if (event.actionLink && event.actionText) {
+                        actionButtonHTML = `
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <a href="${event.actionLink}" class="button mt-3" target="_blank">${event.actionText}</a>
+                                </div>
+                            </div>
+                        `;
+                    }
+                    
+                    // Create event over indicator if applicable
+                    let eventOverHTML = '';
+                    if (event.eventOver) {
+                        eventOverHTML = `
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <div class="button1">Event Over</div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                    
+                    // Insert event content
+                    container.innerHTML = `
+                        <div class="event-content${event.eventOver ? ' past-event' : ''}">
+                            <h1>${event.title}</h1>
+                            <p class="paragraph mb-4">${event.description}</p>
+                            
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mt-2">
+                                ${detailsHTML}
+                            </div>
+                            
+                            ${actionButtonHTML}
+                            ${eventOverHTML}
+                        </div>
+                    `;
+                } else {
+                    // Show error message if event not found
+                    container.innerHTML = `
+                        <div class="event-content text-center">
+                            <h1>Event Not Found</h1>
+                            <p class="paragraph mb-4">Sorry, the event you're looking for doesn't exist or has been removed.</p>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <a href="allevents.html" class="button mt-3">View All Events</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+            
+            // Render the event details on page load
+            renderEventDetails();
+        });
+    </script>
+</body>
+</html>

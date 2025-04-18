@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NOVA Exhibition - BFA in Digital Arts showcase events">
     <title>Exhibition Listings</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style_web.css">
-</head>
-
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-
-<!-- Custom CSS -->
-<link rel="stylesheet" href="allevents.css" />
+    <link rel="stylesheet" href="allevents.css">
 </head>
 
 <body>
-
     <!-- Background Circles -->
     <div class="background">
         <div class="circle" id="circle1"></div>
@@ -25,11 +23,11 @@
         <div class="circle" id="circle3"></div>
     </div>
 
-
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/novalogo.png" alt="Logo">
+                <img src="images/novalogo.png" alt="NOVA Logo" width="150" height="50">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,110 +43,88 @@
         </div>
     </nav>
 
-
-
-
-    <div class="exhibitions-container">
-
-        <div class="exhibition">
-            <div class="exhibition-image">
-                <img src="images/tattoo_raffle.png" alt="Tatoo Raffle">
-            </div>
-            <div class="exhibition-content">
-                <h2>Tattoo Raffle</h2>
-                <p> We are organising a giveaway raffle to help support our exhibition on the 22nd-23rd of May, held in
-                    the Faculty of Media and Knowledge Sciences. We have partnered with The Lucky Cat Tattoo Parlour to
-                    offer people a chance to win a tattoo worth €200!</p>
-                <a href="tatoo_raffle.html" class="button">More Information</a>
-            </div>
-        </div>
-
-
-        <div class="exhibition">
-            <div class="exhibition-image">
-                <img src="images/trivia_night.png" alt="Trivia Night">
-            </div>
-            <div class="exhibition-content">
-                <h3>Friday 2 May 2025</h3>
-                <h2>Trivia Night</h2>
-                <p> Join us for our next event, TRIVIA NIGHT.
-                    A night jam packed of fun. We really hope to see you there.</p>
-                <a href="trivia.html" class="button">More Information</a>
-            </div>
-        </div>
-
-        <div class="exhibition">
-            <div class="exhibition-image">
-                <img src="images/nova.png" alt="Opening Night">
-            </div>
-            <div class="exhibition-content">
-                <h3>Thursday 22 May 2025</h3>
-                <h2>Opening Night - Exhibition</h2>
-                <p> NOVA is the final exhibition of the BFA in Digital Arts graduates, showcasing the work of 30
-                    students. It marks the culmination of their three-year journey through a dynamic and
-                    immersive
-                    display of dissertation projects.</p>
-                <a href="openingexhibition.html" class="button">More Information</a>
-            </div>
-        </div>
-
-
-        <div class="exhibition">
-            <div class="exhibition-image">
-                <img src="images/nova.png" alt="NOVA Exhibition">
-            </div>
-            <div class="exhibition-content">
-                <h3>Friday 23 May 2025</h3>
-                <h2>Exhibition</h2>
-                <p>NOVA is the final exhibition of the BFA in Digital Arts graduates, showcasing the work of 30
-                    students. It marks the culmination of their three-year journey through a dynamic and
-                    immersive
-                    display of dissertation projects.</p>
-                <a href="exhibition.html" class="button">More Information</a>
-            </div>
-        </div>
-
-        <div class="exhibition">
-            <div class="grey-overlay"></div>
-            <div class="exhibition-image">
-                <img src="images/event1.jpeg" alt="Figure Drawing Workshop">
-            </div>
-            <div class="exhibition-content">
-                <h3>Friday 21 March 2025</h3>
-                <h2>Event - Figure Drawing Workshop</h2>
-                <p>Whether you are an experienced artist or just want to give it a try, this is a great chance
-                    to
-                    practice and improve your skills in a relaxed, creative environment.</p>
-                <div class="button1">Event over</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="exhibition">
-            <div class="grey-overlay"></div>
-            <div class="exhibition-image">
-                <img src="images/thriftsale.png" alt="Thrift Sale">
-            </div>
-            <div class="exhibition-content">
-                <h3>Tuesday 8 & Wednesday 9 April 2025</h3>
-                <h2>Thrift Sale</h2>
-                <p>Join us for our next event packed with hidden gems, great deals, and sustainable finds! Every
-                    purchase supports our exhibition, so come browse, shop, and make a difference!</p>
-                <div class="button1">Event over</a>
-                </div>
-            </div>
-        </div>
-
-
-
-
-    </div>
-    </div>
+    <!-- Rendered Events -->
+    <div class="exhibitions-container" id="exhibitions-list"></div>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="style.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="style.js" defer></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const exhibitionTemplate = `
+                {{#exhibitions}}
+                <div class="exhibition{{#overlay}} overlay-active{{/overlay}}{{#eventOver}} event-over{{/eventOver}}">
+                    {{#overlay}}<div class="grey-overlay"></div>{{/overlay}}
+                    <div class="exhibition-image">
+                        <img src="{{image}}" alt="{{title}}" loading="lazy">
+                    </div>
+                    <div class="exhibition-content">
+                        {{#date}}<h3>{{date}}</h3>{{/date}}
+                        <h2>{{title}}</h2>
+                        <p>{{description}}</p>
+                        {{#eventId}}<a href="event.html?event={{eventId}}" class="button">More Information</a>{{/eventId}}
+                        {{#eventOver}}<div class="button1">Event over</div>{{/eventOver}}
+                    </div>
+                </div>
+                {{/exhibitions}}
+            `;
+
+            const exhibitions = [
+                {
+                    image: "images/tattoo_raffle.png",
+                    title: "Tattoo Raffle",
+                    description: "We are organising a giveaway raffle to help support our exhibition on the 22nd-23rd of May, held in the Faculty of Media and Knowledge Sciences. We have partnered with The Lucky Cat Tattoo Parlour to offer people a chance to win a tattoo worth €200!",
+                    eventId: "tattoo-raffle"
+                },
+                {
+                    image: "images/trivia_night.png",
+                    title: "Trivia Night",
+                    date: "Friday 2 May 2025",
+                    description: "Join us for our next event, TRIVIA NIGHT. A night jam-packed with fun. We really hope to see you there.",
+                    eventId: "trivia"
+                },
+                {
+                    image: "images/nova.png",
+                    title: "Opening Night - Exhibition",
+                    date: "Thursday 22 May 2025",
+                    description: "NOVA is the final exhibition of the BFA in Digital Arts graduates, showcasing the work of 30 students. It marks the culmination of their three-year journey through a dynamic and immersive display of dissertation projects.",
+                    eventId: "opening-exhibition"
+                },
+                {
+                    image: "images/nova.png",
+                    title: "Exhibition",
+                    date: "Friday 23 May 2025",
+                    description: "NOVA is the final exhibition of the BFA in Digital Arts graduates, showcasing the work of 30 students. It marks the culmination of their three-year journey through a dynamic and immersive display of dissertation projects.",
+                    eventId: "exhibition"
+                },
+                {
+                    image: "images/event1.jpeg",
+                    title: "Figure Drawing Workshop",
+                    date: "Friday 21 March 2025",
+                    description: "Whether you are an experienced artist or just want to give it a try, this is a great chance to practice and improve your skills in a relaxed, creative environment.",
+                    eventOver: true,
+                    overlay: true
+                },
+                {
+                    image: "images/thriftsale.png",
+                    title: "Thrift Sale",
+                    date: "Tuesday 8 & Wednesday 9 April 2025",
+                    description: "Join us for our next event packed with hidden gems, great deals, and sustainable finds! Every purchase supports our exhibition, so come browse, shop, and make a difference!",
+                    eventOver: true,
+                    overlay: true
+                }
+            ];
+
+            /* DEVELOPER NOTE: When adding new events to the array above:
+                1. Always add a comma after each event object
+                2. Don't add a comma after the last event object
+                3. Make sure to include the closing bracket and semicolon "];" */
+
+            const rendered = Mustache.render(exhibitionTemplate, { exhibitions });
+            document.getElementById("exhibitions-list").innerHTML = rendered;
+        });
+    </script>
 </body>
-
-
 </html>
