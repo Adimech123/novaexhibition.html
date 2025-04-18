@@ -292,6 +292,20 @@ body {
     color: #343333;
 }
 
+
+.detail .button {
+    position: absolute;
+    margin-left: 40px;
+    /* Adjust this value as needed */
+    margin-top: 20px;
+}
+
+.detail {
+    position: relative;
+    /* Make sure parent has position relative */
+}
+
+
 .button {
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
     display: inline-block;
