@@ -33,43 +33,7 @@ html {
 }
 
 
-/* Content on top of the video */
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    z-index: 3;
-    width: 80%;
-    max-width: 800px;
-}
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.cta-button {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #e03d00;
-}
 
 /* For mobile devices */
 @media (max-width: 768px) {
