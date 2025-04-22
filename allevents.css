@@ -270,6 +270,7 @@ body {
 
 .exhibition-content {
     flex: 0 0 70%;
+    text-align: left !important;
 }
 
 .exhibition h2 {
