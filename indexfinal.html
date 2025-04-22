@@ -10,20 +10,22 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style_web.css" />
     <style>
-        /* Hero Video Styles */
-        .hero-video-container {
+        /* Fullscreen Hero Video Styles */
+        .hero-section {
             position: relative;
             width: 100%;
-            height: 60vh;
+            height: 100vh;
             overflow: hidden;
-            margin-bottom: 2rem;
-            border-radius: 12px;
         }
         
-        .hero-video {
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            z-index: 1;
         }
         
         .video-overlay {
@@ -32,7 +34,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+        
+        /* Video content styles */
+        .background-video-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -40,19 +52,58 @@
             color: white;
             text-align: center;
             padding: 0 20px;
+            z-index: 3;
         }
         
-        .video-overlay h2 {
-            font-size: 3rem;
+        .background-video-content h1 {
+            font-size: 4rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         
-        .video-overlay p {
+        .background-video-content h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        
+        .background-video-content p {
             font-size: 1.2rem;
             max-width: 800px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            margin-bottom: 2rem;
+        }
+        
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+        
+        /* Logo in video */
+        .video-logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 60px;
+            z-index: 4;
         }
     </style>
 </head>
@@ -63,6 +114,36 @@
         <div class="circle" id="circle2"></div>
         <div class="circle" id="circle3"></div>
     </div>
+    
+    <!-- Fullscreen Hero Video Section -->
+    <div class="hero-section">
+        <!-- Logo in video -->
+        <img src="images/novalogo.png" alt="Logo" class="video-logo">
+        
+        <!-- Your provided video code -->
+        <video loop muted autoplay playsinline poster="URL/TO/poster.jpg" class="background-video">
+            <source src="../video/hero_video.mp4" type="video/mp4">
+            <source src="URL/TO/video.webm" type="video/webm">
+            <source src="URL/TO/video.ogv" type="video/ogv">
+        </video>
+        
+        <div class="video-overlay"></div>
+        
+        <!-- Your provided content container -->
+        <div class="background-video-content">
+            <h1>NOVA</h1>
+            <h2>Coming Soon</h2>
+            <p>Our website is launching May 16, 2025. We're working hard behind the scenes to bring you an exciting and refreshed experience.</p>
+            <a href="./allevents.html" class="button mb-4">Check Out Our Events</a>
+            
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <i class="bi bi-chevron-down" style="font-size: 2rem;"></i>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navbar after hero video -->
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -82,22 +163,8 @@
         </div>
     </nav>
     
-    <!-- Hero Video Section -->
-    <div class="container py-4">
-        <div class="hero-video-container">
-            <video class="hero-video" autoplay muted loop playsinline>
-                <source src="videos/nova-promo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="video-overlay">
-                <h2>Welcome to NOVA</h2>
-                <p>Innovation meets creativity - Coming soon to redefine your experience</p>
-            </div>
-        </div>
-    </div>
-    
     <!-- Main Section -->
-    <main class="container py-3">
+    <main class="container py-5">
         <div class="card3 text-center">
             <h1 class="fw-bold mb-3">Coming soon!</h1>
             <h1 class="fw-bold mb-3"> Website launches May 16 2025</h1>
@@ -125,6 +192,7 @@
             </div>
         </div>
     </main>
+    
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script src="style.js"></script>
