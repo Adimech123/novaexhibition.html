@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,9 +51,9 @@
     <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="style.js" defer></script>
-    
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const exhibitionTemplate = `
                 {{#exhibitions}}
                 <div class="exhibition{{#overlay}} overlay-active{{/overlay}}{{#eventOver}} event-over{{/eventOver}}">
@@ -127,4 +128,5 @@
         });
     </script>
 </body>
+
 </html>
