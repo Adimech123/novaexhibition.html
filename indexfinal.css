@@ -123,35 +123,19 @@ html {
     border-radius: 25px;
     padding: 40px;
     margin: 2rem auto;
+    margin-top: 7%;
     max-width: 1000px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    text-align: justify;
-    word-spacing: -1.75px;
-    color: #000;
 }
 
-.card3 h1 {
-    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
-    font-size: 48px;
-    margin-bottom: 0px;
-    text-align: center;
-    color: #000;
 
-}
-
-.card3 h2 {
-    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    font-size: 22px;
-    margin-bottom: 5px;
-    margin-left: 0px;
-    color: #000;
-}
 
 .card3 p {
     font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
     font-size: 22px;
     line-height: 1.5;
     margin-bottom: 0px;
+    word-spacing: -1.75px;
     text-align: justify;
 }
 
