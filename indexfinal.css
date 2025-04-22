@@ -179,7 +179,36 @@ html {
 
 
 
+.photo-gallery {
+    flex: 1;
+    max-width: 60%;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Replace margin-left with these centering properties */
+    margin-left: auto;
+    margin-right: auto;
+    /* Add some top/bottom margin if needed */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
+.photo-gallery img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.photo-gallery img.active {
+    opacity: 1;
+}
 
 
 
