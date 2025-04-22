@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_web.css">
     <title>Events</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -19,46 +25,62 @@
         <div class="circle" id="circle6"></div>
     </div>
 
-    <div class="container">
-        <nav>
-            <a class="navbar-brand" href="nova.html">
-                <img src="imagesweb/novalogo.png" alt="Logo" class="logo">
+    <!-- New container section -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/novalogo.png" alt="Logo">
             </a>
-            <ul class="links">
-                <li><a href="allevents.html">EVENTS</a></li>
-                <li><a href="allevents.html">ARTISTS</a></li>
-                <li><a href="allevents.html">SPONSORS</a></li>
-                <li><a href="allevents.html">CONTACT</a></li>
-            </ul>
-        </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="allevents.html">Events</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="sponsors.html">Artists</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="sponsors.html">Sponsors</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="contacts.html">Contact</a>
+                    </li>
 
-        <div class="white-box">
-            <div class="text">
-                <h1>LET'S CONNECT</h1>
-                <div class="contact-container">
-                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
-                        <hr>
-                        <div>
-                            <input type="hidden" name="access_key" value="3ad50d67-5a9d-4a32-b8ab-3bb658519bc5">
-
-                            <h2>Full Name</h2>
-                            <input type="text" name="name" placeholder=" Enter Your Name" class="contact-inputs"
-                                required>
-
-                            <h2>Email</h2>
-                            <input type="email" name="email" placeholder="Enter Your Email" class="contact-inputs"
-                                required>
-
-                            <h2>Message</h2>
-                            <textarea name="message" placeholder="Type Your Message" class="contact-inputs"
-                                required></textarea>
-                            <button type="submit">Submit</button>
-                        </div>
-                    </form>
-                    <div class="contact-right"></div>
-                </div>
+                </ul>
             </div>
         </div>
+    </nav>
+
+
+    <div class="white-box">
+        <div class="text">
+            <h1>LET'S CONNECT</h1>
+            <div class="contact-container">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                    <hr>
+                    <div>
+                        <input type="hidden" name="access_key" value="3ad50d67-5a9d-4a32-b8ab-3bb658519bc5">
+
+                        <h2>Full Name</h2>
+                        <input type="text" name="name" placeholder=" Enter Your Name" class="contact-inputs" required>
+
+                        <h2>Email</h2>
+                        <input type="email" name="email" placeholder="Enter Your Email" class="contact-inputs" required>
+
+                        <h2>Message</h2>
+                        <textarea name="message" placeholder="Type Your Message" class="contact-inputs"
+                            required></textarea>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+                <div class="contact-right"></div>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
 

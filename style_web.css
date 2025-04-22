@@ -89,6 +89,8 @@ body {
    3. Navigation Styles
    =============================== */
 
+/* navbar */
+
 .custom-navbar {
     position: sticky;
     top: 0;
@@ -131,6 +133,8 @@ body {
     opacity: 1;
     color: #f0685c;
 }
+
+
 
 /* ===============================
    4. Circles
