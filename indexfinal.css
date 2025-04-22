@@ -12,6 +12,15 @@ html {
     overflow-x: hidden;
 }
 
+
+
+
+
+
+/* ===============================
+  1. Index - home page
+   =============================== */
+
 /* Hero container */
 .hero-container {
     position: relative;
@@ -31,6 +40,35 @@ html {
     /* Cover the entire container */
     z-index: 1;
 }
+
+.center-logo {
+    max-width: 500px;
+    /* Larger size - adjust as needed */
+    width: 50%;
+    /* Responsive sizing */
+    height: auto;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
