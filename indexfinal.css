@@ -53,6 +53,43 @@ html {
 }
 
 
+/* Scroll Arrow */
+.scroll-arrow-container {
+    position: absolute;
+    bottom: 10%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+.scroll-arrow {
+    width: 40px;
+    height: 40px;
+    border: solid white;
+    border-width: 0 7px 7px 0;
+    transform: rotate(45deg);
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
 
 
 
@@ -138,6 +175,7 @@ html {
     word-spacing: -1.75px;
     text-align: justify;
 }
+
 
 
 
