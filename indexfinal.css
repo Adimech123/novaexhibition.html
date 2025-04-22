@@ -21,6 +21,8 @@ html {
   1. Index - home page
    =============================== */
 
+/* Video */
+
 /* Hero container */
 .hero-container {
     position: relative;
@@ -50,6 +52,88 @@ html {
     z-index: 2;
 }
 
+
+
+
+
+
+/* Background container styling */
+.container-fluid.bg-light {
+    background-color: #f8f9fa;
+    width: 100%;
+    height: 100%;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Content styling */
+h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+h3 {
+    color: #444;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+
+
+/* navbar */
+
+.custom-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    /* optional for nice blur */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+}
+
+/* Logo image sizing */
+.navbar-brand img {
+    max-height: 50px;
+    width: auto;
+    transform: scale(1.2);
+    margin: -8px 0;
+    transform-origin: left center;
+}
+
+
+/* Align items and spacing in nav */
+.navbar-nav {
+    display: flex;
+    gap: clamp(10px, 2vw, 20px);
+}
+
+/* Custom font and hover styles */
+.navbar-nav .nav-link {
+    font-family: 'Neue Haas Grotesk Display Pro', 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    opacity: 1;
+    color: #f0685c;
+}
 
 
 
