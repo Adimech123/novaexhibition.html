@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,9 +86,9 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="./js/script.js" defer></script>
-    
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Event data object
             const eventData = {
                 "tattoo-raffle": {
@@ -245,16 +246,16 @@
             function renderEventDetails() {
                 const eventId = getEventId();
                 const container = document.getElementById('event-details-container');
-                
+
                 // If event ID exists and is in our data
                 if (eventId && eventData[eventId]) {
                     const event = eventData[eventId];
-                    
+
                     // Create HTML for event details
                     let detailsHTML = '';
                     event.details.forEach(detail => {
                         let valueHTML = '';
-                        
+
                         // Check if the detail has multiple values
                         if (detail.values && Array.isArray(detail.values)) {
                             detail.values.forEach(val => {
@@ -263,7 +264,7 @@
                         } else if (detail.value) {
                             valueHTML = `<h3>${detail.value}</h3>`;
                         }
-                        
+
                         detailsHTML += `
                             <div class="col">
                                 <div class="detail">
@@ -273,10 +274,10 @@
                             </div>
                         `;
                     });
-                    
+
                     // Set page title
                     document.title = `${event.title} | NOVA Exhibition`;
-                    
+
                     // Create action button HTML only if actionLink and actionText exist
                     let actionButtonHTML = '';
                     if (event.actionLink && event.actionText) {
@@ -288,7 +289,7 @@
                             </div>
                         `;
                     }
-                    
+
                     // Create event over indicator if applicable
                     let eventOverHTML = '';
                     if (event.eventOver) {
@@ -300,7 +301,7 @@
                             </div>
                         `;
                     }
-                    
+
                     // Insert event content
                     container.innerHTML = `
                         <div class="event-content${event.eventOver ? ' past-event' : ''}">
@@ -330,10 +331,11 @@
                     `;
                 }
             }
-            
+
             // Render the event details on page load
             renderEventDetails();
         });
     </script>
 </body>
+
 </html>

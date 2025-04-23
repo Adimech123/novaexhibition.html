@@ -1,0 +1,218 @@
+/* ===============================
+   1. Fonts
+   =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NeueHaasDisplaRoman';
+    letter-spacing: 0.05em;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayBold';
+    src: url('../fonts/NeueHaasDisplayBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplaRoman';
+    src: url('../fonts/NeueHaasDisplayRoman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayMedium';
+    src: url('../fonts/NeueHaasDisplayMediu.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayLight';
+    src: url('../fonts/NeueHaasDisplayLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayThin';
+    src: url('../fonts/NeueHaasDisplayThin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ===============================
+   2. Body
+   =============================== */
+body {
+    background: #fff;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+
+/* ===============================
+   3. Navigation Styles
+   =============================== */
+
+.custom-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    /* optional for nice blur */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+}
+
+/* Logo image sizing */
+.navbar-brand img {
+    max-height: 50px;
+    width: auto;
+    transform: scale(1.2);
+    margin: -8px 0;
+    transform-origin: left center;
+}
+
+
+/* Align items and spacing in nav */
+.navbar-nav {
+    display: flex;
+    gap: clamp(10px, 2vw, 20px);
+}
+
+/* Custom font and hover styles */
+.navbar-nav .nav-link {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    opacity: 1;
+    color: #f0685c;
+}
+
+
+
+
+
+
+
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.name-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.artist-name {
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
+    font-size: 70px;
+    letter-spacing: 0.03em;
+    color: #000;
+    text-align: left;
+    margin-left: 45%;
+    margin-bottom: 25%
+}
+
+.portrait-container {
+    flex: 1;
+    max-width: 400px;
+    margin-right: 25%;
+    margin-top: 3%;
+}
+
+.portrait {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+
+
+
+/* ===============================
+   SOCIAL
+   =============================== */
+
+.social-media-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+
+}
+
+.social-icons {
+    margin-left: 45%;
+    margin-bottom: 5%;
+    /* This aligns with the start of the name text */
+    justify-content: flex-start;
+    /* Align items to the left */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icons a img {
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(0);
+    /* Makes the icons black */
+}
+
+/* Set different sizes for each icon */
+.social-icons a:nth-child(1) img {
+    /* Instagram */
+    width: 26px;
+}
+
+
+
+/* Hover effect */
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Define CSS variables for the new navigation styles */
+:root {
+    --text-color: #ffffff;
+    --accent-color: #f78b81;
+}
