@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NOVA Exhibition - BFA in Digital Arts showcase events">
+    <title>Exhibition Listings</title>
+
+    <link rel="canonical" href="https://novabfa.com/allevents.html" />
+    <!-- Standard favicon -->
+    <link rel="icon" href="./images/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon_io/favicon.ico" type="image/x-icon">
+
+    <!-- PNG favicon variants -->
+    <link rel="icon" href="./images/favicon_io/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="./images/favicon_io/favicon-32x32.png" sizes="32x32" type="image/png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="./images/favicon_io/apple-touch-icon.png">
+
+    <!-- Android Chrome icons -->
+    <link rel="icon" href="./images/favicon_io/android-chrome-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="./images/favicon_io/android-chrome-512x512.png" sizes="512x512" type="image/png">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="./images/favicon_io/site.webmanifest">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="artist.css">
+</head>
+
+<body>
+    <!-- Background Circles -->
+    <div class="background">
+        <div class="circle" id="circle1"></div>
+        <div class="circle" id="circle2"></div>
+        <div class="circle" id="circle3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/novalogo.png" alt="NOVA Logo" width="150" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="allevents.html">Events</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Rendered Events -->
+    <div class="exhibitions-container" id="exhibitions-list"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const exhibitionTemplate = `
+                {{#exhibitions}}
+                <div class="exhibition{{#overlay}} overlay-active{{/overlay}}{{#eventOver}} event-over{{/eventOver}}">
+                    {{#overlay}}<div class="grey-overlay"></div>{{/overlay}}
+                    <div class="exhibition-image">
+                        <img src="{{image}}" alt="{{title}}" loading="lazy">
+                    </div>
+                    <div class="exhibition-content">
+                        {{#date}}<h3>{{date}}</h3>{{/date}}
+                        <h2>{{title}}</h2>
+                        <p>{{description}}</p>
+                    </div>
+                </div>
+                {{/exhibitions}}
+            `;
+
+            const exhibitions = [
+                {
+                    image: "./images/tattoo_raffle.png",
+                    title: "Kristabelle Agius",
+                    eventId: "kristabelle-agius"
+                },
+                {
+                    image: "./images/trivia_night.png",
+                    title: "Federica Albani",
+                    eventId: "federica-albani"
+                },
+
+            ];
+
+            /* DEVELOPER NOTE: When adding new events to the array above:
+                1. Always add a comma after each event object
+                2. Don't add a comma after the last event object
+                3. Make sure to include the closing bracket and semicolon "];" */
+
+            const rendered = Mustache.render(exhibitionTemplate, { exhibitions });
+            document.getElementById("exhibitions-list").innerHTML = rendered;
+        });
+    </script>
+</body>
+
+</html>
