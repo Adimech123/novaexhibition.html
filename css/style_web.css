@@ -5,12 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-family: 'NeueHaasDisplayMedium';
 }
 
 @font-face {
     font-family: 'NeueHaasDisplayBold';
-    src: url('../fonts/NeueHaasDisplayBold.ttf') format('truetype');
+    src: url('./fonts/NeueHaasDisplayBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: 'NeueHaasDisplayMedium';
-    src: url('../fonts/NeueHaasDisplayMedium.ttf') format('truetype');
+    src: url('./fonts/NeueHaasDisplayMedium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -26,7 +26,7 @@
 
 @font-face {
     font-family: 'NeueHaasDisplayLight';
-    src: url('../fonts/NeueHaasDisplayLight.ttf') format('truetype');
+    src: url('./fonts/NeueHaasDisplayLight.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -34,11 +34,12 @@
 
 @font-face {
     font-family: 'NeueHaasDisplayThin';
-    src: url('../fonts/NeueHaasDisplayThin.ttf') format('truetype');
+    src: url('./fonts/NeueHaasDisplayThin.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
+
 
 /* ===============================
    2. Body
@@ -120,7 +121,7 @@ body {
 
 /* Custom font and hover styles */
 .navbar-nav .nav-link {
-    font-family: 'Neue Haas Grotesk Display Pro', 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
     font-size: 15px;
     font-weight: bold;
     text-decoration: none;
