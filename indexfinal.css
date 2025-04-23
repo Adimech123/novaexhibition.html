@@ -124,7 +124,7 @@ html {
 
 /* Custom font and hover styles */
 .navbar-nav .nav-link {
-    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-family: 'Neue Haas Grotesk Display Pro', 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
     font-size: 15px;
     font-weight: bold;
     text-decoration: none;

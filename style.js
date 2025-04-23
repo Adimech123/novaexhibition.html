@@ -40,41 +40,4 @@ document.addEventListener('DOMContentLoaded', () => {
         // Store interval reference for cleanup if needed
         const timerInterval = setInterval(updateCountdown, 1000);
     }
-
-     // Photo gallery logic
-     const photos = document.querySelectorAll('.photo-gallery img');
-    
-     // Only set up gallery if photos exist
-     if (photos.length > 0) {
-         let currentIndex = 0;
-         
-         // Make sure first photo is active initially
-         if (!photos[0].classList.contains('active')) {
-             photos[0].classList.add('active');
-         }
-         
-         // Create a function for the rotation to make it easier to manage
-         const rotatePhotos = () => {
-             photos[currentIndex].classList.remove('active');
-             currentIndex = (currentIndex + 1) % photos.length;
-             photos[currentIndex].classList.add('active');
-         };
-         
-         // Use requestAnimationFrame to ensure smooth transitions
-         // and avoid layout thrashing
-         const galleryInterval = setInterval(() => {
-             requestAnimationFrame(rotatePhotos);
-         }, 2000);
-         
-         // Clean up interval if page is hidden/inactive
-         document.addEventListener('visibilitychange', () => {
-             if (document.hidden) {
-                 clearInterval(galleryInterval);
-             } else {
-                 // Restart interval when page becomes visible again
-                 clearInterval(galleryInterval); // Clear any existing interval
-                 setInterval(rotatePhotos, 2000);
-             }
-         });
-     }
 });
