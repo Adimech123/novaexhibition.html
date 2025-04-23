@@ -5,12 +5,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'NeueHaasDisplayMedium';
+    font-family: 'NeueHaasDisplaRoman';
+    letter-spacing: 0.05em;
 }
 
 @font-face {
     font-family: 'NeueHaasDisplayBold';
     src: url('../fonts/NeueHaasDisplayBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplaRoman';
+    src: url('../fonts/NeueHaasDisplayRoman.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -332,7 +341,7 @@ body {
 }
 
 .card3 p {
-    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
+    font-family: 'NeueHaasDisplaRoman', Helvetica, Arial, sans-serif;
     font-size: 22px;
     line-height: 1.5;
     margin-bottom: 0px;
