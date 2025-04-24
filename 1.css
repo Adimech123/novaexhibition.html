@@ -25,6 +25,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 30%;
+    /* This positions the focal point higher in the frame */
     transition: filter 0.4s ease;
 }
 
@@ -53,13 +55,14 @@
 
 .artist-name {
     margin-bottom: 8px;
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 25px;
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
 }
 
 .artist-bio {
     margin: 0;
     font-size: 16px;
+    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
     line-height: 1.5;
 }
 
@@ -72,24 +75,27 @@
     transform: translateY(-5px);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+@media (min-width: 1400px) {
     .portrait-container {
-        height: 300px;
-        margin-bottom: 20px;
+        height: 400px;
+        /* Increase container height on larger screens */
+    }
+
+    .portrait {
+        object-position: center 25%;
+        /* Adjust focal point for larger screens */
     }
 }
 
-@media (max-width: 576px) {
-    .portrait-grid {
-        padding: 60px 0;
+/* For extra large screens */
+@media (min-width: 1800px) {
+    .portrait-container {
+        height: 450px;
+        /* Further increase height for very large screens */
     }
 
-    .artist-name {
-        font-size: 20px;
-    }
-
-    .artist-bio {
-        font-size: 14px;
+    .portrait {
+        object-position: center 20%;
+        /* Move focal point even higher */
     }
 }
