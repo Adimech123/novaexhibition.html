@@ -111,11 +111,6 @@ body {
 
 
 
-
-
-
-
-
 /* ===============================
    TEXT
    =============================== */
@@ -184,7 +179,36 @@ body {
 
 
 
+/* ===============================
+   PINK FULL-SCREEN CONTAINER
+   =============================== */
+.container2 {
+    width: 100%;
+    min-height: 100vh;
+    /* Makes it full screen height */
+    background-color: pink;
+    /* Or use a specific hex color like #ffb6c1 for light pink */
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+}
 
+.container2 h2 {
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    letter-spacing: 0.03em;
+    color: #000;
+    margin-bottom: 0px;
+}
+
+.container2 p {
+    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    color: #000;
+    text-align: justify;
+    line-height: 1.5;
+}
 
 
 
