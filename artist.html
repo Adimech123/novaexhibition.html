@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="NOVA: a showcase of 30 BFA Digital Arts graduates' dissertation projects, culminating their three-year creative journey in a dynamic exhibition.">
-    <title>Full-Screen Hero Video</title>
+    <title>NOVA — Coming Soon</title>
 
     <link rel="canonical" href="https://novabfa.com" />
     <!-- Standard favicon -->
@@ -33,121 +33,54 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="artist.css" />
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg custom-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="./images/novalogo.png" alt="Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav links">
-                    <li class="nav-item">
-                        <a class="nav-link" href="allevents.html">Events</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link" href="sponsors.html">Artists</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link" href="sponsors.html">Sponsors</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link" href="contacts.html">Contact</a>
-                    </li>
+    <!-- Background Circles -->
+    <div id="background-component"></div>
 
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+    <!-- Navigation -->
+    <div id="nav-component"></div>
 
     <!-- Main Section -->
-    <main class="artist-container" id="content-section">
-        <div class="top-section">
-            <div class="name-container">
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/nova.bfa/" target="_blank">
-                        <img src="./images/instagram.png" alt="Instagram">
-                    </a>
+    <main class="container py-5">
+        <div class="row align-items-center">
+            <!-- Left column: Text and social media -->
+            <div class="col-md-6">
+                <h1>Kristabelle Agius</h1>
+
+                <p class="paragraph mb-4 text-justify">
+                    Kristabelle Agius is a creative with a keen interest in art, graphic design, fashion, and
+                    photography.
+                    She enjoys expressing herself through visual media and handcrafted creations.
+                </p>
+                <!-- Social Links -->
+                <div class="social-media-container">
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/kristabelle_design/?next=%2F" target="_blank">
+                            <img src="./images/instagram.png" alt="Instagram">
+                        </a>
+                    </div>
                 </div>
-                <h1 class="artist-name">Kristabelle Agius</h1>
             </div>
 
-            <div class="portrait-container">
-                <img src="images/web/kristabelle_agius.jpg" alt="portrait" class="portrait">
+            <!-- Right column: Image -->
+            <div class="col-md-6">
+                <img src="images/web/kristabelle_agius.jpg" alt="portrait" class="img-fluid">
             </div>
-        </div>
 
-
-        <div class="full-width-text">
-            <p class="paragraph mb-4 text-justify">
-                Kristabelle Agius is a creative with a keen interest in art, graphic design, fashion, and
-                photography.
-                She enjoys expressing herself through visual media and handcrafted creations.
-            </p>
         </div>
     </main>
 
 
 
 
-
-
-
-
-
-    <div class="container2">
-        <h2>The Old Meets the New: Bringing 1980s Style Into Today’s Fashion Industry</h2>
-        <p class="paragraph mb-4 text-justify">
-            This research project explores the evolving
-            connection between 1980s fashion
-            and contemporary style, using sewing
-            as the primary medium and photography
-            as a supporting tool. Women in their 60s—
-            who were in their mid-20s during
-            the 1980s—were interviewed for their
-            insights into the era's sewing techniques,
-            fabrics, and design preferences.
-            These insights informed a follow-up
-            questionnaire for young women today,
-            examining which elements of 1980s fashion
-            they would incorporate into their personal
-            style.
-
-            <br /><br />
-            The results reveal a cyclical dynamic, in
-            which bold silhouettes, structured designs,
-            and vibrant colours from the 1980s are
-            selectively reimagined to align with modern
-            aesthetics.
-        </p>
-    </div>
-
-
-
-    <div class="container3">
-
-    </div>
-
-
-
-
-    <!-- Bootstrap JS (optional) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
-
-
-    <!-- JavaScript for About Slideshow -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/components.js"></script>
 </body>
 
 </html>
