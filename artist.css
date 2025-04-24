@@ -419,7 +419,7 @@ body {
 }
 
 .nav-arrow-link:hover {
-    color: #f0685c;
+    color: #f56c5f;
 }
 
 .nav-arrow {
@@ -439,7 +439,7 @@ body {
 }
 
 .nav-arrow-link:hover .nav-arrow {
-    background-color: #f0685c;
+    background-color: #f56c5f;
     color: #fff;
     transform: translateX(0);
 }
