@@ -400,6 +400,82 @@ body {
 
 
 
+/* ===============================
+   ARTIST NAVIGATION
+   =============================== */
+.artist-navigation {
+    width: 100%;
+    padding: 30px 0;
+    background-color: #fff;
+}
+
+.nav-arrow-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.nav-arrow-link:hover {
+    color: #f0685c;
+}
+
+.nav-arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-arrow i {
+    font-size: 24px;
+}
+
+.nav-arrow-link:hover .nav-arrow {
+    background-color: #f0685c;
+    color: #fff;
+    transform: translateX(0);
+}
+
+.left-arrow {
+    transform: translateX(5px);
+}
+
+.nav-arrow-link:hover .left-arrow {
+    transform: translateX(-5px);
+}
+
+.right-arrow {
+    transform: translateX(-5px);
+}
+
+.nav-arrow-link:hover .right-arrow {
+    transform: translateX(5px);
+}
+
+.nav-text {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
