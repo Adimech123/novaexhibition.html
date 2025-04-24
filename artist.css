@@ -198,17 +198,210 @@ body {
     font-size: 50px;
     letter-spacing: 0.03em;
     color: #000;
-    margin-bottom: 0px;
+    margin-top: -5%;
 }
 
 .container2 p {
     font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-size: 28px;
     letter-spacing: 0.03em;
     color: #000;
     text-align: justify;
     line-height: 1.5;
+    margin-top: 5%;
 }
+
+
+
+
+/* ===============================
+   PINK FULL-SCREEN CONTAINER
+   =============================== */
+.container3 {
+    width: 100%;
+    min-height: 100vh;
+    /* Makes it full screen height */
+    background-color: rgb(131, 185, 198);
+    /* Or use a specific hex color like #ffb6c1 for light pink */
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+}
+
+.container3 img {
+    width: 20%;
+    /* Make the image smaller - adjust this percentage as needed */
+    height: auto;
+    object-fit: cover;
+    display: block;
+    /* This makes the margin auto work for centering */
+    margin: 5% auto 0;
+    /* Top, horizontal, bottom margins */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Make the container3 image smaller and centered */
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 20%;
+    /* Smaller image */
+    height: auto;
+    cursor: pointer;
+    /* Shows the hand cursor on hover */
+    transition: transform 0.3s;
+}
+
+.image-container img:hover {
+    transform: scale(1.02);
+    /* Slight zoom effect on hover */
+}
+
+/* Gallery Modal Styles */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    overflow: hidden;
+}
+
+.gallery-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#featured-image {
+    max-height: 70vh;
+    max-width: 90%;
+    object-fit: contain;
+    margin: 2% auto;
+}
+
+/* Navigation arrows */
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-arrow {
+    left: 20px;
+}
+
+.next-arrow {
+    right: 20px;
+}
+
+/* Fullscreen button */
+.fullscreen-btn {
+    position: absolute;
+    bottom: 140px;
+    /* Position above thumbnails */
+    right: 20px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+/* Gallery dots */
+.gallery-dots {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+/* Thumbnails row */
+.thumbnail-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+}
+
+.thumbnail {
+    height: 80px;
+    width: auto;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.thumbnail.active,
+.thumbnail:hover {
+    opacity: 1;
+    border: 2px solid white;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
