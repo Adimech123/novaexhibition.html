@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NOVA Exhibition - Meet the artists">
+    <title>Artists</title>
+
+    <link rel="canonical" href="https://novabfa.com/artists.html" />
+    <!-- Standard favicon -->
+    <link rel="icon" href="./images/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon_io/favicon.ico" type="image/x-icon">
+
+    <!-- PNG favicon variants -->
+    <link rel="icon" href="./images/favicon_io/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="./images/favicon_io/favicon-32x32.png" sizes="32x32" type="image/png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="./images/favicon_io/apple-touch-icon.png">
+
+    <!-- Android Chrome icons -->
+    <link rel="icon" href="./images/favicon_io/android-chrome-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="./images/favicon_io/android-chrome-512x512.png" sizes="512x512" type="image/png">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="./images/favicon_io/site.webmanifest">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style_web.css" />
+    <link rel="stylesheet" href="./css/artists.css" />
+</head>
+
+<body>
+    <!-- Background Circles -->
+    <div id="background-component"></div>
+
+    <!-- Navigation -->
+    <div id="nav-component"></div>
+
+    <h4>ARTISTS</h4>
+
+    <div class="container">
+        <div class="portrait-grid" id="artists-grid"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/components.js"></script>
+    <script src="./js/artists.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Artists template using Mustache
+            const artistsTemplate = `
+                {{#artists}}
+                <div class="row">
+                    {{#row}}
+                    <div class="col-md-4">
+                        <div class="portrait-container">
+                            <a href="artist.html?id={{id}}" target="_parent">
+                                <img src="{{image}}" alt="{{name}}" class="portrait">
+                                <div class="artist-info">
+                                    <h3 class="artist-name">{{name}}</h3>
+                                    <p class="artist-bio">{{project}}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    {{/row}}
+                </div>
+                {{/artists}}
+            `;
+
+            // Artist data array
+            const artistsData = [
+                {
+                    id: "kristabelle-agius", //this should be written in this formet for the artist page url reference
+                    name: "Kristabelle Agius",
+                    project: "The Old Meets the New",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-2",
+                    name: "Artist Name 2",
+                    project: "Project Name 2",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-3",
+                    name: "Artist Name 3",
+                    project: "Project Name 3",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-4",
+                    name: "Artist Name 4",
+                    project: "Project Name 4",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-5",
+                    name: "Artist Name 5",
+                    project: "Project Name 5",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-6",
+                    name: "Artist Name 6",
+                    project: "Project Name 6",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-7",
+                    name: "Artist Name 7",
+                    project: "Project Name 7",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-8",
+                    name: "Artist Name 8",
+                    project: "Project Name 8",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-9",
+                    name: "Artist Name 9",
+                    project: "Project Name 9",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-10",
+                    name: "Artist Name 10",
+                    project: "Project Name 10",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-11",
+                    name: "Artist Name 11",
+                    project: "Project Name 11",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-12",
+                    name: "Artist Name 12",
+                    project: "Project Name 12",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-13",
+                    name: "Artist Name 13",
+                    project: "Project Name 13",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-14",
+                    name: "Artist Name 14",
+                    project: "Project Name 14",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-15",
+                    name: "Artist Name 15",
+                    project: "Project Name 15",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-16",
+                    name: "Artist Name 16",
+                    project: "Project Name 16",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-17",
+                    name: "Artist Name 17",
+                    project: "Project Name 17",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-18",
+                    name: "Artist Name 18",
+                    project: "Project Name 18",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-19",
+                    name: "Artist Name 19",
+                    project: "Project Name 19",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-20",
+                    name: "Artist Name 20",
+                    project: "Project Name 20",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-21",
+                    name: "Artist Name 21",
+                    project: "Project Name 21",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-22",
+                    name: "Artist Name 22",
+                    project: "Project Name 22",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-23",
+                    name: "Artist Name 23",
+                    project: "Project Name 23",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-24",
+                    name: "Artist Name 24",
+                    project: "Project Name 24",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-25",
+                    name: "Artist Name 25",
+                    project: "Project Name 25",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-26",
+                    name: "Artist Name 26",
+                    project: "Project Name 26",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-27",
+                    name: "Artist Name 27",
+                    project: "Project Name 27",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-28",
+                    name: "Artist Name 28",
+                    project: "Project Name 28",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-29",
+                    name: "Artist Name 29",
+                    project: "Project Name 29",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                },
+                {
+                    id: "artist-30",
+                    name: "Artist Name 30",
+                    project: "Project Name 30",
+                    image: "./images/artists/kristabelle_agius.jpg"
+                }
+            ];
+
+            /* DEVELOPER NOTE: When adding new events to the array above:
+                1. Always add a comma after each event object
+                2. Don't add a comma after the last event object
+                3. Make sure to include the closing bracket and semicolon "];" */
+            
+            // Add navigation links for each artist (previous and next)
+            artistsData.forEach((artist, index) => {
+                const prevIndex = index === 0 ? artistsData.length - 1 : index - 1;
+                const nextIndex = index === artistsData.length - 1 ? 0 : index + 1;
+                
+                artist.prevId = artistsData[prevIndex].id;
+                artist.nextId = artistsData[nextIndex].id;
+            });
+
+            // Function to arrange artists in rows of 3
+            function arrangeArtistsInRows(artists) {
+                const rows = [];
+                for (let i = 0; i < artists.length; i += 3) {
+                    rows.push({
+                        row: artists.slice(i, i + 3)
+                    });
+                }
+                return rows;
+            }
+
+            // Render the template
+            const rendered = Mustache.render(artistsTemplate, { 
+                artists: arrangeArtistsInRows(artistsData)
+            });
+            document.getElementById("artists-grid").innerHTML = rendered;
+            
+        });
+    </script>
+</body>
+
+</html>
