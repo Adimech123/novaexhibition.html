@@ -116,3 +116,41 @@ h4 {
         /* Move focal point even higher */
     }
 }
+
+
+/* Add this to your existing CSS file (1.css) */
+
+/* Mobile-specific styles for showing overlays on scroll */
+@media (max-width: 768px) {
+
+    /* Hide navigation arrows on mobile since they're less useful on touch devices */
+    .artist-navigation {
+        display: none;
+    }
+
+    /* Initial state for mobile: keep info partially visible */
+    .portrait-container .artist-info {
+        bottom: -70%;
+        /* Show just a hint of the overlay */
+        transition: bottom 0.3s ease;
+    }
+
+    /* Class to be added by JavaScript when element is in viewport */
+    .portrait-container.in-view .artist-info {
+        bottom: 0;
+    }
+
+    /* Enhance tap behavior */
+    .portrait-container {
+        cursor: pointer;
+    }
+
+    /* Make portrait slightly darker by default on mobile */
+    .portrait {
+        filter: brightness(0.9);
+    }
+
+    .portrait-container.in-view .portrait {
+        filter: brightness(0.7);
+    }
+}
