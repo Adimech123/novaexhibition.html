@@ -136,46 +136,32 @@
 
 
 
-
-    <!-- Third Container -->
+    <!-- Third Container with Carousel -->
     <section class="container3">
-        <div class="image-container">
-            <img src="images/trivia_night.png" alt="trivia" class="img-fluid gallery-trigger">
-        </div>
-
-        <!-- Gallery modal that will be hidden initially -->
-        <div id="imageGallery" class="gallery-modal">
-            <div class="gallery-content">
-                <img id="featured-image" src="images/trivia_night.png" alt="trivia" class="img-fluid">
+        <div class="carousel-container">
+            <!-- Main carousel display -->
+            <div class="carousel-display">
+                <img src="images/trivia_night.png" alt="Image 1" class="carousel-image active">
+                <img src="path/to/image2.jpg" alt="Image 2" class="carousel-image">
+                <img src="path/to/image3.jpg" alt="Image 3" class="carousel-image">
+                <!-- Add more images as needed -->
 
                 <!-- Navigation arrows -->
-                <span class="gallery-nav prev-arrow">&#10094;</span>
-                <span class="gallery-nav next-arrow">&#10095;</span>
+                <div class="carousel-arrow prev-arrow">&#10094;</div>
+                <div class="carousel-arrow next-arrow">&#10095;</div>
 
-                <!-- Fullscreen button -->
-                <span class="fullscreen-btn">&#x26F6;</span>
-
-                <!-- Gallery dots -->
-                <div class="gallery-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-
-                <!-- Thumbnails -->
-                <div class="thumbnail-row">
-                    <img src="images/trivia_night.png" alt="thumbnail 1" class="thumbnail active">
-                    <!-- Add your other gallery images here -->
-                    <img src="path/to/image2.jpg" alt="thumbnail 2" class="thumbnail">
-                    <img src="path/to/image3.jpg" alt="thumbnail 3" class="thumbnail">
-                    <!-- Add more thumbnails as needed -->
+                <!-- Dots/indicators -->
+                <div class="carousel-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <!-- Add more dots as needed -->
                 </div>
             </div>
+
+
         </div>
     </section>
-
-
-
 
 
 

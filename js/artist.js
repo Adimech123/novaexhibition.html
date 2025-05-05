@@ -1,124 +1,116 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Get the gallery trigger image and modal
-    const galleryTrigger = document.querySelector('.gallery-trigger');
-    const galleryModal = document.getElementById('imageGallery');
-
-    // Get gallery elements
-    const featuredImage = document.getElementById('featured-image');
-    const thumbnails = document.querySelectorAll('.thumbnail');
-    const dots = document.querySelectorAll('.dot');
-    const prevArrow = document.querySelector('.prev-arrow');
-    const nextArrow = document.querySelector('.next-arrow');
-    const fullscreenBtn = document.querySelector('.fullscreen-btn');
+    // Get carousel elements
+    const carouselImages = document.querySelectorAll('.carousel-image');
+    const thumbnails = document.querySelectorAll('.carousel-thumbnails .thumbnail');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+    const prevArrow = document.querySelector('.carousel-arrow.prev-arrow');
+    const nextArrow = document.querySelector('.carousel-arrow.next-arrow');
 
     let currentIndex = 0;
+    let autoSlideInterval;
 
-    // Open gallery when trigger image is clicked
-    galleryTrigger.addEventListener('click', function () {
-        galleryModal.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
-    });
+    // Initialize the carousel
+    initCarousel();
 
-    // Close gallery when clicking outside the image
-    galleryModal.addEventListener('click', function (e) {
-        if (e.target === galleryModal) {
-            closeGallery();
-        }
-    });
+    function initCarousel() {
+        // Show first image
+        showImage(0);
 
-    // Close gallery with ESC key
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') {
-            closeGallery();
-        }
+        // Set up automatic sliding
+        startAutoSlide();
 
-        // Navigate with arrow keys
-        if (galleryModal.style.display === 'block') {
-            if (e.key === 'ArrowRight') {
-                showNextImage();
-            } else if (e.key === 'ArrowLeft') {
-                showPrevImage();
-            }
-        }
-    });
+        // Add event listeners
+        prevArrow.addEventListener('click', showPrevImage);
+        nextArrow.addEventListener('click', showNextImage);
 
-    // Function to close the gallery
-    function closeGallery() {
-        galleryModal.style.display = 'none';
-        document.body.style.overflow = '';
-    }
-
-    // Update displayed image
-    function updateImage(index) {
-        // Update main image
-        featuredImage.src = thumbnails[index].src;
-
-        // Update active thumbnail and dot
-        thumbnails.forEach(thumb => thumb.classList.remove('active'));
-        thumbnails[index].classList.add('active');
-
-        // Ensure thumbnail is visible in the row
-        thumbnails[index].scrollIntoView({
-            behavior: 'smooth',
-            block: 'nearest',
-            inline: 'center'
+        // Add event listeners to thumbnails
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function () {
+                const index = parseInt(this.getAttribute('data-index'));
+                showImage(index);
+            });
         });
 
+        // Add event listeners to dots
+        dots.forEach(dot => {
+            dot.addEventListener('click', function () {
+                const index = parseInt(this.getAttribute('data-index'));
+                showImage(index);
+            });
+        });
+
+        // Pause auto-slide on hover
+        document.querySelector('.carousel-display').addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+
+        // Resume auto-slide on mouse leave
+        document.querySelector('.carousel-display').addEventListener('mouseleave', () => {
+            startAutoSlide();
+        });
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowLeft') {
+                showPrevImage();
+            } else if (e.key === 'ArrowRight') {
+                showNextImage();
+            }
+        });
+    }
+
+    // Start automatic sliding
+    function startAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(showNextImage, 5000); // Change image every 5 seconds
+    }
+
+    // Show specific image by index
+    function showImage(index) {
+        // Remove active class from all images, thumbnails and dots
+        carouselImages.forEach(img => img.classList.remove('active'));
+        thumbnails.forEach(thumb => thumb.classList.remove('active'));
         dots.forEach(dot => dot.classList.remove('active'));
-        if (dots[index]) {
-            dots[index].classList.add('active');
+
+        // Add active class to current image, thumbnail and dot
+        carouselImages[index].classList.add('active');
+        if (thumbnails[index]) thumbnails[index].classList.add('active');
+        if (dots[index]) dots[index].classList.add('active');
+
+        // Ensure thumbnail is visible in the scroll area
+        if (thumbnails[index]) {
+            thumbnails[index].scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center'
+            });
         }
 
+        // Update current index
         currentIndex = index;
+
+        // Reset auto-slide timer
+        startAutoSlide();
     }
 
-    // Navigate to next image
-    function showNextImage() {
-        let newIndex = currentIndex + 1;
-        if (newIndex >= thumbnails.length) newIndex = 0;
-        updateImage(newIndex);
-    }
-
-    // Navigate to previous image
+    // Show previous image
     function showPrevImage() {
-        let newIndex = currentIndex - 1;
-        if (newIndex < 0) newIndex = thumbnails.length - 1;
-        updateImage(newIndex);
+        let index = currentIndex - 1;
+        if (index < 0) {
+            index = carouselImages.length - 1;
+        }
+        showImage(index);
     }
 
-    // Add click events to thumbnails
-    thumbnails.forEach((thumbnail, index) => {
-        thumbnail.addEventListener('click', () => updateImage(index));
-    });
-
-    // Add click events to dots
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => updateImage(index));
-    });
-
-    // Previous and next navigation
-    prevArrow.addEventListener('click', showPrevImage);
-    nextArrow.addEventListener('click', showNextImage);
-
-    // Fullscreen functionality
-    fullscreenBtn.addEventListener('click', () => {
-        if (featuredImage.requestFullscreen) {
-            featuredImage.requestFullscreen();
-        } else if (featuredImage.mozRequestFullScreen) { /* Firefox */
-            featuredImage.mozRequestFullScreen();
-        } else if (featuredImage.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-            featuredImage.webkitRequestFullscreen();
-        } else if (featuredImage.msRequestFullscreen) { /* IE/Edge */
-            featuredImage.msRequestFullscreen();
+    // Show next image
+    function showNextImage() {
+        let index = currentIndex + 1;
+        if (index >= carouselImages.length) {
+            index = 0;
         }
-    });
+        showImage(index);
+    }
 });
-
-
-
-
-
-
 
 
 
