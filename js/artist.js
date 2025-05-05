@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextArrow = document.querySelector('.carousel-arrow.next-arrow');
 
     let currentIndex = 0;
-    let autoSlideInterval;
 
     // Initialize the carousel
     initCarousel();
@@ -15,9 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function initCarousel() {
         // Show first image
         showImage(0);
-
-        // Set up automatic sliding
-        startAutoSlide();
 
         // Add event listeners
         prevArrow.addEventListener('click', showPrevImage);
@@ -32,37 +28,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Add event listeners to dots
-        dots.forEach(dot => {
+        dots.forEach((dot, index) => {
             dot.addEventListener('click', function () {
-                const index = parseInt(this.getAttribute('data-index'));
                 showImage(index);
             });
         });
-
-        // Pause auto-slide on hover
-        document.querySelector('.carousel-display').addEventListener('mouseenter', () => {
-            clearInterval(autoSlideInterval);
-        });
-
-        // Resume auto-slide on mouse leave
-        document.querySelector('.carousel-display').addEventListener('mouseleave', () => {
-            startAutoSlide();
-        });
-
-        // Add keyboard navigation
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'ArrowLeft') {
-                showPrevImage();
-            } else if (e.key === 'ArrowRight') {
-                showNextImage();
-            }
-        });
-    }
-
-    // Start automatic sliding
-    function startAutoSlide() {
-        clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(showNextImage, 5000); // Change image every 5 seconds
     }
 
     // Show specific image by index
@@ -86,9 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Update current index
         currentIndex = index;
-
-        // Reset auto-slide timer
-        startAutoSlide();
     }
 
     // Show previous image
@@ -109,6 +76,27 @@ document.addEventListener('DOMContentLoaded', function () {
         showImage(index);
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Artist Navigation JavaScript (arrows: previous artist and next artist)
 document.addEventListener('DOMContentLoaded', function () {
