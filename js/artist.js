@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Get carousel elements
     const carouselImages = document.querySelectorAll('.carousel-image');
-    const thumbnails = document.querySelectorAll('.carousel-thumbnails .thumbnail');
+    const thumbnails = document.querySelectorAll('.thumbnail');
     const dots = document.querySelectorAll('.carousel-dots .dot');
     const prevArrow = document.querySelector('.carousel-arrow.prev-arrow');
     const nextArrow = document.querySelector('.carousel-arrow.next-arrow');
@@ -74,16 +74,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Add active class to current image, thumbnail and dot
         carouselImages[index].classList.add('active');
-        if (thumbnails[index]) thumbnails[index].classList.add('active');
-        if (dots[index]) dots[index].classList.add('active');
 
-        // Ensure thumbnail is visible in the scroll area
-        if (thumbnails[index]) {
-            thumbnails[index].scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest',
-                inline: 'center'
-            });
+        // Check if thumbnails or dots exist before trying to access them
+        if (thumbnails.length > 0 && thumbnails[index]) {
+            thumbnails[index].classList.add('active');
+        }
+
+        if (dots.length > 0 && dots[index]) {
+            dots[index].classList.add('active');
         }
 
         // Update current index
@@ -111,6 +109,49 @@ document.addEventListener('DOMContentLoaded', function () {
         showImage(index);
     }
 });
+
+// Artist Navigation JavaScript (arrows: previous artist and next artist)
+document.addEventListener('DOMContentLoaded', function () {
+    // Array of artist pages - update this with your actual artist pages
+    const artistPages = [
+        'artist1.html',
+        'artist2.html',
+        'kristabelle-agius.html', // Assuming this is the current artist page
+        'artist4.html',
+        'artist5.html'
+        // Add all your artist pages here
+    ];
+
+    // Find current artist in the array
+    const currentPage = window.location.pathname.split('/').pop();
+    const currentIndex = artistPages.indexOf(currentPage);
+
+    const prevArtistLink = document.querySelector('.prev-artist');
+    const nextArtistLink = document.querySelector('.next-artist');
+
+    // Set previous artist link
+    if (currentIndex > 0) {
+        prevArtistLink.href = artistPages[currentIndex - 1];
+    } else {
+        // If this is the first artist, link to the last artist
+        prevArtistLink.href = artistPages[artistPages.length - 1];
+    }
+
+    // Set next artist link
+    if (currentIndex < artistPages.length - 1) {
+        nextArtistLink.href = artistPages[currentIndex + 1];
+    } else {
+        // If this is the last artist, link to the first artist
+        nextArtistLink.href = artistPages[0];
+    }
+});
+
+
+
+
+
+
+
 
 
 
