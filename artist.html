@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NOVA Exhibition - Meet the artist">
-    <title>Artist</title>
+    <title>Artist | NOVA Exhibition</title>
 
     <link rel="canonical" href="https://novabfa.com/artist.html" />
     <!-- Standard favicon -->
@@ -32,11 +32,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/artist.css" />
-
 </head>
 
 <body>
-
     <!-- Background Circles -->
     <div id="background-component"></div>
 
@@ -45,149 +43,331 @@
 
     <!-- Artist Navigation -->
     <div class="artist-navigation">
-        <div class="container">
-            <div class="row justify-content-between align-items-center py-4">
-                <div class="col-auto">
-                    <a href="#" class="nav-arrow-link prev-artist">
-                        <div class="nav-arrow left-arrow">
-                            <i class="bi bi-arrow-left"></i>
-                        </div>
-                        <span class="nav-text">Previous Artist</span>
-                    </a>
-                </div>
-                <div class="col-auto">
-                    <a href="#" class="nav-arrow-link next-artist">
-                        <div class="nav-arrow right-arrow">
-                            <i class="bi bi-arrow-right"></i>
-                        </div>
-                        <span class="nav-text">Next Artist</span>
-                    </a>
+        <div class="container" id="artist-navigation-container">
+            <!-- Navigation content will be dynamically inserted here -->
+            <div class="text-center py-3">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
                 </div>
             </div>
         </div>
     </div>
 
-
-
     <!-- Main Section -->
-    <main class="container py-5">
-        <div class="row align-items-center">
-            <!-- Left column: Text and social media -->
-            <div class="col-md-6">
-                <h1>Kristabelle Agius</h1>
+    <section class="white-bg">
+        <main class="container py-4 py-md-5" id="artist-info-container">
+            <!-- Artist info content will be dynamically inserted here -->
+            <div class="text-center py-3">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-3">Loading artist information...</p>
+            </div>
+        </main>
+    </section>
 
-                <p class="paragraph mb-4 text-justify">
-                    Kristabelle Agius is a creative with a keen interest in art, graphic design, fashion, and
-                    photography.
-                    She enjoys expressing herself through visual media and handcrafted creations.
-                </p>
+    <!-- Project Section -->
+    <section class="container2 pt-2 pb-2">
+        <div class="container" id="project-container">
+            <!-- Project content will be dynamically inserted here -->
+            <div class="text-center py-3">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="container3 py-4 py-md-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12" id="carousel-container">
+                    <!-- Carousel content will be dynamically inserted here -->
+                    <div class="text-center py-3">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mustache Templates -->
+    <!-- Artist Navigation Template -->
+    <script id="navigation-template" type="text/template">
+        <div class="row justify-content-between align-items-center py-3 py-md-4">
+            <div class="col-6 col-sm-auto">
+                <a href="artist.html?id={{prevArtistId}}" class="nav-arrow-link prev-artist d-flex align-items-center">
+                    <div class="nav-arrow left-arrow">
+                        <i class="bi bi-arrow-left"></i>
+                    </div>
+                    <span class="nav-text d-none d-sm-inline-block ms-2">Previous Artist</span>
+                </a>
+            </div>
+            <div class="col-6 col-sm-auto">
+                <a href="artist.html?id={{nextArtistId}}" class="nav-arrow-link next-artist d-flex align-items-center justify-content-end justify-content-sm-start">
+                    <span class="nav-text d-none d-sm-inline-block me-2">Next Artist</span>
+                    <div class="nav-arrow right-arrow">
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </script>
+
+    <!-- Artist Info Template -->
+    <script id="artist-info-template" type="text/template">
+        <div class="row align-items-center gy-4">
+            <!-- Left column: Text and social media -->
+            <div class="col-12 col-md-6 order-1 order-md-1">
+                <h1 class="mb-3">{{name}}</h1>
+
+                <p class="paragraph mb-4">{{bio}}</p>
                 <!-- Social Links -->
                 <div class="social-media-container">
                     <div class="social-icons">
-                        <a href="https://www.instagram.com/kristabelle_design/?next=%2F" target="_blank">
-                            <img src="./images/instagram.png" alt="Instagram">
+                        {{#social}}
+                        <a href="{{url}}" target="_blank" class="d-inline-block" aria-label="{{platform}}">
+                            <img src="{{icon}}" alt="{{platform}}" width="32" height="32">
                         </a>
+                        {{/social}}
                     </div>
                 </div>
             </div>
 
             <!-- Right column: Image -->
-            <div class="col-md-6">
-                <img src="./images/artists/kristabelle_agius.jpg" alt="portrait" class="img-fluid">
-            </div>
-
-        </div>
-    </main>
-
-
-    <!-- Second Container -->
-    <section class="container2">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-
-                    <h2>The Old Meets the New:
-
-                        Bringing 1980s Style Into Today’s Fashion Industry
-                    </h2>
-                    <p>This research project explores the evolving connection between 1980s fashion and contemporary
-                        style, using sewing as the primary medium and photography as a supporting tool. Women in their
-                        60s—who were in their mid-20s during the 1980s—were interviewed for their insights into the
-                        era’s sewing techniques, fabrics, and design preferences. These insights informed a follow-up
-                        questionnaire for young women today, examining which elements of 1980s fashion they would
-                        incorporate into their personal style. The results reveal a cyclical dynamic, in which bold
-                        silhouettes, structured designs, and vibrant colours from the 1980s are selectively reimagined
-                        to align with modern aesthetics.
-                    </p>
+            <div class="col-12 col-md-6 order-2 order-md-2 text-center text-md-end">
+                <div class="portrait-container">
+                    <img src="{{portraitImage}}" alt="Portrait of {{name}}" class="img-fluid rounded shadow artist-portrait">
                 </div>
             </div>
         </div>
-    </section>
+    </script>
 
+    <!-- Project Template -->
+    <script id="project-template" type="text/template">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2 class="mb-3 text-md-start">{{projectTitle}}</h2>
+                <p class="mb-0">{{projectDescription}}</p>
+            </div>
+        </div>
+    </script>
 
+    <!-- Carousel Template -->
+    <script id="carousel-template" type="text/template">
+        <div class="carousel-container position-relative">
+            <!-- Main carousel display -->
+            <div class="carousel-display">
+                <!-- Carousel images -->
+                {{#carouselImages}}
+                <img src="{{src}}" alt="{{alt}}" class="carousel-image {{#first}}active{{/first}} img-fluid">
+                {{/carouselImages}}
+                
+                <!-- Navigation arrows -->
+                <div class="carousel-arrow prev-arrow d-flex align-items-center justify-content-center">&#10094;</div>
+                <div class="carousel-arrow next-arrow d-flex align-items-center justify-content-center">&#10095;</div>
 
-
-
-
-
-
-
-
-
-
-
-    <!-- Third Container with Carousel -->
-    <section class="container3">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-12 col-xl-10">
-                    <div class="carousel-container">
-                        <!-- Main carousel display -->
-                        <div class="carousel-display">
-                            <!-- Updated with placeholder images - replace with your actual images -->
-                            <img src="./images/trivia_night.png" alt="Image 1" class="carousel-image active">
-                            <img src="./images/sample_image2.jpg" alt="Image 2" class="carousel-image">
-                            <img src="./images/sample_image3.jpg" alt="Image 3" class="carousel-image">
-                            <img src="./images/sample_image4.jpg" alt="Image 4" class="carousel-image">
-                            <img src="./images/sample_image5.jpg" alt="Image 5" class="carousel-image">
-                            <!-- Add more images as needed -->
-
-                            <!-- Navigation arrows -->
-                            <div class="carousel-arrow prev-arrow">&#10094;</div>
-                            <div class="carousel-arrow next-arrow">&#10095;</div>
-
-                            <!-- Dots/indicators -->
-                            <div class="carousel-dots">
-                                <span class="dot active" data-index="0"></span>
-                                <span class="dot" data-index="1"></span>
-                                <span class="dot" data-index="2"></span>
-                                <span class="dot" data-index="3"></span>
-                                <span class="dot" data-index="4"></span>
-                                <!-- Add more dots as needed -->
-                            </div>
-                        </div>
-
-
-                    </div>
+                <!-- Dots/indicators -->
+                <div class="carousel-dots">
+                    {{#carouselImages}}
+                    <span class="dot {{#first}}active{{/first}}" data-index="{{index}}" role="button" aria-label="Slide {{slideNumber}}"></span>
+                    {{/carouselImages}}
                 </div>
             </div>
         </div>
-    </section>
-
-
-
-
-
-
-
-
-
+    </script>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/artist.js"></script>
     <script src="./js/components.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Artist data object
+            const artistData = {
+                "kristabelle-agius": {
+                    name: "Kristabelle Agius",
+                    bio: "Kristabelle Agius is a creative with a keen interest in art, graphic design, fashion, and photography. She enjoys expressing herself through visual media and handcrafted creations.",
+                    social: [
+                        {
+                            platform: "Instagram",
+                            url: "https://www.instagram.com/kristabelle_design/?next=%2F",
+                            icon: "./images/instagram.png"
+                        }
+                    ],
+                    portraitImage: "./images/artists/kristabelle_agius.jpg",
+                    projectTitle: "The Old Meets the New: Bringing 1980s Style Into Today's Fashion Industry",
+                    projectDescription: "This research project explores the evolving connection between 1980s fashion and contemporary style, using sewing as the primary medium and photography as a supporting tool. Women in their 60s—who were in their mid-20s during the 1980s—were interviewed for their insights into the era's sewing techniques, fabrics, and design preferences. These insights informed a follow-up questionnaire for young women today, examining which elements of 1980s fashion they would incorporate into their personal style. The results reveal a cyclical dynamic, in which bold silhouettes, structured designs, and vibrant colours from the 1980s are selectively reimagined to align with modern aesthetics.",
+                    carouselImages: [
+                        {
+                            src: "./images/projects/Kristabelle_Agius/image1.jpg",
+                            alt: "Image 1"
+                        },
+                        {
+                            src: "./images/projects/Kristabelle_Agius/image2.jpg",
+                            alt: "Image 2"
+                        },
+                        {
+                            src: "./images/projects/Kristabelle_Agius/image3.jpg",
+                            alt: "Image 3"
+                        },
+                        {
+                            src: "./images/projects/Kristabelle_Agius/image4.jpg",
+                            alt: "Image 4"
+                        },
+                        {
+                            src: "./images/projects/Kristabelle_Agius/image5.jpg",
+                            alt: "Image 5"
+                        },
+                        {
+                            src: "./images/projects/Kristabelle_Agius/image6.jpg",
+                            alt: "Image 5"
+                        }
+                    ]
+                },
+                "lynn-zammitrussell": {
+                    name: "Lynn Zammit Russell",
+                    bio: "Lynn Zammit Russell is a multidisciplinary digital artist working primarily in 3D and VR game design. Her practice explores immersive, story-driven experiences that merge visual storytelling with interactive and spatial experimentation.",
+                    social: [
+                        {
+                            platform: "LinkTree",
+                            url: "https://linktr.ee/lyzadesigns",
+                            icon: "./images/instagram.png"
+                        }
+                    ],
+                    portraitImage: "./images/artists/Lynn_ZammitRussell.jpg",
+                    projectTitle: "Immersive Storytelling: A VR Escape Room Exploring Maltese Mythology",
+                    projectDescription: "The Lost Notes invites players into a forgotten temple where stone walls whisper ancient truths and myth bleeds into memory. This VR escape room reimagines Maltese folklore, centering on legendary giants and the temples that inspired their story. Players retrace the steps of a vanished archaeologist through puzzles, fragmented diary pages, and spatial storytelling—uncovering knowledge and confronting blurred lines between history and myth. The experience transforms cultural heritage into an interactive narrative, where discovery is felt as much as understood. By embedding story into space, motion, and interaction, The Lost Notes explores how mythology is preserved through presence—inviting players not just to observe the past but to step inside it.",
+                    carouselImages: [
+                        {
+                            src: "./images/projects/Lynn_Zammit_Russell/image1.png",
+                            alt: "VR Experience 1"
+                        },
+                        {
+                            src: "./images/projects/Lynn_Zammit_Russell/image2.png",
+                            alt: "VR Experience 2"
+                        },
+                        {
+                            src: "./images/projects/Lynn_Zammit_Russell/image3.png",
+                            alt: "VR Experience 3"
+                        },
+                        {
+                            src: "./images/projects/Lynn_Zammit_Russell/image4.png",
+                            alt: "VR Experience 3"
+                        }
+                    ]
+                }
+                // Add more artists as needed
+            };
+
+            // Get all artist IDs in an array for navigation
+            const artistIds = Object.keys(artistData);
+
+            // Function to get URL parameter
+            function getArtistId() {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get('id');
+            }
+
+            // Function to render artist details using Mustache templates
+            function renderArtistDetails() {
+                const artistId = getArtistId();
+                
+                // If no artist ID in URL or not found, default to first artist
+                const currentArtistId = (artistId && artistData[artistId]) ? artistId : artistIds[0];
+                const artist = artistData[currentArtistId];
+
+                // Set page title
+                document.title = `${artist.name} | NOVA Exhibition`;
+                
+                // Get template content
+                const navigationTemplate = document.getElementById('navigation-template').innerHTML;
+                const artistInfoTemplate = document.getElementById('artist-info-template').innerHTML;
+                const projectTemplate = document.getElementById('project-template').innerHTML;
+                const carouselTemplate = document.getElementById('carousel-template').innerHTML;
+                
+                // Set up navigation data
+                const currentIndex = artistIds.indexOf(currentArtistId);
+                const prevIndex = (currentIndex - 1 + artistIds.length) % artistIds.length;
+                const nextIndex = (currentIndex + 1) % artistIds.length;
+                
+                // Create navigation view model
+                const navigationViewModel = {
+                    prevArtistId: artistIds[prevIndex],
+                    nextArtistId: artistIds[nextIndex]
+                };
+                
+                // Prepare carousel data with index and first flag
+                const carouselImages = artist.carouselImages.map((image, index) => {
+                    return {
+                        ...image,
+                        index: index,
+                        slideNumber: index + 1,
+                        first: index === 0
+                    };
+                });
+                
+                // Create carousel view model
+                const carouselViewModel = {
+                    carouselImages: carouselImages
+                };
+                
+                // Render templates
+                document.getElementById('artist-navigation-container').innerHTML = Mustache.render(navigationTemplate, navigationViewModel);
+                document.getElementById('artist-info-container').innerHTML = Mustache.render(artistInfoTemplate, artist);
+                document.getElementById('project-container').innerHTML = Mustache.render(projectTemplate, artist);
+                document.getElementById('carousel-container').innerHTML = Mustache.render(carouselTemplate, carouselViewModel);
+                
+                // Setup carousel event listeners
+                setupCarouselEventListeners();
+            }
+
+            // Function to setup carousel event listeners
+            function setupCarouselEventListeners() {
+                const images = document.querySelectorAll('.carousel-image');
+                const dots = document.querySelectorAll('.dot');
+                const prevArrow = document.querySelector('.prev-arrow');
+                const nextArrow = document.querySelector('.next-arrow');
+                
+                let currentIndex = 0;
+                
+                // Function to show image at specific index
+                function showImage(index) {
+                    images.forEach(img => img.classList.remove('active'));
+                    dots.forEach(dot => dot.classList.remove('active'));
+                    
+                    currentIndex = (index + images.length) % images.length;
+                    
+                    images[currentIndex].classList.add('active');
+                    dots[currentIndex].classList.add('active');
+                }
+                
+                // Add event listeners to dots
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        showImage(index);
+                    });
+                });
+                
+                // Add event listeners to arrows
+                prevArrow.addEventListener('click', () => {
+                    showImage(currentIndex - 1);
+                });
+                
+                nextArrow.addEventListener('click', () => {
+                    showImage(currentIndex + 1);
+                });
+            }
+
+            // Initialize the page
+            renderArtistDetails();
+        });
+    </script>
 </body>
 
 </html>
