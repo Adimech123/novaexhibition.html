@@ -1292,31 +1292,31 @@
             // Function to render artist details using Mustache templates
             function renderArtistDetails() {
                 const artistId = getArtistId();
-                
+
                 // If no artist ID in URL or not found, default to first artist
                 const currentArtistId = (artistId && artistData[artistId]) ? artistId : artistIds[0];
                 const artist = artistData[currentArtistId];
 
                 // Set page title
                 document.title = `${artist.name} | NOVA Exhibition`;
-                
+
                 // Get template content
                 const navigationTemplate = document.getElementById('navigation-template').innerHTML;
                 const artistInfoTemplate = document.getElementById('artist-info-template').innerHTML;
                 const projectTemplate = document.getElementById('project-template').innerHTML;
                 const carouselTemplate = document.getElementById('carousel-template').innerHTML;
-                
+
                 // Set up navigation data
                 const currentIndex = artistIds.indexOf(currentArtistId);
                 const prevIndex = (currentIndex - 1 + artistIds.length) % artistIds.length;
                 const nextIndex = (currentIndex + 1) % artistIds.length;
-                
+
                 // Create navigation view model
                 const navigationViewModel = {
                     prevArtistId: artistIds[prevIndex],
                     nextArtistId: artistIds[nextIndex]
                 };
-                
+
                 // Prepare carousel data with index and first flag
                 const carouselImages = artist.carouselImages.map((image, index) => {
                     return {
@@ -1326,18 +1326,18 @@
                         first: index === 0
                     };
                 });
-                
+
                 // Create carousel view model
                 const carouselViewModel = {
                     carouselImages: carouselImages
                 };
-                
+
                 // Render templates
                 document.getElementById('artist-navigation-container').innerHTML = Mustache.render(navigationTemplate, navigationViewModel);
                 document.getElementById('artist-info-container').innerHTML = Mustache.render(artistInfoTemplate, artist);
                 document.getElementById('project-container').innerHTML = Mustache.render(projectTemplate, artist);
                 document.getElementById('carousel-container').innerHTML = Mustache.render(carouselTemplate, carouselViewModel);
-                
+
                 // Setup carousel event listeners
                 setupCarouselEventListeners();
             }
@@ -1348,32 +1348,32 @@
                 const dots = document.querySelectorAll('.dot');
                 const prevArrow = document.querySelector('.prev-arrow');
                 const nextArrow = document.querySelector('.next-arrow');
-                
+
                 let currentIndex = 0;
-                
+
                 // Function to show image at specific index
                 function showImage(index) {
                     images.forEach(img => img.classList.remove('active'));
                     dots.forEach(dot => dot.classList.remove('active'));
-                    
+
                     currentIndex = (index + images.length) % images.length;
-                    
+
                     images[currentIndex].classList.add('active');
                     dots[currentIndex].classList.add('active');
                 }
-                
+
                 // Add event listeners to dots
                 dots.forEach((dot, index) => {
                     dot.addEventListener('click', () => {
                         showImage(index);
                     });
                 });
-                
+
                 // Add event listeners to arrows
                 prevArrow.addEventListener('click', () => {
                     showImage(currentIndex - 1);
                 });
-                
+
                 nextArrow.addEventListener('click', () => {
                     showImage(currentIndex + 1);
                 });

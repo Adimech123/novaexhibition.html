@@ -445,7 +445,7 @@ h1 {
 
 
 .text h1 {
-    margin: 0 0 10px;
+    margin: 0 0 5px;
     font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
     font-size: 25px;
     position: relative;
@@ -540,11 +540,17 @@ button[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    display: block;
+    display: flex;
+    /* Change from block to flex */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
     margin: 0 auto;
-    /* This centers the button */
+    /* Keep the button itself centered on the page */
     width: fit-content;
     height: 45px;
+    text-align: center;
 
 
 }
@@ -563,32 +569,121 @@ button[type="submit"]:hover {
 
 
 
+
+
+
+
+
+
+
+
+/* ===============================
+   Responsive Contact Page Styling
+   =============================== */
+
+/* Additional responsive styles for contact page */
+@media (max-width: 1024px) {
+    .white-box {
+        width: calc(100% - 60px);
+        padding: 25px;
+        margin: 20px auto;
+        max-width: 800px;
+    }
+
+    .contact-left {
+        min-width: 100%;
+    }
+
+    .contact-right {
+        display: none;
+        /* Hide the right section on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .white-box {
+        width: calc(100% - 40px);
+        padding: 20px;
+        margin: 15px auto;
+        position: relative;
+        transform: none;
+        margin-top: 10%;
+        left: 0;
+        height: auto;
+        min-height: 500px;
+    }
+
+    .text h1 {
+        font-size: 22px;
+        margin: 10px 0 20px;
+        /* Adjusted margins for mobile */
+    }
+
+    .text h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .contact-inputs {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+        font-size: 18px;
+        height: 40px;
+    }
+}
+
 @media (max-width: 480px) {
-    .countdown2 {
-        flex-wrap: nowrap;
-        /* Prevent wrapping */
-        gap: 5px;
-        margin-top: -1%;
+    .white-box {
+        width: calc(100% - 20px);
+        padding: 15px;
+        margin: 10px auto;
+        border-radius: 15px;
     }
 
-    .card3 {
-        margin-top: -7%;
+    .text h1 {
+        font-size: 20px;
+        margin: 15px 0 18px;
+        /* Adjusted margins for smaller mobile */
     }
 
-    .card3 h1 {
-        font-size: 30px;
+    .text h2 {
+        font-size: 16px;
+        margin-bottom: 8px;
     }
 
-    .card3 p {
-        font-size: 21px;
+    .contact-inputs {
+        padding: 8px;
+        font-size: 14px;
     }
 
-    .countdown2-value {
-        font-size: 1.5rem;
-        padding: 0.4rem 0.8rem;
+    textarea.contact-inputs {
+        min-height: 100px;
     }
 
-    .countdown2-label {
-        font-size: 0.75rem;
+    button[type="submit"] {
+        padding: 8px 16px;
+        font-size: 16px;
+        height: 36px;
     }
+
+    .contact-inputs::placeholder {
+        font-size: 13px;
+    }
+}
+
+/* Fix for navigation on small screens */
+@media (max-width: 576px) {
+    .navbar-brand img {
+        max-height: 40px;
+    }
+
+    .custom-navbar {
+        padding: 0.3rem 0.5rem;
+    }
+
+
 }
