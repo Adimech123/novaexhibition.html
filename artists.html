@@ -221,7 +221,7 @@
                 {
                     id: "lily-nowak",
                     name: "Lily Nowak",
-                    project: "What’s in the Box? Promoting Wellness through Storytelling ",
+                    project: "What’s in the Box?",
                     image: "./images/artists/24_lily_nowak.jpg"
                 },
                 {
@@ -253,7 +253,7 @@
                     name: "Karl Vella Bamber",
                     project: "Abstracting The Self",
                     image: "./images/artists/29_karl_vellabamber.jpg"
-                },  
+                },
                 {
                     id: "lynn-zammitrussell",
                     name: "Lynn Zammit Russell",
@@ -266,12 +266,12 @@
                 1. Always add a comma after each event object
                 2. Don't add a comma after the last event object
                 3. Make sure to include the closing bracket and semicolon "];" */
-            
+
             // Add navigation links for each artist (previous and next)
             artistsData.forEach((artist, index) => {
                 const prevIndex = index === 0 ? artistsData.length - 1 : index - 1;
                 const nextIndex = index === artistsData.length - 1 ? 0 : index + 1;
-                
+
                 artist.prevId = artistsData[prevIndex].id;
                 artist.nextId = artistsData[nextIndex].id;
             });
@@ -288,11 +288,11 @@
             }
 
             // Render the template
-            const rendered = Mustache.render(artistsTemplate, { 
+            const rendered = Mustache.render(artistsTemplate, {
                 artists: arrangeArtistsInRows(artistsData)
             });
             document.getElementById("artists-grid").innerHTML = rendered;
-            
+
         });
     </script>
 </body>
