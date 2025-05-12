@@ -42,7 +42,7 @@
     justify-content: flex-end;
 }
 .artist-name {
-    margin-bottom: 8px;
+    margin-bottom: 0px;
     font-size: 25px;
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
     /* Always maintain consistent spacing */
