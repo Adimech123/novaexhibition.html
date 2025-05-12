@@ -1,7 +1,6 @@
 .portrait-grid {
     padding: 80px 0;
 }
-
 .portrait-container {
     position: relative;
     width: 100%;
@@ -9,18 +8,15 @@
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
     margin-bottom: 30px;
 }
-
 .row {
     margin-bottom: 15px;
 }
-
 .portrait-container:hover {
     transform: scale(1.02);
 }
-
 .portrait {
     width: 100%;
     height: 100%;
@@ -29,45 +25,46 @@
     /* This positions the focal point higher in the frame */
     transition: filter 0.4s ease;
 }
-
 .portrait-container:hover .portrait {
     filter: brightness(0.7);
 }
-
 .artist-info {
     position: absolute;
-    bottom: -100%;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 70%;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    height: auto;
+    background: linear-gradient(transparent, #000000cc);
     color: white;
     padding: 160px 20px 20px;
-    transition: bottom 0.4s ease;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
-
-.portrait-container:hover .artist-info {
-    bottom: 0;
-}
-
 .artist-name {
     margin-bottom: 8px;
     font-size: 25px;
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    /* Always maintain consistent spacing */
+    padding-bottom: 0px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)
 }
-
 .artist-bio {
     margin: 0;
     font-size: 16px;
     font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
     line-height: 1.5;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1)
 }
-
-
-
+.portrait-container:hover .artist-bio {
+    max-height: 200px; /* Adjust based on expected content height */
+    opacity: 1;
+    transition: max-height 0.7s cubic-bezier(0, 0, 1, 1), /* Slow expansion (ease-out) */
+                opacity 0.2s cubic-bezier(0, 0, 1, 1); /* Slow fade in (ease-out) */
+}
 h4 {
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
     font-size: 40px;
@@ -77,80 +74,64 @@ h4 {
     margin-top: 80px;
     margin-bottom: 0;
 }
-
-
-
-
-
-
 /* Optional: Add some animation to the grid items for visual appeal */
 .col-md-4 {
     transition: all 0.3s ease-in-out;
 }
-
 .col-md-4:hover {
     transform: translateY(-5px);
 }
-
 @media (min-width: 1400px) {
     .portrait-container {
         height: 400px;
         /* Increase container height on larger screens */
     }
-
     .portrait {
         object-position: center 25%;
         /* Adjust focal point for larger screens */
     }
 }
-
 /* For extra large screens */
 @media (min-width: 1800px) {
     .portrait-container {
         height: 450px;
         /* Further increase height for very large screens */
     }
-
     .portrait {
         object-position: center 20%;
         /* Move focal point even higher */
     }
 }
-
-
 /* Add this to your existing CSS file (1.css) */
-
 /* Mobile-specific styles for showing overlays on scroll */
 @media (max-width: 768px) {
-
     /* Hide navigation arrows on mobile since they're less useful on touch devices */
     .artist-navigation {
         display: none;
     }
-
     /* Initial state for mobile: keep info partially visible */
     .portrait-container .artist-info {
-        bottom: -70%;
-        /* Show just a hint of the overlay */
-        transition: bottom 0.3s ease;
+        bottom: 0;
+        /* Show just the artist name */
     }
-
     /* Class to be added by JavaScript when element is in viewport */
     .portrait-container.in-view .artist-info {
         bottom: 0;
     }
-
     /* Enhance tap behavior */
     .portrait-container {
         cursor: pointer;
     }
-
     /* Make portrait slightly darker by default on mobile */
     .portrait {
         filter: brightness(0.9);
     }
-
     .portrait-container.in-view .portrait {
         filter: brightness(0.7);
+    }
+    /* Mobile bio behavior */
+    .portrait-container.in-view .artist-bio {
+        max-height: 200px;
+        opacity: 1;
     }
 }
