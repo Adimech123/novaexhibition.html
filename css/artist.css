@@ -84,6 +84,10 @@ body {
     transform-origin: left center;
 }
 
+.custom-navbar{
+    background: rgba(255, 255, 256)!important;
+}
+
 
 /* Align items and spacing in nav */
 .navbar-nav {
