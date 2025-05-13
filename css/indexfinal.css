@@ -246,14 +246,13 @@ html {
 }
 
 
-@media (max-width: 769px) {
+@media (min-width: 769px) {
     .photo-gallery {
-        max-width: 100%;
+        max-width: 85%;
         width: 100%;
-        margin-left: 0;
-        margin-right: 0;
     }
 }
+
 
 
 
@@ -274,6 +273,10 @@ html {
         height: 350px;
     }
 
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
     .hero-content p {
         font-size: 1.2rem;
     }
@@ -289,14 +292,66 @@ html {
 /* For screens at or below 700px - White NOVA logo sizing */
 @media (max-width: 700px) {
     .hero-container .position-absolute img {
-        max-width: 450px !important;
+        max-width: 300px !important;
         /* Override any inline styles */
         width: 70% !important;
         /* Responsive scaling relative to parent */
     }
 }
 
-/* Media Queries for Responsive Design */
+/* Large-medium devices (769px to 991px) */
+@media (min-width: 769px) and (max-width: 991px) {
+    .card3 {
+        padding: 40px;
+        max-width: 90%;
+    }
+
+    .card3 p {
+        font-size: 20px;
+        line-height: 1.45;
+        word-spacing: -1.5px;
+    }
+
+    .photo-gallery {
+        max-width: 85%;
+        width: 100%;
+
+    }
+}
+
+
+/* Medium-lower devices (651px to 768px) */
+@media (min-width: 651px) and (max-width: 768px) {
+    .card3 {
+        padding: 35px;
+    }
+
+    .card3 p {
+        font-size: 17px;
+        line-height: 1.4;
+        word-spacing: -1px;
+    }
+
+
+}
+
+/* Small-to-medium devices (577px and up) */
+@media (min-width: 577px) and (max-width: 650px) {
+    .card3 {
+        padding: 25px;
+    }
+
+    .card3 p {
+        font-size: 16px;
+        line-height: 1.35;
+        word-spacing: -0.75px;
+        /* Reduced negative word spacing */
+    }
+
+    .photo-gallery {
+        margin-top: -55rem;
+    }
+}
 
 /* Small devices (phones, 576px and down) */
 @media (max-width: 576px) {
@@ -311,7 +366,10 @@ html {
     }
 
     .card3 p {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.3;
+        word-spacing: normal;
+        /* Improve readability on small screens */
     }
 
     .photo-gallery {
@@ -322,4 +380,6 @@ html {
         width: 25px;
         height: 25px;
     }
+
+
 }
