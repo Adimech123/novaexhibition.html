@@ -224,10 +224,54 @@ html {
 
 
 
-/* For mobile devices */
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .center-logo {
+        max-width: 500px;
+    }
+
+    .card3 p {
+        font-size: 22px;
+    }
+
+    .photo-gallery {
+        max-width: 60%;
+        height: 600px;
+    }
+
+    .navbar-brand img {
+        transform: scale(1.2);
+        transform-origin: left center;
+    }
+}
+
+
+@media (max-width: 769px) {
+    .photo-gallery {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+
+/* Medium devices (tablets, 768px and down) */
 @media (max-width: 768px) {
-    .hero-content h1 {
+    .hero-container {
+        height: 70vh;
         font-size: 2.5rem;
+        /* Shorter on tablets */
+    }
+
+    .navbar-brand img {
+        max-height: 35px;
+    }
+
+    .photo-gallery {
+        max-width: 95%;
+        height: 350px;
     }
 
     .hero-content p {
@@ -240,6 +284,17 @@ html {
     }
 }
 
+
+
+/* For screens at or below 700px - White NOVA logo sizing */
+@media (max-width: 700px) {
+    .hero-container .position-absolute img {
+        max-width: 450px !important;
+        /* Override any inline styles */
+        width: 70% !important;
+        /* Responsive scaling relative to parent */
+    }
+}
 
 /* Media Queries for Responsive Design */
 
@@ -266,43 +321,5 @@ html {
     .scroll-arrow {
         width: 25px;
         height: 25px;
-    }
-}
-
-/* Medium devices (tablets, 768px and down) */
-@media (max-width: 768px) {
-    .hero-container {
-        height: 70vh;
-        /* Shorter on tablets */
-    }
-
-    .navbar-brand img {
-        max-height: 35px;
-    }
-
-    .photo-gallery {
-        max-width: 95%;
-        height: 350px;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    .center-logo {
-        max-width: 500px;
-    }
-
-    .card3 p {
-        font-size: 22px;
-    }
-
-    .photo-gallery {
-        max-width: 60%;
-        height: 600px;
-    }
-
-    .navbar-brand img {
-        transform: scale(1.2);
-        transform-origin: left center;
     }
 }
