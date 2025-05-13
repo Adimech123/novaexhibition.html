@@ -1,3 +1,1138 @@
+/* ===============================
+   1. Fonts
+   =============================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NeueHaasDisplaRoman';
+    letter-spacing: 0.05em;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayBold';
+    src: url('../fonts/NeueHaasDisplayBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplaRoman';
+    src: url('../fonts/NeueHaasDisplayRoman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayMedium';
+    src: url('../fonts/NeueHaasDisplayMediu.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayLight';
+    src: url('../fonts/NeueHaasDisplayLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayThin';
+    src: url('../fonts/NeueHaasDisplayThin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ===============================
+   2. Body
+   =============================== */
+body {
+    background: #fff;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+
+/* ===============================
+   3. Navigation Styles
+   =============================== */
+
+.custom-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    /* optional for nice blur */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+}
+
+/* Logo image sizing */
+.navbar-brand img {
+    max-height: 50px;
+    width: auto;
+    transform: scale(1.2);
+    margin: -8px 0;
+    transform-origin: left center;
+}
+
+
+/* Align items and spacing in nav */
+.navbar-nav {
+    display: flex;
+    gap: clamp(10px, 2vw, 20px);
+}
+
+/* Custom font and hover styles */
+.navbar-nav .nav-link {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    opacity: 1;
+    color: #f0685c;
+}
+
+/* ===============================
+   4. Circles
+   =============================== */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.7;
+    mix-blend-mode: screen;
+    animation: float 30s infinite ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#circle1 {
+    width: 130%;
+    height: 130%;
+    background-color: #f88b81;
+    top: -50%;
+    left: -60%;
+    animation-delay: -1s;
+}
+
+#circle2 {
+    width: 150%;
+    height: 150%;
+    background-color: #99f1ec;
+    top: 300px;
+    left: 10%;
+    animation-delay: -2.5s;
+}
+
+#circle3 {
+    width: 130%;
+    height: 130%;
+    background-color: #4f4e95;
+    top: -40%;
+    left: 55px;
+    animation-delay: -4.5s;
+}
+
+#circle4 {
+    width: 100%;
+    height: 100%;
+    background-color: #466dbd;
+    top: 50%;
+    left: -25%;
+    animation-delay: -4.5s;
+}
+
+#circle5 {
+    width: 50%;
+    height: 50%;
+    background-color: #e2ecff;
+    top: 50%;
+    left: -25%;
+    animation-delay: -4.5s;
+}
+
+#circle6 {
+    width: 50%;
+    height: 50%;
+    background-color: #e2ecff;
+    top: 10%;
+    left: 60%;
+    animation-delay: -4.5s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(7%, 7%) scale(1.08);
+    }
+
+    50% {
+        transform: translate(0, 14%) scale(0.92);
+    }
+
+    75% {
+        transform: translate(-7%, 7%) scale(1.08);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* ===============================
+   5. Layout
+   =============================== */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+}
+
+/* 5.2 Logo */
+
+.logo-img {
+    width: 100%;
+    max-width: 400px;
+    /* Allows scaling up to this size */
+    height: auto;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+
+/* ===============================
+   Sponsor Sections
+   =============================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.sponsor-tier {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.sponsor-tier h2 {
+    font-family: 'NeueHaasDisplayMedium';
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+/* Logo image sizing */
+.navbar-brand img {
+    max-height: 50px;
+    width: auto;
+    transform: scale(1.2);
+    margin: -8px 0;
+    transform-origin: left center;
+}
+
+
+/* ===============================
+   Sponsor Card
+   =============================== */
+.sponsor {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 220px;
+    max-width: 90vw;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'NeueHaasDisplayLight';
+    font-size: 1rem;
+    color: #000;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure images stay within the sponsor container */
+.sponsor img {
+    width: 100%;
+    /* Ensure image fills the container width */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: contain;
+    /* Ensure image stays within the bounds of its container */
+    max-width: 100%;
+    /* Prevents the image from growing beyond the container width */
+    max-height: 100%;
+    /* Prevents the image from growing beyond the container height */
+}
+
+
+
+
+
+/* ===============================
+   Call to Action
+   =============================== */
+.cta {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1rem;
+    font-family: 'NeueHaasDisplayLight';
+}
+
+.cta a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #f78b81;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'NeueHaasDisplayBold';
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta a:hover {
+    background-color: #e66759;
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+/* ===============================
+   6. Exhibition Components
+   =============================== */
+.exhibitions-container {
+    padding: 20px;
+    margin-top: -5%;
+}
+
+.exhibition {
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1000px;
+    min-height: 200px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    word-spacing: -1.75px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.exhibitions-container .exhibition:first-child {
+    z-index: 5;
+}
+
+.exhibition-image {
+    flex: 0 0 25%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.exhibition-image img {
+    width: 65%;
+    max-height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exhibition-content {
+    flex: 0 0 70%;
+    text-align: left !important;
+}
+
+.exhibition h2 {
+    margin: 0 0 10px;
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.exhibition h3 {
+    margin: 0 0 10px;
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+.exhibition p {
+    margin: 0 0 15px;
+    font-family: 'NeueHaasDisplayRoman', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #343333;
+}
+
+
+.detail .button {
+    position: absolute;
+    margin-left: 40px;
+    /* Adjust this value as needed */
+    margin-top: 20px;
+}
+
+.detail {
+    position: relative;
+    /* Make sure parent has position relative */
+}
+
+
+.button {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    display: inline-block;
+    padding: 10px 15px;
+    background: #f78b81;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    word-spacing: 0.8px;
+}
+
+.button1 {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    display: inline-block;
+    padding: 10px 15px;
+    background: #a6a6a6;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    word-spacing: 0.8px;
+}
+
+.button:hover {
+    background: #f56c5f;
+}
+
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.684);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 345px;
+    margin-top: 90px;
+}
+
+.close-button:hover {
+    background: #f56c5f;
+}
+
+/* Update the cross icon to change color on hover */
+.cross-icon::before,
+.cross-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+    /* Add transition for smooth color change */
+}
+
+/* Make the X darker when hovering */
+.close-button:hover .cross-icon::before,
+.close-button:hover .cross-icon::after {
+    background-color: #f56c5f;
+    /* Darker color for better contrast on orange */
+}
+
+/* ===============================
+  6. Text & White Box for event page
+   =============================== */
+.card2 {
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 40px;
+    margin: 10px auto;
+    max-width: 1000px;
+    min-height: 320px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    word-spacing: -1.75px;
+    color: #000;
+    padding: 40px;
+    margin-top: 100px;
+    position: relative;
+
+}
+
+.card2 h1 {
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    margin-bottom: 0px;
+    text-align: left;
+    color: #000;
+}
+
+.card2 h2 {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    color: #000;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.card2 h3 {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    color: #000;
+}
+
+.card2 p {
+    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
+
+
+/* ===============================
+  6. Text & White Box for website page
+   =============================== */
+.card {
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 40px;
+    margin: 10px auto;
+    max-width: 1000px;
+    min-height: 320px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    word-spacing: -1.75px;
+    color: #000;
+    margin-top: 100px;
+
+}
+
+.card h1 {
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #000;
+}
+
+.card h2 {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    color: #000;
+}
+
+.card p {
+    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+/* ===============================
+  4.2 Large Logo for Intro page (website and start page together)
+   =============================== */
+.logo2 {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    /* Make sure logo is behind nav */
+}
+
+.logo2 img {
+    width: 500px;
+    height: auto;
+    max-width: 700px;
+    margin-top: -300px;
+}
+
+
+/* ===============================
+   4. close button
+   =============================== */
+/* Container styles */
+
+.position-fixed {
+    position: fixed;
+    z-index: 1050 !important;
+    top: 95px !important;
+    right: 135px !important;
+}
+
+/* Close button styles */
+/* Fixed position close button styling */
+.btn-close-custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 40%;
+    margin-top: -160%;
+}
+
+.btn-close-custom:hover {
+    background: rgba(255, 255, 255, 0.684);
+}
+
+/* Cross icon inside button */
+.cross-icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.cross-icon::before,
+.cross-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.cross-icon::before {
+    transform: rotate(45deg);
+}
+
+.cross-icon::after {
+    transform: rotate(-45deg);
+}
+
+.btn-close-custom:hover .cross-icon::before,
+.btn-close-custom:hover .cross-icon::after {
+    background-color: #f56c5f;
+}
+
+
+
+
+/* ===============================
+  6. Text & White Box for website page
+   =============================== */
+.card3 {
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1000px;
+    min-height: 320px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    word-spacing: -1.75px;
+    color: #000;
+    margin-top: 60px;
+}
+
+
+.card3 h1 {
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
+    font-size: 29px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #000;
+
+}
+
+.card3 h2 {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    color: #000;
+}
+
+.card3 p {
+    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
+
+
+/* ===============================
+  7. Events
+   =============================== */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-top: 30px;
+}
+
+
+.paragraph {
+    font-family: 'NeueHaasDisplayThin', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.detail {
+    padding: 0;
+}
+
+.event-content h1 {
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: 600;
+}
+
+.detail h2 {
+    font-family: 'NeueHaasDisplayBold', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: 600;
+
+}
+
+.detail h3 {
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.4;
+}
+
+
+.events-container {
+    padding: 0;
+}
+
+
+.place {
+    max-width: 100%;
+}
+
+
+.social-media-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icons a img {
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(0);
+    /* Makes the icons black */
+}
+
+/* Set different sizes for each icon */
+.social-icons a:nth-child(1) img {
+    /* Instagram */
+    width: 20px;
+}
+
+.social-icons a:nth-child(2) img {
+    /* Facebook */
+    width: 15px;
+}
+
+.social-icons a:nth-child(3) img {
+    /* TikTok */
+    width: 20px;
+}
+
+/* Hover effect */
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+/* ===============================
+  8. Countdown for index.html
+   =============================== */
+
+h1 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.countdown2 {
+    display: flex;
+    justify-content: center;
+    /* This is already set correctly */
+    align-items: center;
+    width: 100%;
+    /* Make sure it takes full width */
+    margin: 0 auto;
+    /* Center it horizontally */
+    padding: 0;
+    /* Remove any padding that might offset it */
+}
+
+.countdown2-item {
+    margin: 0 1rem;
+    min-width: 80px;
+    text-align: center;
+}
+
+.countdown2-value {
+
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-bottom: 0.5rem;
+
+}
+
+.countdown2-label {
+    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.exhibition1 {
+    background: rgba(255, 255, 255, 0.684);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+
+.exhibitions-container {
+    padding-top: 100px;
+}
+
+
+/* ===============================
+   grey-overlay
+   =============================== */
+.grey-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(147, 147, 147, 0.25);
+    /* Grey with 25% opacity */
+    border-radius: 25px;
+    /* Match parent container's border-radius */
+    pointer-events: none;
+    /* Allows clicks to pass through to elements below */
+    z-index: 2;
+    /* Positioned above content but below buttons/interactive elements */
+}
+
+
+
+
+
+/* ===============================
+   7. Responsive Styles
+   =============================== 
+@media (max-width: 3456px) {
+
+
+
+    .card3 {
+        position: fixed;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 1200px;
+        z-index: 10;
+        margin-top: 0;
+    }
+
+
+    .card2 {
+        margin-top: 11%;
+    }
+
+    .close-button {
+        margin-top: -4%;
+    }
+
+    .countdown2 {
+        position: fixed;
+        bottom: 250px;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        margin-top: 0;
+    }
+}
+
+
+
+
+
+
+/* Large screens (desktops, less than 1200px) 
+@media (max-width: 1200px) {
+   
+.exhibition {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    .exhibition h2 {
+        font-size: 22px;
+    }
+
+    .exhibition h3,
+    .exhibition p {
+        font-size: 16px;
+    }
+
+    .card3 {
+        margin-top: 0%;
+    }
+
+    .countdown2 {
+        bottom: 22%;
+    }
+
+    .card2 {
+        margin-top: 14%;
+    }
+
+    .flex-row .detail h2 {
+        margin-top: 5%;
+        font-size: 27px;
+    }
+
+    .flex-row .detail h3 {
+        font-size: 21px;
+    }
+
+    .close-button {
+        margin-top: -6%;
+        margin-right: 6.5%;
+    }
+}
+
+/* Medium screens (tablets, less than 992px) 
+@media (max-width: 992px) {      */
+
+.card2 {
+    width: 90%;
+}
+
+
+
+/*.card2 {
+        margin-top: 17%;
+        width: 85%;
+    }
+
+
+
+.card3 {
+        margin-top: 0%;
+        max-width: 800px;
+    }
+
+    .card3 h1 {
+        font-size: 45px;
+
+    }
+
+    .card3 p {
+        font-size: 25px;
+        text-align: justify;
+    }
+        
+    .card2 h1 {
+        font-size: 43px;
+
+    }
+
+    .card2 p {
+        font-size: 20px;
+
+    }
+
+    .flex-row .detail h2 {
+        margin-top: 5%;
+        font-size: 25px;
+    }
+
+    .flex-row .detail h3 {
+        font-size: 22px;
+    }
+
+    .close-button {
+        margin-top: -7%;
+        margin-right: 5.5%;
+
+    }
+
+    .exhibitions-container {
+        padding-top: 80px;
+    }
+
+    .exhibition {
+        padding: 20px;
+        margin: 25px auto;
+    }
+
+    .exhibition-image {
+        flex: 0 0 30%;
+    }
+
+    .exhibition-content {
+        flex: 0 0 65%;
+    }
+
+    .exhibition-image img {
+        width: 80%;
+        max-height: 180px;
+    }
+
+    .button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+
+    .countdown2-item {
+        margin-top: -1%;
+
+    }
+}
+
+ Small screens (small tablets, less than 768px) */
+@media (max-width: 768px) {
+    .position-fixed {
+        top: 95px !important;
+        right: -290px !important;
+    }
+}
+
 /* Updated Sponsor Section Styles */
 
 /* Maintain the existing .sponsor-tier styles */
@@ -69,4 +1204,413 @@
         width: 140px;
         height: 90px;
     }
+}
+
+
+/*.logo {
+        top: -3px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .card3 {
+        margin-top: 0%;
+        max-width: 600px;
+    }
+
+    .card3 h1 {
+        font-size: 42px;
+
+    }
+
+    .card3 p {
+        font-size: 23px;
+        text-align: justify;
+    }
+
+    .countdown2 {
+        font-size: 23px;
+        text-align: justify;
+        bottom: 14%;
+    }
+
+    .countdown2-label {
+        text-align: justify;
+    }
+
+    .card2 {
+        margin-top: 20%;
+    }
+
+    .card2 h1 {
+        font-size: 35px;
+    }
+
+    .card2 p {
+        font-size: 19px;
+    }
+
+    .close-button {
+        margin-top: -9%;
+        margin-right: 5%;
+    }
+
+    .flex-row .detail h2 {
+        margin-top: 5%;
+        font-size: 24px;
+    }
+
+    .flex-row .detail h3 {
+        font-size: 19px;
+    }
+
+
+    .exhibition {
+        padding: 20px;
+        margin: 20px auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .exhibitions-container {
+        padding-top: 60px;
+    }
+
+    .exhibition-image {
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .exhibition-content {
+        flex: 0 0 100%;
+    }
+
+    .exhibition-image img {
+        width: 50%;
+        max-height: 150px;
+    }
+
+    .exhibition h2 {
+        font-size: 20px;
+    }
+
+    .exhibition h3 {
+        font-size: 15px;
+    }
+
+    .exhibition p {
+        font-size: 15px;
+        word-spacing: normal;
+        text-align: justify;
+    }
+
+
+}
+
+
+/* Extra small screens (phones, less than 576px) 
+@media (max-width: 576px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    .logo {
+        left: 10px;
+        top: -6px;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    .card3 {
+        margin-top: 0%;
+        max-width: 450px;
+    }
+
+    .card3 h1 {
+        font-size: 40px;
+
+    }
+
+    .card3 p {
+        font-size: 22px;
+        text-align: justify;
+    }
+
+
+    .card2 {
+        margin-top: 25%;
+    }
+
+    .close-button {
+        margin-top: 16%;
+        margin-right: 4%;
+    }
+
+    .flex-row .detail h2 {
+        margin-top: 5%;
+    }
+
+    .flex-row .detail h3 {
+        font-size: 16px;
+    }
+
+
+    .exhibition1 {
+        top: 15px;
+        height: 35px;
+    }
+
+
+    .exhibitions-container {
+        padding-top: 50px;
+    }
+
+    .exhibition {
+        padding: 15px;
+        margin: 15px auto;
+        min-height: auto;
+    }
+
+    .exhibition-image img {
+        width: 70%;
+        max-height: 120px;
+    }
+
+    .exhibition h2 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .exhibition h3 {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .exhibition p {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .button {
+        padding: 6px 10px;
+        font-size: 13px;
+        border-radius: 3px;
+    }
+
+    .circle {
+        filter: blur(30px);
+    }
+
+
+
+    .countdown2 {
+        bottom: 10%;
+    }
+
+    .countdown2-value {
+        font-size: 32px;
+    }
+
+
+}
+
+
+/* Extra small screens (phones, less than 420px)*/
+@media (max-width: 420px) {
+
+    .btn-close-custom {
+        margin-top: -65px;
+    }
+
+    .card2 {
+        margin-top: 75px;
+    }
+
+    .card2 h1 {
+        font-size: 30px;
+    }
+
+    .card2 h2 {
+        font-size: 20px;
+    }
+
+    .card2 p {
+        font-size: 21px;
+    }
+
+
+
+    .exhibitions-container {
+        margin-top: -25%;
+    }
+
+    .exhibition {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .exhibition-image {
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+        order: -1;
+        /* This ensures the image comes first */
+        width: 30%;
+        height: auto;
+    }
+
+    .exhibition-content {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .exhibition-image img {
+        width: 70%;
+        max-height: 120px;
+    }
+
+    /* .card3 {
+    margin-top: 0%;
+    max-width: 350px;
+}
+
+.card3 h1 {
+    font-size: 32px;
+}
+
+.card3 h2 {
+    font-size: 18px;
+}
+
+.card3 p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.close-button {
+    margin-top: 16.5%;
+    margin-right: 4.5%;
+}
+
+
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    margin-top: 28%;
+    max-width: 350px;
+    gap: 15px;
+}
+
+
+.card2 .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+.card2 p {
+    font-size: 18.5px;
+}
+
+.card2 h1 {
+    font-size: 30px;
+}
+
+.card2 h2 {
+    font-size: 20px;
+}
+
+.card2 h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    font-weight: 305;
+    /* Add this line to make it not bold 
+}
+
+.flex-row .detail h3 {
+    font-size: 16px;
+}
+
+ .event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 60px;
+    margin-left: 0;
+}
+
+
+.detail {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+
+.paragraph {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.detail h3 {
+    font-size: 18px;
+}
+
+.detail p {
+    font-size: 14px;
+}
+
+.social-media-container {
+    width: 80%;
+    margin-left: 10%;
+
+}
+
+
+.countdown2-item {
+    margin: 0 0.5rem;
+    min-width: 60px;
+    text-align: center;
+}
+
+You can also adjust the parent container if needed 
+.countdown2 {
+    gap: 5px;
+    bottom: 10%;
+}
+
+.countdown2-value {
+    font-size: 30px;
+}
+
+.countdown2-label {
+    font-family: 'NeueHaasDisplayLight', Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}*/
+}
+
+/* Define CSS variables for the new navigation styles */
+:root {
+    --text-color: #ffffff;
+    --accent-color: #f78b81;
 }
