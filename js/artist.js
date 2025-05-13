@@ -1,3 +1,64 @@
+// Email - Add this to your existing artist.js file
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Find the mail icon in social links
+    const mailIcon = document.querySelector('a[href*="kristabelleagius02@gmail.com"]');
+
+    // If mail icon exists, update its behavior
+    if (mailIcon) {
+        // Update the href to use mailto: protocol if it doesn't already
+        if (!mailIcon.href.startsWith('mailto:')) {
+            mailIcon.href = 'mailto:kristabelleagius02@gmail.com';
+        }
+
+        // Add click event listener (optional, as the mailto: will work automatically)
+        mailIcon.addEventListener('click', function (e) {
+            // This is optional but can be used for tracking or other functionality
+            console.log('Email link clicked');
+
+            // The browser will automatically open the default mail client
+            // No need to prevent default behavior as mailto: links are handled by the browser
+        });
+    }
+
+    // Alternative method if you're adding the mail icon programmatically
+    // If you have a specific container where social icons are inserted:
+    const socialContainer = document.querySelector('.social-links'); // Update selector as needed
+    if (socialContainer) {
+        // Find all social links
+        const socialLinks = socialContainer.querySelectorAll('a');
+
+        socialLinks.forEach(link => {
+            // Check if this is the mail icon by looking at the image or other attributes
+            const img = link.querySelector('img');
+            if (img && img.src.includes('mail.png')) {
+                link.href = 'mailto:kristabelleagius02@gmail.com';
+            }
+        });
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // Get carousel elements
     const carouselImages = document.querySelectorAll('.carousel-image');
