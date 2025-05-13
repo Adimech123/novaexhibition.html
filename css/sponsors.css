@@ -9,6 +9,18 @@
     letter-spacing: 0.05em;
 }
 
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.7;
+    mix-blend-mode: screen;
+    animation: float 30s infinite ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @font-face {
     font-family: 'NeueHaasDisplayBold';
     src: url('../fonts/NeueHaasDisplayBold.ttf') format('truetype');
