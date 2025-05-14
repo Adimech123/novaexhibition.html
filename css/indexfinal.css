@@ -323,7 +323,6 @@ html {
     .photo-gallery {
         max-width: 85%;
         width: 100%;
-
     }
 }
 
@@ -400,5 +399,33 @@ html {
         height: 65%;
         width: auto;
 
+    }
+}
+
+
+/* Small devices (phones, 576px and down) */
+@media (min-width: 400px) and (max-width: 576px) {
+
+    .card3 {
+        margin-top: 2rem;
+    }
+
+    .card3 p {
+        font-size: 13px;
+
+    }
+
+    .container2 {
+        height: 65%;
+        width: auto;
+    }
+
+    .photo-gallery {
+        max-width: 90%;
+        max-height: 50%;
+    }
+
+    .footer {
+        margin-top: -20%
     }
 }
