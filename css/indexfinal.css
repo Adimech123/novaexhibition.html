@@ -224,6 +224,8 @@ html {
 
 
 
+
+
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     .center-logo {
@@ -292,7 +294,7 @@ html {
 /* For screens at or below 700px - White NOVA logo sizing */
 @media (max-width: 700px) {
     .hero-container .position-absolute img {
-        max-width: 300px !important;
+        max-width: 500px !important;
         /* Override any inline styles */
         width: 70% !important;
         /* Responsive scaling relative to parent */
@@ -319,9 +321,18 @@ html {
     }
 }
 
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+    .hero-container {
+        height: 100vh;
+        /* Changed from 70vh to 100vh for full viewport height */
+        font-size: 2.5rem;
+    }
+}
 
 /* Medium-lower devices (651px to 768px) */
 @media (min-width: 651px) and (max-width: 768px) {
+
     .card3 {
         padding: 35px;
     }
