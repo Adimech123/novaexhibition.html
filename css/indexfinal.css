@@ -214,7 +214,7 @@ html {
 
 
 
-//* Add these styles to your indexfinal.css file */
+/* Add these styles to your indexfinal.css file */
 
 /* Footer Styling */
 .footer {
@@ -466,7 +466,7 @@ html {
 
 
 /* Small devices (phones, 576px and down) */
-@media (min-width: 400px) and (max-width: 576px) {
+@media (min-width: 300px) and (max-width: 576px) {
 
     .card3 {
         margin-top: 2rem;
@@ -478,7 +478,7 @@ html {
     }
 
     .container2 {
-        height: 65%;
+        height: 70%;
         width: auto;
     }
 
@@ -508,6 +508,6 @@ html {
     .footer {
         padding: 1.5rem 0.75rem;
         /* Slightly more compact footer */
-        margin-top: -30%
+        margin-top: -45%
     }
 }
