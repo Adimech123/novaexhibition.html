@@ -376,6 +376,16 @@ main {
     margin-bottom: 15px;
 }
 
+@media (max-width: 768px) {
+    #footer-component {
+      display: block !important;
+    }
+    
+    .footer {
+      padding: 20px 0 !important;
+    }
+  }
+
 /* ===============================
    8. Typography
    =============================== */

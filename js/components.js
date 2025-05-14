@@ -35,7 +35,7 @@ function loadComponent(elementId, url) {
         
         // Fallback: Try loading from predefined components in JavaScript
         const components = {
-            'components/nav.html': `
+            './components/nav.html': `
                 <!-- Navigation content -->
                 <nav class="navbar navbar-expand-lg custom-navbar">
                     <div class="container">
@@ -66,7 +66,7 @@ function loadComponent(elementId, url) {
                     </div>
                 </nav>
             `,
-            'components/background.html': `
+            './components/background.html': `
                 <!-- Background content -->
                 <div class="background">
                     <div class="circle" id="circle1"></div>
@@ -74,7 +74,7 @@ function loadComponent(elementId, url) {
                     <div class="circle" id="circle3"></div>
                 </div>
             `,
-            'components/footer.html': `
+            './components/footer.html': `
                 <!-- Footer content -->
                 <footer class="footer">
                     <div class="social-media-container">
