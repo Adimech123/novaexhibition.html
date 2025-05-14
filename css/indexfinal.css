@@ -328,6 +328,16 @@ html {
         /* Changed from 70vh to 100vh for full viewport height */
         font-size: 2.5rem;
     }
+
+    .photo-gallery {
+        margin-top: 10%;
+    }
+
+    .container2 {
+        height: 75%;
+        width: auto;
+
+    }
 }
 
 /* Medium-lower devices (651px to 768px) */
@@ -342,8 +352,6 @@ html {
         line-height: 1.4;
         word-spacing: -1px;
     }
-
-
 }
 
 /* Small-to-medium devices (577px and up) */
@@ -385,6 +393,7 @@ html {
 
     .photo-gallery {
         height: 300px;
+        margin-top: 13%;
     }
 
     .scroll-arrow {
@@ -393,4 +402,9 @@ html {
     }
 
 
+    .container2 {
+        height: 65%;
+        width: auto;
+
+    }
 }
