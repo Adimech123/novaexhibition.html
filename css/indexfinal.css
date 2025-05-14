@@ -214,6 +214,62 @@ html {
 
 
 
+/* Add these styles to your indexfinal.css file */
+
+/* Footer Styling */
+.footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.social-media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.nav-links a {
+    color: #000;
+    text-decoration: none;
+    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: #f0685c;
+}
+
+.copyright {
+    font-family: 'NeueHaasDisplayRoman', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    opacity: 0.7;
+}
 
 
 
@@ -425,7 +481,25 @@ html {
         max-height: 50%;
     }
 
+    .social-icon {
+        width: 25px;
+        /* Smaller social icons */
+        height: 25px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        /* Smaller footer navigation text */
+    }
+
+    .copyright {
+        font-size: 11px;
+        /* Smaller copyright text */
+    }
+
     .footer {
+        padding: 1.5rem 0.75rem;
+        /* Slightly more compact footer */
         margin-top: -20%
     }
 }
