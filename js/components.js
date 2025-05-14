@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Load navigation component
-    loadComponent('nav-component', 'components/nav.html');
+    loadComponent('nav-component', './components/nav.html');
     
     // Load background component
-    loadComponent('background-component', 'components/background.html');
+    loadComponent('background-component', './components/background.html');
+
+    // Load footer component
+    loadComponent('footer-component', './components/footer.html');
 });
 
 // Function to load HTML components
@@ -70,6 +73,34 @@ function loadComponent(elementId, url) {
                     <div class="circle" id="circle2"></div>
                     <div class="circle" id="circle3"></div>
                 </div>
+            `,
+            'components/footer.html': `
+                <!-- Footer content -->
+                <footer class="footer">
+                    <div class="social-media-container">
+                        <a href="https://instagram.com/nova.bfa" target="_blank">
+                            <img class="social-icon" src="./images/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61574121508715" target="_blank">
+                            <img class="social-icon" src="./images/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.tiktok.com/@nova.bfa" target="_blank">
+                            <img class="social-icon" src="./images/tiktok.png" alt="TikTok">
+                        </a>
+                    </div>
+                    
+                    <div class="nav-links">
+                        <a href="indexfinal.html">Home</a>
+                        <a href="allevents.html">Events</a>
+                        <a href="artists.html">Artists</a>
+                        <a href="sponsors.html">Sponsors</a>
+                        <a href="contacts.html">Contact</a>
+                    </div>
+                    
+                    <div class="copyright">
+                        NOVA | BFA Digital Arts 2025
+                    </div>
+                </footer>
             `
         };
         

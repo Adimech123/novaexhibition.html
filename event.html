@@ -31,13 +31,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/style_web.css">
+    <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/allevents.css">
 </head>
 
 <body>
+    
+    <!-- Background Circles -->
+    <div id="background-component"></div>
 
-<!-- New container section -->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -52,26 +55,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="allevents.html">Events</a>
                     </li>
-                    <li class="nav-item"></li>
-                        <a class="nav-link" href="artists.html">Artists</a>
-                    </li>
-                    <li class="nav-item"></li>
-                        <a class="nav-link" href="sponsors.html">Sponsors</a>
-                    </li>
-                    <li class="nav-item"></li>
-                        <a class="nav-link" href="contacts.html">Contact</a>
-                    </li>
-
                 </ul>
             </div>
         </div>
     </nav>
-    
-    <!-- Background Circles -->
-    <div id="background-component"></div>
-
-    <!-- Navigation -->
-    <div id="nav-component"></div>
 
     <div class="card2 position-relative">
         <!-- Close button -->
@@ -92,6 +79,10 @@
             </div>
         </div>
     </div>
+
+       
+   <!-- Footer -->
+   <!--<div id="footer-component"></div>-->
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js" defer></script>
@@ -374,28 +365,6 @@
             renderEventDetails();
         });
     </script>
-
-   <footer class="footer">
-       <div class="social-media-container">
-           <a href="https://instagram.com/nova.bfa" target="_blank">
-               <img class="social-icon" src="./images/instagram.png" alt="Logo">
-           </a>
-           <a href="https://www.facebook.com/profile.php?id=61574121508715" target="_blank">
-               <img class="social-icon"  src="./images/facebook.png" alt="Logo">
-           </a>
-           <a href="https://www.tiktok.com/@nova.bfa" target="_blank">
-               <img class="social-icon"  src="./images/tiktok.png" alt="Logo">
-           </a>
-       </div>
-       
-       <div class="nav-links">
-           <a href="index.html">Home</a>
-       </div>
-       
-       <div class="copyright">
-           NOVA | BFA Digital Arts 2025
-       </div>
-   </footer>
     
 </body>
 

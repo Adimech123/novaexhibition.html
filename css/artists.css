@@ -1,70 +1,9 @@
-#gradient-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, 
-      white 0%, 
-      white 40%, 
-      rgba(255, 255, 255, 0) 100%);
-    z-index: 1000; /* Very high z-index */
-    pointer-events: none; /* Allow clicks to pass through */
-}
-/* Ensure your content is above this overlay */
-.container, #nav-component, h4,  .footer{
-    position: relative;
-    z-index: 1001; /* Higher than the overlay */
-}
-
-/* navbar */
-
-.custom-navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(8px);
-    /* optional for nice blur */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 1rem;
-}
-
-/* Logo image sizing */
-.navbar-brand img {
-    max-height: 50px;
-    width: auto;
-    transform: scale(1.2);
-    margin: -8px 0;
-    transform-origin: left center;
-}
-
-
-/* Align items and spacing in nav */
-.navbar-nav {
-    display: flex;
-    gap: clamp(10px, 2vw, 20px);
-}
-
-/* Custom font and hover styles */
-.navbar-nav .nav-link {
-    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
-    opacity: 0.7;
-    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.navbar-nav .nav-link:hover {
-    opacity: 1;
-    color: #f0685c;
-}
+/* This file contains only the styles specific to the artists listing page, after removing those in common.css */
 
 .portrait-grid {
     padding: 80px 0;
 }
+
 .portrait-container {
     position: relative;
     width: 100%;
@@ -75,12 +14,15 @@
     transition: transform 0.4s ease;
     margin-bottom: 30px;
 }
+
 .row {
     margin-bottom: 15px;
 }
+
 .portrait-container:hover {
     transform: scale(1.02);
 }
+
 .portrait {
     width: 100%;
     height: 100%;
@@ -89,9 +31,11 @@
     /* This positions the focal point higher in the frame */
     transition: filter 0.4s ease;
 }
+
 .portrait-container:hover .portrait {
     filter: brightness(0.7);
 }
+
 .artist-info {
     position: absolute;
     bottom: 0;
@@ -105,6 +49,7 @@
     flex-direction: column;
     justify-content: flex-end;
 }
+
 .artist-name {
     margin-bottom: 0px;
     font-size: 25px;
@@ -113,6 +58,7 @@
     padding-bottom: 0px;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)
 }
+
 .artist-bio {
     margin: 0;
     font-size: 16px;
@@ -123,12 +69,14 @@
     overflow: hidden;
     transition: max-height 0.4s cubic-bezier(0.4, 0, 0, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1)
 }
+
 .portrait-container:hover .artist-bio {
     max-height: 200px; /* Adjust based on expected content height */
     opacity: 1;
     transition: max-height 0.7s cubic-bezier(0, 0, 1, 1), /* Slow expansion (ease-out) */
                 opacity 0.2s cubic-bezier(0, 0, 1, 1); /* Slow fade in (ease-out) */
 }
+
 h4 {
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
     font-size: 40px;
@@ -138,13 +86,16 @@ h4 {
     margin-top: 80px;
     margin-bottom: 0;
 }
+
 /* Optional: Add some animation to the grid items for visual appeal */
 .col-md-4 {
     transition: all 0.3s ease-in-out;
 }
+
 .col-md-4:hover {
     transform: translateY(-5px);
 }
+
 @media (min-width: 1400px) {
     .portrait-container {
         height: 400px;
@@ -155,6 +106,7 @@ h4 {
         /* Adjust focal point for larger screens */
     }
 }
+
 /* For extra large screens */
 @media (min-width: 1800px) {
     .portrait-container {
@@ -166,33 +118,39 @@ h4 {
         /* Move focal point even higher */
     }
 }
-/* Add this to your existing CSS file (1.css) */
+
 /* Mobile-specific styles for showing overlays on scroll */
 @media (max-width: 768px) {
     /* Hide navigation arrows on mobile since they're less useful on touch devices */
     .artist-navigation {
         display: none;
     }
+    
     /* Initial state for mobile: keep info partially visible */
     .portrait-container .artist-info {
         bottom: 0;
         /* Show just the artist name */
     }
+    
     /* Class to be added by JavaScript when element is in viewport */
     .portrait-container.in-view .artist-info {
         bottom: 0;
     }
+    
     /* Enhance tap behavior */
     .portrait-container {
         cursor: pointer;
     }
+    
     /* Make portrait slightly darker by default on mobile */
     .portrait {
         filter: brightness(0.9);
     }
+    
     .portrait-container.in-view .portrait {
         filter: brightness(0.7);
     }
+    
     /* Mobile bio behavior */
     .portrait-container.in-view .artist-bio {
         max-height: 200px;

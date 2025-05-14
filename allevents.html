@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/style_web.css">
+    <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/allevents.css">
 </head>
 
@@ -40,10 +40,30 @@
     <div id="background-component"></div>
 
     <!-- Navigation -->
-    <div id="nav-component"></div>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/novalogo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="allevents.html">Events</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Rendered Events -->
     <div class="exhibitions-container" id="exhibitions-list"></div>
+
+    <!-- Footer -->
+    <!--<div id="footer-component"></div>-->
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js" defer></script>

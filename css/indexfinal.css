@@ -1,32 +1,30 @@
-/* Reset default browser margins and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* This file contains only the styles specific to the index page, after removing those in common.css */
 
-/* Ensure the body takes up the full viewport */
-body,
-html {
+/* ===============================
+   Page Structure
+   =============================== */
+   .index-page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     height: 100%;
     overflow-x: hidden;
 }
 
-
-
-
-
+.index-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 
 /* ===============================
-  1. Index - home page
+   1. Index - home page
    =============================== */
-
-/* Video */
 
 /* Hero container */
 .hero-container {
     position: relative;
-    height: 100%;
+    height: 100vh; /* Full viewport height */
     width: 100%;
     overflow: hidden;
 }
@@ -39,19 +37,15 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Cover the entire container */
     z-index: 1;
 }
 
 .center-logo {
     max-width: 500px;
-    /* Larger size - adjust as needed */
     width: 50%;
-    /* Responsive sizing */
     height: auto;
     z-index: 2;
 }
-
 
 /* Scroll Arrow */
 .scroll-arrow-container {
@@ -73,7 +67,6 @@ html {
 }
 
 @keyframes bounce {
-
     0%,
     20%,
     50%,
@@ -91,81 +84,23 @@ html {
     }
 }
 
-
-
-/* navbar */
-
-.custom-navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(8px);
-    /* optional for nice blur */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 1rem;
-}
-
-/* Logo image sizing */
-.navbar-brand img {
-    max-height: 50px;
-    width: auto;
-    transform: scale(1.2);
-    margin: -8px 0;
-    transform-origin: left center;
-}
-
-
-/* Align items and spacing in nav */
-.navbar-nav {
-    display: flex;
-    gap: clamp(10px, 2vw, 20px);
-}
-
-/* Custom font and hover styles */
-.navbar-nav .nav-link {
-    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
-    opacity: 0.7;
-    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.navbar-nav .nav-link:hover {
-    opacity: 1;
-    color: #f0685c;
-}
-
-
-
-
-
-
 /* second container- second part */
-
 .container2 {
     position: relative;
-    height: 100%;
     width: 100%;
-    overflow: hidden;
+    padding: 40px 20px;
 }
 
-
-/* text */
+/* Card3 styling specific to index page */
 .card3 {
     background: rgba(255, 255, 255, 0.684);
     backdrop-filter: blur(5px);
     border-radius: 25px;
     padding: 40px;
     margin: 2rem auto;
-    margin-top: 7%;
     max-width: 1000px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .card3 p {
     font-family: 'NeueHaasDisplayRoman', Helvetica, Arial, sans-serif;
@@ -176,9 +111,7 @@ html {
     text-align: justify;
 }
 
-
-
-
+/* Photo gallery */
 .photo-gallery {
     flex: 1;
     max-width: 60%;
@@ -189,10 +122,8 @@ html {
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* Replace margin-left with these centering properties */
     margin-left: auto;
     margin-right: auto;
-    /* Add some top/bottom margin if needed */
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -210,84 +141,9 @@ html {
     opacity: 1;
 }
 
-
-
-
-
-/* Add these styles to your indexfinal.css file */
-
-/* Footer Styling */
-.footer {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(8px);
-    padding: 2rem 1rem;
-    text-align: center;
-    margin-top: 2rem;
-    padding: 1rem 0.75rem;
-}
-
-.social-media-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-    padding: 0.25rem 0;
-
-    height: auto;
-    min-height: 0;
-}
-
-.social-icon {
-    width: 25px;
-    /* Smaller social icons */
-    height: 25px;
-}
-
-
-.social-icon:hover {
-    transform: scale(1.1);
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 0.75rem;
-}
-
-.nav-links a {
-    color: #000;
-    text-decoration: none;
-    font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.nav-links a:hover {
-    opacity: 1;
-    color: #f0685c;
-}
-
-.copyright {
-    font-family: 'NeueHaasDisplayRoman', Helvetica, Arial, sans-serif;
-    font-size: 11px;
-    opacity: 0.7;
-}
-
-
-
-
-
-
-
-
-
-
-
-
+/* ===============================
+   Responsive Styles for Index Page
+   =============================== */
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -310,7 +166,6 @@ html {
     }
 }
 
-
 @media (min-width: 769px) {
     .photo-gallery {
         max-width: 85%;
@@ -318,17 +173,12 @@ html {
     }
 }
 
-
-
-
 /* Medium devices (tablets, 768px and down) */
 @media (max-width: 768px) {
     .hero-container {
         height: 100vh;
-        /* Changed from 70vh to 100vh for full viewport height */
         font-size: 2.5rem;
     }
-
 
     .navbar-brand img {
         max-height: 35px;
@@ -357,17 +207,13 @@ html {
     }
 
     .container2 {
-        height: 75%;
-        width: auto;
+        padding: 30px 15px;
     }
 
     .card3 {
         max-width: 90%;
     }
 }
-
-
-
 
 /* Large-medium devices (769px to 991px) */
 @media (min-width: 769px) and (max-width: 991px) {
@@ -392,15 +238,12 @@ html {
 @media (max-width: 700px) {
     .hero-container .position-absolute img {
         max-width: 500px !important;
-        /* Override any inline styles */
         width: 70% !important;
-        /* Responsive scaling relative to parent */
     }
 }
 
 /* Medium-lower devices (651px to 768px) */
 @media (min-width: 651px) and (max-width: 768px) {
-
     .card3 {
         padding: 35px;
     }
@@ -422,33 +265,29 @@ html {
         font-size: 16px;
         line-height: 1.35;
         word-spacing: -0.75px;
-        /* Reduced negative word spacing */
     }
-
 }
 
 /* Small devices (phones, 576px and down) */
 @media (max-width: 576px) {
     .center-logo {
         max-width: 80%;
-        /* Even smaller for very small screens */
     }
 
     .card3 {
         padding: 20px;
-        margin-top: 4rem;
+        margin-top: 1.5rem;
     }
 
     .card3 p {
         font-size: 15px;
         line-height: 1.3;
         word-spacing: normal;
-        /* Improve readability on small screens */
     }
 
     .photo-gallery {
         height: 300px;
-        margin-top: 13%;
+        margin-top: 1rem;
     }
 
     .scroll-arrow {
@@ -456,30 +295,19 @@ html {
         height: 25px;
     }
 
-
     .container2 {
-        height: 65%;
-        width: auto;
-
+        padding: 20px 10px;
     }
 }
 
-
-/* Small devices (phones, 576px and down) */
+/* Very small devices */
 @media (min-width: 300px) and (max-width: 576px) {
-
     .card3 {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     .card3 p {
         font-size: 13px;
-
-    }
-
-    .container2 {
-        height: 70%;
-        width: auto;
     }
 
     .photo-gallery {
@@ -489,25 +317,14 @@ html {
 
     .social-icon {
         width: 25px;
-        /* Smaller social icons */
         height: 25px;
     }
 
-
-
     .nav-links a {
         font-size: 12px;
-        /* Smaller footer navigation text */
     }
 
     .copyright {
         font-size: 11px;
-        /* Smaller copyright text */
-    }
-
-    .footer {
-        padding: 1.5rem 0.75rem;
-        /* Slightly more compact footer */
-        margin-top: -45%
     }
 }
