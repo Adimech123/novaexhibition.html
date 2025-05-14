@@ -139,25 +139,25 @@ h1 {
    SOCIAL
    =============================== */
 
-.social-media-container {
+.artist-social-media-container {
     display: flex;
     width: 100%;
     margin-bottom: 20px;
 }
 
-.social-icons {
+.artist-social-icons {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.social-icons img {
+.artist-social-icons img {
     width: 32px;
     height: 32px;
     transition: transform 0.3s ease;
 }
 
-.social-icons img:hover {
+.artist-social-icons img:hover {
     transform: scale(1.2);
 }
 
