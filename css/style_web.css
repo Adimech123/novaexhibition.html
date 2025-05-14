@@ -368,21 +368,21 @@ body {
    SOCIAL
    =============================== */
 
-.social-media-container {
+.artist-social-media-container {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 30px;
 }
 
-.social-icons {
+.artist-social-icons {
     display: flex;
     justify-content: center;
     gap: 20px;
     align-items: center;
 }
 
-.social-icons a img {
+.artist-social-icons a img {
     height: auto;
     transition: transform 0.3s ease-in-out;
     filter: brightness(0);
@@ -406,7 +406,7 @@ body {
 }
 
 /* Hover effect */
-.social-icons img:hover {
+.artist-social-icons img:hover {
     transform: scale(1.1);
 }
 
