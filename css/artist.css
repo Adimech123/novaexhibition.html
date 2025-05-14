@@ -84,8 +84,8 @@ body {
     transform-origin: left center;
 }
 
-.custom-navbar{
-    background: rgba(255, 255, 256)!important;
+.custom-navbar {
+    background: rgba(255, 255, 256) !important;
 }
 
 
@@ -700,5 +700,5 @@ h1 {
     font-size: 15px;
     transition: color 0.3s ease;
     margin-top: 15px;
-    margin-bottom:15px;
+    margin-bottom: 15px;
 }
