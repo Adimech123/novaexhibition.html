@@ -145,27 +145,7 @@
 
 
 
-/* Navbar display handling */
-#nav-component {
-    display: none;
-    /* Initially hidden */
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    /* Smooth transition when appearing */
-    opacity: 0;
-    transform: translateY(-10px);
-    position: relative;
-    z-index: 1000;
-}
 
-#nav-component.navbar-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Adding a distinct padding/margin to ensure there's visual separation between navbar and content */
-#content-section {
-    padding-top: 20px;
-}
 
 
 

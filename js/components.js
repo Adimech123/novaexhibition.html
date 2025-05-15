@@ -119,12 +119,26 @@ function loadComponent(elementId, url) {
         element.innerHTML = `<div class="alert alert-danger">Failed to load component</div>`;
     }
 }
+
+
+
+
+
+
 function scrollToContent() {
     // Make the navbar visible first
     const navbar = document.getElementById('nav-component');
     if (navbar) {
         navbar.style.display = 'block';
         navbar.classList.add('navbar-visible');
+
+        // Set the navbarShown flag to true (make sure it's accessible)
+        if (typeof navbarShown !== 'undefined') {
+            navbarShown = true;
+        } else {
+            // If we can't access the variable directly, we'll set a data attribute instead
+            document.body.setAttribute('data-navbar-shown', 'true');
+        }
 
         // Scroll to the navbar
         navbar.scrollIntoView({

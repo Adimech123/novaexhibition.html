@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         countdownElements.days.innerText = String(Math.floor(diff / timeUnits.days)).padStart(2, '0');
-        countdownElements.hours.innerText = String(Math.floor(diff % timeUnits.days / timeUnits.hours)).padStart(2, '0');
-        countdownElements.minutes.innerText = String(Math.floor(diff % timeUnits.hours / timeUnits.minutes)).padStart(2, '0');
-        countdownElements.seconds.innerText = String(Math.floor(diff % timeUnits.minutes / timeUnits.seconds)).padStart(2, '0');
+        countdownElements.hours.innerText = String(Math.floor((diff % timeUnits.days) / timeUnits.hours)).padStart(2, '0');
+        countdownElements.minutes.innerText = String(Math.floor((diff % timeUnits.hours) / timeUnits.minutes)).padStart(2, '0');
+        countdownElements.seconds.innerText = String(Math.floor((diff % timeUnits.minutes) / timeUnits.seconds)).padStart(2, '0');
     };
 
     if (Object.values(countdownElements).every(el => el)) {
@@ -42,40 +42,28 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
 
     const rotatePhotos = () => {
+        if (photos.length === 0) return;
         photos[currentIndex].classList.remove('active');
         currentIndex = (currentIndex + 1) % photos.length;
         photos[currentIndex].classList.add('active');
     };
 
+    const startGalleryInterval = () => {
+        if (galleryInterval) clearInterval(galleryInterval);
+        galleryInterval = setInterval(() => requestAnimationFrame(rotatePhotos), 2000);
+    };
+
     if (photos.length > 0) {
         photos[0].classList.add('active');
-        galleryInterval = setInterval(() => requestAnimationFrame(rotatePhotos), 2000);
+        startGalleryInterval();
 
         document.addEventListener('visibilitychange', () => {
             if (document.hidden) {
                 clearInterval(galleryInterval);
+                galleryInterval = null;
             } else {
-                galleryInterval = setInterval(() => requestAnimationFrame(rotatePhotos), 2000);
+                startGalleryInterval();
             }
         });
     }
-
-    // Navbar Visibility Logic
-    const navbar = document.getElementById('nav-component');
-    const heroContainer = document.querySelector('.hero-container');
-
-    if (navbar && heroContainer) {
-        navbar.style.display = 'none';
-
-        window.addEventListener('scroll', () => {
-            const heroHeight = heroContainer.offsetHeight;
-            if (window.scrollY > (heroHeight * 0.9)) {
-                navbar.style.display = 'block';
-                navbar.classList.add('navbar-visible');
-            } else {
-                navbar.style.display = 'none';
-                navbar.classList.remove('navbar-visible');
-            }
-        });
-    }
-});
+}); // ✅ Closing brace and parenthesis added here
