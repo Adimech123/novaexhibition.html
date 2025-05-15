@@ -33,7 +33,6 @@ function loadComponent(elementId, url) {
             console.warn("XMLHttpRequest failed, falling back to alternative methods:", xhrError);
         }
 
-        // Fallback: Try loading from predefined components in JavaScript
         const components = {
             './components/nav.html': `
                 <!-- Navigation content -->
@@ -51,16 +50,15 @@ function loadComponent(elementId, url) {
                                 <li class="nav-item">
                                     <a class="nav-link" href="allevents.html">Events</a>
                                 </li>
-                                <!-- 
-                                <li class="nav-item"></li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="artists.html">Artists</a>
                                 </li>
-                                <li class="nav-item"></li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="sponsors.html">Sponsors</a>
                                 </li>
-                                <li class="nav-item"></li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="contacts.html">Contact</a>
-                                </li>-->
+                                </li>
                             </ul>
                         </div>
                     </div>

@@ -3,7 +3,7 @@
 /* ===============================
    6. Exhibition Components
    =============================== */
-   .exhibitions-container {
+.exhibitions-container {
     padding: 20px;
     margin-top: -5%;
 }
@@ -177,6 +177,8 @@
     margin-bottom: 0px;
     text-align: justify;
 }
+
+
 
 /* ===============================
   6. Text & White Box for website page
