@@ -3,7 +3,7 @@
 /* ===============================
    Page Structure
    =============================== */
-   .index-page-container {
+.index-page-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -24,7 +24,8 @@
 /* Hero container */
 .hero-container {
     position: relative;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
+    /* Full viewport height */
     width: 100%;
     overflow: hidden;
 }
@@ -67,6 +68,7 @@
 }
 
 @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -157,7 +159,7 @@
 
     .photo-gallery {
         max-width: 60%;
-        height: 600px;
+        height: 800px;
     }
 
     .navbar-brand img {
