@@ -38,7 +38,7 @@ function loadComponent(elementId, url) {
                 <!-- Navigation content -->
                 <nav class="navbar navbar-expand-lg custom-navbar">
                     <div class="container">
-                        <a class="navbar-brand" href="indexfinal.html">
+                        <a class="navbar-brand" href="index.html">
                             <img src="./images/novalogo.png" alt="Logo">
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -88,7 +88,7 @@ function loadComponent(elementId, url) {
                     </div>
                     
                     <div class="nav-links">
-                        <a href="indexfinal.html">Home</a>
+                        <a href="index.html">Home</a>
                         <a href="allevents.html">Events</a>
                         <a href="artists.html">Artists</a>
                         <a href="sponsors.html">Sponsors</a>
