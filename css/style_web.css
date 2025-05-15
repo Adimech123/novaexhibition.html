@@ -3,7 +3,7 @@
 /* ===============================
    Countdown Styling
    =============================== */
-   .count-value {
+.count-value {
     font-size: 2.5rem;
     font-weight: bold;
     background: rgba(255, 255, 255, 0.7);
@@ -210,6 +210,10 @@ button[type="submit"]:hover {
     display: flex;
     justify-content: center;
 }
+
+
+
+
 
 /* ===============================
    Responsive Contact Page Styling
