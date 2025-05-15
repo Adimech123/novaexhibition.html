@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Load navigation component
     loadComponent('nav-component', './components/nav.html');
-    
+
     // Load background component
     loadComponent('background-component', './components/background.html');
 
@@ -13,18 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
 function loadComponent(elementId, url) {
     const element = document.getElementById(elementId);
     if (!element) return;
-    
+
     try {
         // Try XMLHttpRequest first (works better with local files in some browsers)
         const xhr = new XMLHttpRequest();
-        
+
         // Use synchronous request for local files (not recommended for production)
         xhr.open('GET', url, false);
-        
+
         // Handle potential security errors
         try {
             xhr.send();
-            
+
             if (xhr.status === 200) {
                 element.innerHTML = xhr.responseText;
                 return;
@@ -32,7 +32,7 @@ function loadComponent(elementId, url) {
         } catch (xhrError) {
             console.warn("XMLHttpRequest failed, falling back to alternative methods:", xhrError);
         }
-        
+
         // Fallback: Try loading from predefined components in JavaScript
         const components = {
             './components/nav.html': `
@@ -103,19 +103,33 @@ function loadComponent(elementId, url) {
                 </footer>
             `
         };
-        
+
         // Check if we have this component defined
         if (components[url]) {
             element.innerHTML = components[url];
             console.log(`Loaded component ${url} from predefined templates`);
             return;
         }
-        
+
         // If we reach here, all methods failed
         throw new Error("Could not load component");
-        
+
     } catch (error) {
         console.error(`Error loading component: ${error}`);
         element.innerHTML = `<div class="alert alert-danger">Failed to load component</div>`;
+    }
+}
+function scrollToContent() {
+    // Make the navbar visible first
+    const navbar = document.getElementById('nav-component');
+    if (navbar) {
+        navbar.style.display = 'block';
+        navbar.classList.add('navbar-visible');
+
+        // Scroll to the navbar
+        navbar.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start' // Align the top of the navbar with the top of the viewport
+        });
     }
 }
